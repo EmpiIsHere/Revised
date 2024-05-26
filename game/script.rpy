@@ -153,84 +153,97 @@ label start:
     with move
     show princess 3 at notspeaking
     a"Uh?....what happen...and who are you"
-    show akemi 3 at notspeaking
+    show akemi def at notspeaking
     show princess 1 at speaking
     "Mysterious" "Thank god are you alright....My name is Aoi i am the daughter of king Charles and from the kingdom of Azurevale"
+    show princess 2
     pra"May i ask your name Hero"
     show akemi 3 at speaking
     show princess def at notspeaking
     a"Hi my name is Akemi....Where am I..."
     show akemi def at notspeaking
-    show princess def at speaking
+    show princess 2 at speaking
     pra"Hero Akemi then...you are in the ruins forest this place is used to summoned hero from another world"
     show akemi 3 at speaking
     show princess def at notspeaking
     a"Huh i am no hero i am just a regular student"
+    show akemi def at notspeaking
+    show princess 2 at speaking
     n"As Akemi seems confused Princess Aoi try to explain everything as she gradually understands the situation Akemi ask another question."
+    show akemi 3 at speaking
+    show princess def at notspeaking
     a"I see so that's what happened....then why did you summon me here"
-    hide akemi def
-    show princess 3
+    show akemi def at notspeaking
+    show princess 2 at speaking
     pra"Please help me on my quest to defeat an evil magician that have been terrorizing my Kingdome and my father..."
     pra"please help me"
     hide princess def
-    show akemi def at left, flip
+    show akemi def at speaking
     n"Akemi have been to honest and always helping someone who needs her help even if she put her sefl in danger."
-    show akemi 2 at left, flip
+    show akemi 3 at speaking
+    show princess def at right, notspeaking
     a".....Okey I'll help you Princess Aoi"
-    hide akemi def
-    show princess 2 
+    show akemi def at notspeaking
+    show princess 2 at speaking
     pra"Really thank you so much hero Akem"
-    hide princess def
-    show akemi 3 at left, flip
+    show akemi 3 at speaking
+    show princess def at notspeaking
     a"It's fine.... and please stop calling me Hero Akemi it's kind of embarrassing"
     a"Just call me Akemi.. "
-    hide akemi def
-    show princess 2
+    show akemi def at notspeaking
+    show princess 3 at speaking
     pra"Understood.... Then you can call me Aoi its so nice to meet you"
-    hide princess def
-    show akemi 2 at left,flip
+    show akemi 3 at speaking
+    show princess def at notspeaking
     a"Yeah nice to meet you too."
-    hide akemi def
+    hide akemi
+    hide princess
     with dissolve
     stop music fadeout 0.5
 label branch_2:
     play music"5.mp3" fadein 0.5 fadeout 0.5
     scene bg forest1
+    with None
     n"As Akemi and Princess Aoi have decided to start their adventure journey."
-    show princess def at left,flip
+    show princess 2 at left,flip
     pra"Thank you for helping me Akemi..."
-    hide princess def
-    show akemi def at left,flip
+    show akemi 3 at left, flip, speaking
+    hide princess 2
+    show princess def at right,flip
+    with move
+    hide princess 3
+    show princess def at right, notspeaking
     a"It okey your welcome.... so, are we going straight to kingdom of Azurevale?"
-    hide akemi def
-    show princess 3
+    show akemi def at flip, notspeaking
+    show princess 3 at speaking
     pra"No, Himiko is a powerful magician simple physical and magical attack won't hurt her."
-    hide princess def
-    show akemi 3 at left,flip
+    show akemi 3 at flip, speaking
+    show princess 3 at notspeaking
     a"So how will I be able to beat Himiko then?"
-    hide akemi def
-    show princess def at left,flip
+    show akemi def at flip, notspeaking
+    show princess 2 at speaking
     pra"We need to get the 3 legendary items that can only be wielded by a hero who came far from our world and that is you. "
-    hide princess def
-    show akemi 2 at left,flip
+    show akemi 3 at flip, speaking
+    show princess def at notspeaking
     a"So, what are these 3 legendary items. Then."
-    hide akemi def
-    show princess 2 
+    show akemi def at flip, notspeaking
+    show princess 2 at speaking
     pra"The first is the blade of Ethereal Fang the legend tells that it has been forge and bless by the ancient gods and imbued with the power to pierce through darkness itself."
     pra"The second item is the Necklace of Valor it is made by the most skilled dwarf and has the ability to increase physical and magical power to its full potential."
-    hide princess def
-    show akemi 3 at left, flip
+    show akemi 3 at flip, speaking
+    show princess def  at notspeaking
     a"What about the third item."
-    hide akemi def
-    show princess 3 at left, flip
+    show akemi def at flip, notspeaking
+    show princess 3 at speaking
     pra"I can't tell you yet. In order to obtain the last item, you need to have the first two. You need their combined power before you can even attempt to retrieve the third item."
-    hide princess def
-    show akemi def at left, flip
+    show akemi 3 at flip, speaking
+    show princess 3 at notspeaking
     a"I see..."
-    hide akemi def
-    show princess 1
+    show akemi def at flip, notspeaking
+    show princess 1 at speaking
     pra"so which of the two item you want to get first."
     hide princess def
+    hide akemi def
     menu:
         "Blades of Ethernal Fang":
             $ menu_flag = True
