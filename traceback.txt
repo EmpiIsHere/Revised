@@ -1,32 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 212, in script
-    show princess def at notspeaking, slip
-  File "game/script.rpy", line 212, in <module>
-    show princess def at notspeaking, slip
-NameError: name 'slip' is not defined
+  File "game/script.rpy", line 568, in script
+    show akemi princess at offscreenright
+Exception: Image 'akemi' does not accept attributes 'princess'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 212, in script
-    show princess def at notspeaking, slip
+  File "game/script.rpy", line 568, in script
+    show akemi princess at offscreenright
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 212, in <module>
-    show princess def at notspeaking, slip
-NameError: name 'slip' is not defined
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1076, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\exports.py", line 739, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\displayable.py", line 246, in _duplicate
+    args.extraneous()
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'akemi' does not accept attributes 'princess'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Sun May 26 22:45:38 2024
+Mon May 27 01:52:19 2024

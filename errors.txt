@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 152: end of line expected.
-    show akemi 3 at left, flip alpha
-                               ^
+File "game/script.rpy", line 568: end of line expected.
+    show akemi, princess at offscreenright
+              ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun May 26 20:26:41 2024
+Mon May 27 01:51:08 2024
