@@ -64,8 +64,10 @@ image bg gcave ="incavegold.png"
 init:
     transform flip:
         xzoom -1.0
-    transform alpha:
+    transform notspeaking:
         alpha .63
+    transform speaking:
+        alpha 1
 
 #asset
 image bg ring = "ring_final.png"
@@ -126,39 +128,43 @@ label start:
     
     
     scene bg library1
+    with None
     n"School Day is done as she makes her way to her favorite spot which is at the library she saw an old book"
     n"Akemi pick it up and try to read it but there is no content of the book only a riddle"
-    show akemi 4 at left, flip
+    show akemi 4 at left, flip 
+    with dissolve
     a"Hmm there's a Riedel (It lights sometimes; it’s dark sometimes everyone wants to walk all over me. What am I?)?"
     hide akemi def
     n"As akemi read the riedel she try to answer it "
     show akemi 3 at left, flip
     a"Hmmmmmm....Moon?"
-    hide akemi def
-    with fade
     scene white 
+    with Fade(.5,.5,.5)
     n"The book glows a wight light and Akemi close her eye"
     n"Akemi hear that someone is calling for her as she slowly open her eyes, she saw this mysterious woman"
     stop music fadeout 0.5
     play music "4.mp3" fadein 1.0 fadeout 1.0
     scene bg ruins
+    with Fade(.5,.5,.5)
     show princess 3
     "Mysterious" "Hero please wake up.."
-    hide princess def
     show akemi 3 at left, flip
+    show princess 3 at right
+    with move
+    show princess 3 at notspeaking
     a"Uh?....what happen...and who are you"
-    hide akemi def
-    show princess 1
+    show akemi 3 at notspeaking
+    show princess 1 at speaking
     "Mysterious" "Thank god are you alright....My name is Aoi i am the daughter of king Charles and from the kingdom of Azurevale"
     pra"May i ask your name Hero"
-    hide princess def
-    show akemi 3 at left, flip
+    show akemi 3 at speaking
+    show princess def at notspeaking
     a"Hi my name is Akemi....Where am I..."
-    hide akemi def
-    show princess def
+    show akemi def at notspeaking
+    show princess def at speaking
     pra"Hero Akemi then...you are in the ruins forest this place is used to summoned hero from another world"
-    hide princess def
-    show akemi 3 at left, flip
+    show akemi 3 at speaking
+    show princess def at notspeaking
     a"Huh i am no hero i am just a regular student"
     n"As Akemi seems confused Princess Aoi try to explain everything as she gradually understands the situation Akemi ask another question."
     a"I see so that's what happened....then why did you summon me here"

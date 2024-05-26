@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 135: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    matrixcolor SaturationMatrix(0)
-    ^
+File "game/script.rpy", line 152: end of line expected.
+    show akemi 3 at left, flip alpha
+                               ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun May 26 16:45:39 2024
+Sun May 26 20:26:41 2024
