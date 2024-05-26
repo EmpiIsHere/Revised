@@ -64,6 +64,8 @@ image bg gcave ="incavegold.png"
 init:
     transform flip:
         xzoom -1.0
+    transform alpha:
+        alpha .63
 
 #asset
 image bg ring = "ring_final.png"
@@ -143,8 +145,7 @@ label start:
     show princess 3
     "Mysterious" "Hero please wake up.."
     hide princess def
-    show akemi 3 at left, flip:
-        alpha .5
+    show akemi 3 at left, flip
     a"Uh?....what happen...and who are you"
     hide akemi def
     show princess 1
