@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 98: play requires a file
-    play sound 
-               ^
+File "game/script.rpy", line 135: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    matrixcolor SaturationMatrix(0)
+    ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat May 25 12:32:06 2024
+Sun May 26 16:45:39 2024

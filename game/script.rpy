@@ -19,7 +19,20 @@ image himiko def = im.Scale("himiko_def.png", 679, 900)
 image himiko 1= im.Scale("himiko_1.png", 679, 900)
 image himiko 2 = im.Scale("himiko_2.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
-define n = Character("Narrator")
+# King Throin
+image throin def = im.Scale("throin_def.png", 679, 900)
+# Minion
+image minion def = im.Scale("minion_def.png", 679, 900)
+# Dragon
+image dragon def = im.Scale("dragon_def.png", 679, 900)
+# Elf Guard
+image elfguard def = im.Scale("elfguard_def.png", 679, 900)
+# Elder Elf
+image elderelf def = im.Scale("elderelf_def.png", 679, 900)
+# Dwarf
+image dwarf def = im.Scale("dwarf_def.png", 679, 900)
+# Generl Ragnor
+image ragnor def = im.Scale("ragnor_def.png", 679, 900)
 
 #background
 image bg forest1 = "forest1.png"
@@ -97,9 +110,11 @@ label start:
     
      
     scene black
+    with None
     n"Summer has passed, and another school year is approaching. Students are excited as the new year will embrace them."
     n"Everyone’s busy with their requirements. And there’s one student who made the room a bit odd as she walks on"
     show akemi def
+    with Fade(.5,.5,.5)
     n"Akemi is an ordinary student. She always wears her jolliest smile."
     scene black
     with Dissolve(.5)
@@ -128,7 +143,8 @@ label start:
     show princess 3
     "Mysterious" "Hero please wake up.."
     hide princess def
-    show akemi 3 at left, flip
+    show akemi 3 at left, flip:
+        alpha .5
     a"Uh?....what happen...and who are you"
     hide akemi def
     show princess 1
