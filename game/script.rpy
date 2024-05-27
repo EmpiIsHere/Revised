@@ -126,10 +126,10 @@ define dragon =Character("Dragon")
 # The game starts here.
 
 label start:
+    play music "library.mp3" loop
     scene black
     with None
     n"Summer has passed, and another school year is approaching. Students are excited as the new year will embrace them." 
-
     n"Everyone’s busy with their requirements. And there’s one student who made the room a bit odd as she walks on." 
     show akemi
     with Fade(.5,.5,.5)
@@ -139,11 +139,9 @@ label start:
     pause .5
     scene black
     with Dissolve(.5)
-
     scene bg library1
     with None
     n"School Day is done as she makes her way to her favorite spot, which is at the library, then she saw an old book." 
-
     n"Akemi picked it up and tried to read it but there is nothing from the book, there’s only a riddle." 
     show akemi 4 at left, flip 
     with dissolve
@@ -151,14 +149,19 @@ label start:
     hide akemi
     n"As Akemi read the riddle, she tries to answer it." 
     show akemi 3 at left, flip
-    a"Moon?" 
+    a"Hmmmmm......Moon?" 
+    #Stop Music library.mp3
+    stop music
+    #Play Music branch1.mp3
+    play music "branch1.mp3" loop 
     scene white 
     with Fade(.5,.5,.5)
     n"The book glows a bright light and Akemi closed her eyes" 
-
     n"Akemi heard that someone is calling her and as she slowly opens her eyes, she saw this mysterious woman." 
-    stop music fadeout 0.5
-    play music "4.mp3" fadein 1.0 fadeout 1.0
+    #MUSIC STOP
+    stop music 
+    #MUSIC START
+    play music "branch1.mp3" loop 
     scene bg ruins
     with Fade(.5,.5,.5)
     show princess 3
@@ -220,9 +223,12 @@ label start:
     hide akemi
     hide princess
     with dissolve
+    #Stop Music branch1
     stop music fadeout 0.5
 label branch_2:
-    play music"5.mp3" fadein 0.5 fadeout 0.5
+    #BG MUSIC
+    play music "forest2.mp3" loop
+    play audio "bird.mp3" loop
     scene bg forest1
     with None
     n"As Akemi and Princess Aoi have decided to start their adventure journey…"
@@ -263,6 +269,7 @@ label branch_2:
     pra"So, which of the two items do you want to get first?"
     hide princess
     hide akemi
+    stop audio
     menu:
         "Blades of Ethernal Fang":
             $ menu_flag = True
@@ -275,6 +282,8 @@ stop music fadeout 0.5
 with dissolve
 #Blade of Ethernal Fang
 label branch_3:
+    play music "yume1.mp3" loop 
+    play audio "bird.mp3" loop
     scene bg forest1
     with None
     n "Ethereal Fang legend speaks that it is resting place deep within the heart of mystical forest known as the Whispering Woods and the location of the forest is only known by the elder elf which is located at Faewood."
@@ -296,6 +305,7 @@ label branch_3:
     n "As the time passed, Akemi and Princess Aoi have the approval of the village chief."
 
     grdelf "You may now enter and be careful."
+    
 
     n "As they entered the elf village, Akemi was amazed at the scenery of the elf village, especially with the giant tree in the center."
 
@@ -352,7 +362,9 @@ label branch_3:
     pra"Himiko is also a magic caster like me but instead of helping others, she used it for her personal gain, and became obsessed with gaining more power then, later fell into the darkness and wanted to control others through fear and power."
 
     a "So, she really is obsessed with gaining more power huh."
-
+    stop audio
+    stop music
+    play music"cbattle.mp3" loop
     n "As Akemi and Princess Aoi got closer to their destination, suddenly an angry giant snake attacked them..." 
 
     s "(sssSSsss)"
@@ -383,12 +395,12 @@ label branch_3:
 
     pra"Akemi, Look out!!"
 
-    n "As Princess Aoi saw Akemi can move, she used her magic and attack the snake with fire"
-
+    n "As Princess Aoi saw Akemi can't move, she used her magic and attack the snake with fire"
+    play audio "mstrike.mp3" loop
     pra"Fireball!"
-
+    play aoudio "fireact.mp3" loop
     n "As the giant snake got fired, it got distracted and Princess Aoi used the chance to see and help Akemi"
-
+    
     s "(sssSSsss)"
 
     pra"Are you alright, Akemi?"
@@ -400,7 +412,10 @@ label branch_3:
     a "Yeah, you're right."
 
     n "As they retreat far away from the monster for now, they rest for a bit."
-
+    stop music
+    hide akemi 3
+    show princess 3 
+    play music "branch1.mp3" loop
     pra"Are you okay, Akemi?"
 
     n "As Princess Aoi asked Akemi if she is okay, she didn't get a respond."
@@ -416,9 +431,10 @@ label branch_3:
     pra"I must do something."
 
     n "As soon as Princess Aoi knows that it is a poison, she began to sight an incantation for magic."
-
+    play audio "mstrike.mp3" fadein 0.5 fadein 0.5 loop
     pra"Heal!"
-
+    stop audio
+    play audio "mheal.mp3" fadein 0.5 fadein 0.5 loop
     pra"Yes, it works, are you okay now Akemi?"
 
     n "Suddenly Akemi began to open her eyes and see Princess Aoi was about to cry."
@@ -435,6 +451,8 @@ label branch_3:
 
     pra"It’s okay, don't mention it."
 
+    play music "cbattle.mp3" loop
+
     n "As they rested for a bit, Akemi heard something rustling in the forest, and the giant snake appeared again."
 
     s "(sssSSHAAaa)"
@@ -450,7 +468,7 @@ label branch_3:
     a "Yeah, we need to run deep in the forest."
 
     pra"Yeah, you're right! The monster won't go near the location of the sword."
-
+    play audio "mheal.mp3" fadein 0.5 fadein 0.5 loop
     pra"Akemi, I will cast a support magic on you, but I need some time."
 
     a "Okay, got it."
@@ -462,9 +480,9 @@ label branch_3:
     pra"I am ready, Akemi."
 
     a "Okay!"
-
+    play audio "mstike.mp3" 
     pra"Mega Flare!!"
-
+    play audio "fattack.mp3"
     s "(sssSSHAAaa)"
 
     n "As the snake got attacked again by fire, Akemi rushed towards Princess Aoi."
@@ -480,7 +498,8 @@ label branch_3:
     a "No worries."
 
     n "Akemi carries Princess Aoi and ran fast at the center of the forest as much as they could."
-
+    stop music
+    play music "branch1.mp3" loop
     a "AAHHH! We made it!"
 
     pra"Yeah!"
@@ -517,6 +536,10 @@ label branch_3:
 
     pra"Yes."
 
+    stop music
+    #SNAKE
+    play music "cbattle.mp3" loop
+
     s "(sssSSsss)"
 
     n "Akemi and Princess Aoi chatting, the snake appears again on their way."
@@ -536,7 +559,7 @@ label branch_3:
     n "Akemi draws the attention of the snake and Princess Aoi used fire magic to make the giant snake more confused."
 
     n "Because of this, the giant snake tries to use the purple smoke and Princess Aoi used her support magic for Akemi resists to be poised just a short of time"
-
+    play audio "fattack.mp3" loop
     pra"Now is your chance, Akemi."
 
     a "Right, HYAAAA!"
@@ -546,12 +569,14 @@ label branch_3:
     n "Akemi jumps high and goes directly to attack the head of the snake. As she swings her sword to the head, it lands on the giant snake's head."
 
     a "Wow, this sword cut it like paper... we did it Aoi!"
-
+    stop audio
     pra"Yeah... that was amazing Akemi!"
 
     a "Let's go back to the elf village now."
 
     pra"Yeah."
+    stop music
+    play music "forest2.mp3" loop
 
     n "Akemi and Princess Aoi got in front of the elf village. The elves were surprised to see that Akemi is holding the Blade of Ethereal Fang"
 
@@ -580,10 +605,17 @@ label branch_3:
     pra"Thank you!"
 
     n "Akemi and Princess Aoi say goodbye to the elf village as they take off on their next journey."
-
+    if menu_flag == False:
+        jump branch_5
+    elif menu_flag == True:
+        jump branch_4
+stop music
 with dissolve
+
 #Necklace of Valor
 label branch_4:
+    stop music
+    play music "Arrraivesound.mp3" loop 
     scene black
     with dissolve
     n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf kingdom which is from the Ironforge mountain."
@@ -690,8 +722,10 @@ label branch_4:
     show princess at left, flip
     n"Princess Aoi continued her tone urgently."
     pra" Your Majesty, we seek your aid in offering us the Necklace of Valor."
+    stop music
     show throin at speaking 
     show princess at notspeaking
+    play music "falls.mp3" loop
     k"I fear I must deliver grim tidings."
     
     n"The king tells them with heavy sorrow."
@@ -700,12 +734,16 @@ label branch_4:
     show princess 3 at speaking
     n"Princess Aoi’s heart sank at the news, but before she could despair, King Throin spoke again, his tine resolute."
     show princess 3 at notspeaking
+    stop music
+    play music "goodnews.mp3" fadein 0.5 fadeout 0.5 loop
     k"However, there’s another way. We can forge a new necklace, one that is more powerful than its predecessor."
     show princess 2 at speaking
     n"A glimmer of hopes sparked within Princess Aoi’s heart at the King's words, but their joy was short-lived as the ground tremble beneath their feet a harbinger of impending danger."
+    stop music
     hide princess
     hide throin
     show durin
+    play music "fighsoundef2.mp3" fadein 0.5 fadeout 0.5 loop
     durin"We are under attack!"
     show akemi 5 at offscreenleft, flip
     show princess 4:
@@ -818,6 +856,8 @@ label branch_4:
     show minion at left
     show minion1 at right
     with Dissolve(1)
+    stop music
+    play music "ragnorbg.mp3" fadein 0.5 fadeout 0.5 loop
     n"Suddenly, shadows moved in the darkness ahead, revealing General Ragnor's minions ready to attack."
     g"Foolish mortals! You will go no further!"
     show minion:
@@ -846,7 +886,9 @@ label branch_4:
     with None
     a"For the dwarves! For our people!"
 #fight DIALOG
+    play music "bgground.mp3" fadein 0.5 fadeout 0.5 loop 
     scene bg dcave
+    play audio "swordfight.mp3" loop
     show minion
     with fade
     min1"You won't leave here alive!"
@@ -919,6 +961,7 @@ label branch_4:
         yalign 1.0
     with Dissolve(2.0)
     n"As they defeated the minions, a menacing figure stepped out from the shadows... General Ragnor himself."
+    stop audio
     show akemi 5 at flip
     show akemi 5 at notspeaking
     show princess 4 at notspeaking
@@ -940,9 +983,9 @@ label branch_4:
     a"We have more than courage... We have each other!"
     show akemi 5 behind princess at notspeaking
     show princess 4 at speaking
-    pra"And we fight for a just cause! *Casts a protective spell on Akemi*"
-
-    g"*Deflects Aoi's attack with a powerful swing* Foolish girl!"
+    pra"And we fight for a just cause! (Casts a attack spell on General Ragnor)"
+    play audio "swordfight.mp3" loop
+    g"(Deflects Aoi's attack with a powerful swing) Foolish girl!"
     hide princess
     show akemi
     a"(Flanking Ragnor) Over here, brute! (Strikes at Ragnor's side)"
@@ -950,7 +993,7 @@ label branch_4:
     g"(Roars in anger) You will pay for that! (Swings his massive axe at Akemi)"
     hide akemi
     show princess
-    pra"Akemi, look out! (Uses her shield to block the axe)"
+    pra"Akemi, look out! (Uses her magic shield to block the axe)"
 
     n"The battle intensifies, with Akemi and Aoi coordinating their attacks, wearing Ragnor down"
 
@@ -963,13 +1006,14 @@ label branch_4:
     pra"(Providing a final spell boost to Akemi) Now, Akemi!"
     hide princess
     show akemi
-    a"(With a final, powerful strike) For the dwarves! For our people!"
-    
+    a"(With a final, powerful strike) This is for the dwarves!"
+    stop audio
     n"With a final, resounding clash, General Ragnor fell to the ground, defeated. The cavern echoed with the silence of their victory."
     n"With the gem safely in their possession, Akemi and Princess Aoi return to the dwarven kingdom, their hearts buoyed by the success of their mission."
     hide akemi
     with dissolve
-    play music"7.mp3" fadein 0.5 fadeout 0.5 
+    stop music
+    play music "goodnews.mp3" fadein 0.5 fadeout 1.0 loop
     scene bg cc
     show princess 2 at left
     pra"Akemi, look! Over there, deep in the mining cave. It's the Mystic Lunar, shimmering in a radiant sky blue. It's truly breathtaking... Our journey was not in vain, this gem holds the key to our kingdom's salvation."
@@ -998,12 +1042,14 @@ label branch_4:
     pra"Thank you, Akemi. Your strength and loyalty have been invaluable to our cause. Let us go forth and ensure that the Necklace of Valor is forged with the same determination that brought us here! But for now we must rest up I am tired!"
     n"After all was said and done everyone rested up for a few days waiting for the smith to finish forging the Necklace of Valor"
     n"While resting, Akemi notice something is worrying Princess Aoi."
-    a"Aoi are you okay? I can see the worry in your eyes."
 
+    play music "falls.mp3" fadein 0.5 fadeout 1.0 loop
+
+    a"Aoi are you okay? I can see the worry in your eyes."
     pra"Thank you Akemi, I am just worry about my father and the people of Azurevale"
     hide princess
     show akemi at left
-    a"I see... But for now, let us focus on the task at hand. We have the gem, and soon we will have the necklace. With its power, we will be better equipped to face whatever challenges lie ahead."
+    a"I see... Don't worry we will save your father and your people, but for now, let us focus on the task at hand. We have the gem, and soon we will have the necklace. With its power, we will be better equipped to face whatever challenges lie ahead."
     hide akemi
     show princess 2 at left
     pra"You're right, Akemi. We must stay focused on our mission. But I cannot shake the worry for my father and my people. They need us now more than ever."
@@ -1014,9 +1060,9 @@ label branch_4:
     with dissolve
     scene black
     n"As they awaited the necklace's completion, Akemi and Princess Aoi spent their days in the dwarven kingdom, assisting those in need. Though outwardly brave, the weight of their responsibilities grew heavier, intensifying their sense of urgency."
-
-    n"On the day of completion, King Throin presented the finished necklace to Akemi and Princess Aoi."
     stop music fadeout 0.5
+    play music "goodnews.mp3" fadein 0.5 fadeout 1.0 loop
+    n"On the day of completion, King Throin presented the finished necklace to Akemi and Princess Aoi."
     with fade
     scene bg throne1
     k"This necklace is a testament to your bravery and determination. May it serve you well in your quest to bring peace to your kingdom."
@@ -1588,4 +1634,3 @@ label himiko_fight:
 
 with dissolve
 return
-
