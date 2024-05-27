@@ -98,7 +98,7 @@ define n = Character("Narrator")
 
 define k = Character("King Throin") 
 
-define s = Character("Scholar") 
+define s = Character("Snake") 
 
 define g = Character("General Ragnor") 
 
@@ -126,93 +126,97 @@ define dragon =Character("Dragon")
 # The game starts here.
 
 label start:
-    
-     
     scene black
     with None
-    n"Summer has passed, and another school year is approaching. Students are excited as the new year will embrace them."
-    n"Everyone’s busy with their requirements. And there’s one student who made the room a bit odd as she walks on"
+    n"Summer has passed, and another school year is approaching. Students are excited as the new year will embrace them." 
+
+    n"Everyone’s busy with their requirements. And there’s one student who made the room a bit odd as she walks on." 
     show akemi
     with Fade(.5,.5,.5)
-    n"Akemi is an ordinary student. She always wears her jolliest smile."
+    n"Akemi is an ordinary student. She always wears her jolliest smile." 
     scene black
     with Dissolve(.5)
     pause .5
     scene black
     with Dissolve(.5)
-    
-    
+
     scene bg library1
     with None
-    n"School Day is done as she makes her way to her favorite spot which is at the library she saw an old book"
-    n"Akemi pick it up and try to read it but there is no content of the book only a riddle"
+    n"School Day is done as she makes her way to her favorite spot, which is at the library, then she saw an old book." 
+
+    n"Akemi picked it up and tried to read it but there is nothing from the book, there’s only a riddle." 
     show akemi 4 at left, flip 
     with dissolve
-    a"Hmm there's a Riedel (It lights sometimes; it’s dark sometimes everyone wants to walk all over me. What am I?)?"
+    a"Hmmm there's a riddle (It lights sometimes; it’s dark sometimes everyone wants to walk all over me. What am I?)" 
     hide akemi
-    n"As akemi read the riedel she try to answer it "
+    n"As Akemi read the riddle, she tries to answer it." 
     show akemi 3 at left, flip
-    a"Hmmmmmm....Moon?"
+    a"Moon?" 
     scene white 
     with Fade(.5,.5,.5)
-    n"The book glows a wight light and Akemi close her eye"
-    n"Akemi hear that someone is calling for her as she slowly open her eyes, she saw this mysterious woman"
+    n"The book glows a bright light and Akemi closed her eyes" 
+
+    n"Akemi heard that someone is calling her and as she slowly opens her eyes, she saw this mysterious woman." 
     stop music fadeout 0.5
     play music "4.mp3" fadein 1.0 fadeout 1.0
     scene bg ruins
     with Fade(.5,.5,.5)
     show princess 3
-    "Mysterious" "Hero please wake up.."
+    "Mysterious" "Hero, please wake up..." 
     show akemi 3 at left, flip
     show princess 3 at right
     with move
     show princess 3 at notspeaking
-    a"Uh?....what happen...and who are you"
+    a"Huh? What happened... and who are you?" 
     show akemi at notspeaking
     show princess 1 at speaking
-    "Mysterious" "Thank god are you alright....My name is Aoi i am the daughter of king Charles and from the kingdom of Azurevale"
+    "Mysterious" "Thanked God, you’re alright.... My name is Aoi, I am the daughter of King Charles and from the kingdom of Azurevale" 
     show princess 2
     pra"May i ask your name Hero"
     show akemi 3 at speaking
     show princess at notspeaking
-    a"Hi my name is Akemi....Where am I..."
-    show akemi at notspeaking
-    show princess 2 at speaking
-    pra"Hero Akemi then...you are in the ruins forest this place is used to summoned hero from another world"
+    pra"May I ask your name, Hero?" 
     show akemi 3 at speaking
     show princess at notspeaking
-    a"Huh i am no hero i am just a regular student"
+    a"Hi, my name is Akemi.... Where am I?" 
     show akemi at notspeaking
     show princess 2 at speaking
-    n"As Akemi seems confused Princess Aoi try to explain everything as she gradually understands the situation Akemi ask another question."
+    pra"Hero Akemi then... you are in the ruins forest; this place is used to summon a hero from another world" 
     show akemi 3 at speaking
     show princess at notspeaking
-    a"I see so that's what happened....then why did you summon me here"
+    a"Huh? I am not a hero; I am just a regular student." 
     show akemi at notspeaking
     show princess 2 at speaking
-    pra"Please help me on my quest toeat an evil magician that have been terrorizing my Kingdome and my father..."
-    pra"please help me"
+    n"As Akemi seems confused, Princess Aoi tries to explain everything as she gradually understands the situation and Akemi asks another question." 
+    show akemi 3 at speaking
+    show princess at notspeaking
+    a"I see, so that's what happened.... then why did you summon me here?" 
+    show akemi at notspeaking
+    show princess 2 at speaking
+    pra"Please help me on my quest to defeat an evil magician that has been terrorizing my kingdom and my father..." 
+
+    pra"Please help me..." 
     hide princess
     show akemi at center, speaking
-    n"Akemi have been to honest and always helping someone who needs her help even if she put her sefl in danger."
+    n"Akemi has been too honest and always helping someone who needs her help even if she puts herself in danger." 
+
+    a"...Okay, I'll help you Princess Aoi" 
     show akemi at left, speaking
     with move
     show akemi 3
     show princess at right, notspeaking
-    a".....Okey I'll help you Princess Aoi"
-    show akemi at notspeaking
-    show princess 2 at speaking
-    pra"Really thank you so much hero Akem"
+    pra"Really? Thank you so much, hero Akemi." 
     show akemi 3 at speaking
     show princess at notspeaking
-    a"It's fine.... and please stop calling me Hero Akemi it's kind of embarrassing"
-    a"Just call me Akemi.. "
+    a"It's fine.... and please stop calling me Hero Akemi. It's kind of embarrassing." 
+    
+    a"Just call me Akemi... " 
     show akemi at notspeaking
     show princess 3 at speaking
-    pra"Understood.... Then you can call me Aoi its so nice to meet you"
+    pra"Okay.... Then you can call me Aoi, it’s so nice to meet you!" 
     show akemi 3 at speaking
     show princess at notspeaking
-    a"Yeah nice to meet you too."
+    a"Yeah, nice to meet you too." 
     hide akemi
     hide princess
     with dissolve
@@ -221,42 +225,42 @@ label branch_2:
     play music"5.mp3" fadein 0.5 fadeout 0.5
     scene bg forest1
     with None
-    n"As Akemi and Princess Aoi have decided to start their adventure journey."
+    n"As Akemi and Princess Aoi have decided to start their adventure journey…"
     show princess 2
-    pra"Thank you for helping me Akemi..."
+    pra"Thank you for helping me Akemi."
     show princess -2 at right
     with move
     show princess at notspeaking, unflip
     show akemi 3 at left, flip
-    a"It okey your welcome.... so, are we going straight to kingdom of Azurevale?"
+    a"It’s nothing, you are welcome.... So, are we going straight to kingdom of Azurevale? "
     show akemi -3 at notspeaking
     show princess 3 at speaking
-    pra"No, Himiko is a powerful magician simple physical and magical attack won't hurt her."
+    pra"No, Himiko is a powerful magician. A simple physical and magical attack won't hurt her."
     show akemi 3 at speaking
     show princess 3 at notspeaking
-    a"So how will I be able to beat Himiko then?"
+    a"So, how will I be able to beat Himiko then??"
     show akemi at notspeaking
     show princess 2 at speaking
-    pra"We need to get the 3 legendary items that can only be wielded by a hero who came far from our world and that is you. "
+    pra"We need to get the 3 legendary items that can only be wielded by a hero who came far from our world and that is you."
     show akemi 3 at speaking
     show princess at notspeaking
-    a"So, what are these 3 legendary items. Then."
+    a"So, what are those 3 legendary items?"
     show akemi at notspeaking
     show princess 2 at speaking
-    pra"The first is the blade of Ethereal Fang the legend tells that it has been forge and bless by the ancient gods and imbued with the power to pierce through darkness itself."
-    pra"The second item is the Necklace of Valor it is made by the most skilled dwarf and has the ability to increase physical and magical power to its full potential."
+    pra"The first is the blade of Ethereal Fang; legend tells that it has been forged and blessed by the Ancient Gods and imbued with the power to pierce through darkness itself."
+    pra"The second item is the Necklace of Valor; it is made by the most skilled dwarf and can increase physical and magical power to its full potential."
     show akemi 3 at speaking
     show princess  at notspeaking
-    a"What about the third item."
+    a"What about the third item?"
     show akemi at notspeaking
     show princess 3 at speaking
-    pra"I can't tell you yet. In order to obtain the last item, you need to have the first two. You need their combined power before you can even attempt to retrieve the third item."
+    pra" I can't tell you yet, because to get the last item. You must get the first two items."
     show akemi 3 at speaking
     show princess 3 at notspeaking
     a"I see..."
     show akemi at notspeaking
     show princess 1 at speaking
-    pra"so which of the two item you want to get first."
+    pra"So, which of the two items do you want to get first?"
     hide princess
     hide akemi
     menu:
@@ -271,306 +275,331 @@ stop music fadeout 0.5
 with dissolve
 #Blade of Ethernal Fang
 label branch_3:
-
     scene bg forest1
     with None
-    n"Ethereal Fang legend speak that it is resting place deep within the heart of mystical forest known as the Whispering Woods and the location of the forest is only know the elder elf wich is located at Faewood."
-    #Princess aoi
+    n "Ethereal Fang legend speaks that it is resting place deep within the heart of mystical forest known as the Whispering Woods and the location of the forest is only known by the elder elf which is located at Faewood."
     show princess 2 at left, flip
-    pra"We must travel deep in the forest to meet the elf elder and ask the Whispering woods."
-    hide princess 2
+    pra"We must travel deep and explore here in Whispering Woods to meet the elder elf."
+    hide princess
     with dissolve
-    n"Upon reaching the guard gates of the Faewood they met with a vigilant sentry, wary of outsider. "
+    n "Upon reaching the guard gates of the Faewood, they met a vigilant sentry, wary of outsiders."
     scene bg dayelf
     with dissolve
-    grdelf"Stop right there, who are you and state your buisness."
-    n"With Aoi regal presence lending credibility and royal etiquette"
+    grdelf "Stop right there, who are you and state your business?"
     show princess 2 at left, flip
-    pra"Good day to you sir, I am Princess Aoi from the kingdom of Azurevale, we humbly ask request to meet and ask guidance of the elf elder."
-    grdelf"Wait here i will ask for the chef of the village."
-    n"As the time Akemi and Princess Aoi for the approval of the chef village."
-    grdelf"You may enter and be careful"
-    n"As the they both enter the elf village akemi is amaze to the scenery of the elf village and the center have this giant tree"
-    hide princess
-    with dissolve
-    show akemi 2 at left
-    a"Wow look at that tree, it looks bigger than the biggest building in my hometown."
-    with fade
-    scene bg meetingelf
-    n" As they enter inside the giant tree, they are great by the elder of the elf village"
-    elder"Greetings Princess Aoi you have grown"
-    hide akemi
-    show princess 2 
-    pra"It's nice to see you all again."
-    elder"Hmm. Princess Aoi are you doing okey, we heard what happen about your father and your kingdom, as you know that we are a friend to your ancestor and your father, we are sorry to hear it."
-    show princess 3
-    show princess 1
-    pra"Thank you for your concern, allow me to introduce you to Akemi the hero i brought to this world toeat Himiko."
-    hide princess
-    show akemi 2 at left
-    a"Hello, it's so nice to meet you all."
-    elder"Hmmm. We guest that you are here to ask us the location of the Blade of Ethereal Fang yes."
-    hide akemi
-    show princess 2
-    pra"Yes, we would like to use it to deafet Himiko."
-    elder"We will tell you the location, but it's very dangerous in the forest, and many monsters have been wandering there do you still want to know."
-    pra"Yes, I am prepared to face any danger to save my father and my people."
-    elder"And how about you, are you prepared to fight such a monster."
-    hide princess
-    with dissolve
-    n"As as they look at akemi waiting to her response"
-    show akemi 2 at left
-    a"Yes, because I made a promised to aoi to help her."
-    elder"Very well then, the location of the sword is located at the center of Whispering Woods west from here."
-    elder" but recently there's a giant snake wandering and we try everything we can but the monster can heal itself easily,"
-    elder "Princess Aoi be careful you and hero Akemi Please look after her, and one more thing go to the center ofthe forest monster won't go near the location of the sword"
-    a"Yes"
-    hide akemi
-    show princess 1 
-    pra"We will be careful and thank you"
-    hide princess
-    with dissolve
-    scene bg forest1
-    n"As they start their quest to get the sword Akemi ask Princess Aoi."
-    show akemi 3 at left
-    a"Aoi, why did Himiko attack and claim your kingdom."
-    hide akemi
-    show princess 3 at left
-    show himiko at right 
-    pra"Himiko is also a magic caster like me but instead of helping others, she used it for her personal gain and Himiko is obsessed with gaining more power and she fell into the darkness and wanted to control others through fear and power."
-    hide princess
-    hide himiko
-    show akemi 3 at left
-    a"So, she's really obsesses in gaining more power huh."
-    n"As Akemi and princess aoi got closer to their destination suddenly an angry giant snake attack them."
-    a"Ahh!" 
-    hide akemi 3
-    show princess 3
-    pra" Ahh!"
-    hide princess
-    show akemi 3 at left
-    a"Are you okey Aoi!"
-    hide akemi
-    show princess 3 at left
-    pra"Yes, I am fine"
-    hide princess
-    n"As they dodge the attack of the giant snake Akemi suddenly got stumble by a tree root"
-    show akemi 3 at left
-    a"Ahhh!"
-    n"As the snake notice the snake suddenly release a purple smoke and release it Akemi suddenly feel dizzy and feel weak and the giant snake saw Akemi lie down on the ground the snake tries to attack again."
-    hide akemi
-    show princess 3 at left
-    pra"Akemi, Look out!!"
-    n"As Princess Aoi saw Akemi can't move, she used her magic and attack the snake with fire."
-    pra"FireBall"
-    n"As the Giant snake got attack by a fire it got distracted and Princess Aoi used the chance to go see Akemi condirtion"
-    pra"Are you alright Akemi."
-    hide princess
-    show akemi 3 at left
-    a" Yeah I am fine...just a little dizzy."
-    hide akemi
-    show princess 3 at left
-    pra" Let's retreat for now."
-    hide princess
-    show akemi 3 at left
-    a"Yeah, you're right."
-    n"As they retreat far away from the monster for now, they rest for a bit."
-    hide akemi 3
-    show princess 3 
-    pra"Are you okey Akemi?."
-    n"As Princess Aoi asked Akemi if she is okey she didn't get a respond. "
-    pra"Akemi,Akemi hey are you okey!"
-    n"Princess Aoi shake Akemi and notice something is strange on Akemi"
-    pra"Huh!? Poison."
-    pra"that is the content of the purple smoke that the snake release earlier"
-    pra" I must do something."
-    n" As soon as Princess Aoi knows that it is a poison, she began sight an incantation for magic"
-    pra"Heal!.....Yes, it works, Akemi are okey?"
-    hide princess
-    show akemi 3 at left
-    a"Aoi, what happened?"
-    hide akemi
-    show princess 2
-    pra"Thank goodness you're okay...are you still injured."
-    hide princess
-    show akemi 2 at left
-    a"No i think i am fine...What happend anyway"
-    hide akemi
-    show princess 3
-    pra"You got poison."
-    hide princess
-    show akemi 2 at left
-    a"I see thank you for helping me"
-    hide akemi
-    show princess 1 
-    pra"Its okey, don't mention it"
-    n"As they rest for a bit Akemi notices something rustelling in the forest, the giant snake appears again."
-    hide princess
-    show akemi 4 at left
-    a"Aoi look out!"
-    hide akemi
-    show princess
+    n "As Aoi present herself with regal presence lending credibility and royal etiquette."
+
+    pra"Good day to you Sir, I am Princess Aoi from the kingdom of Azurevale, we humbly request to meet and ask for guidance from the elder elf."
+
+    grdelf "Wait here, I will ask for the chief of the village."
+
+    n "As the time passed, Akemi and Princess Aoi have the approval of the village chief."
+
+    grdelf "You may now enter and be careful."
+
+    n "As they entered the elf village, Akemi was amazed at the scenery of the elf village, especially with the giant tree in the center."
+
+    a "Wow! Look at that tree, it looks bigger than the biggest building in my hometown."
+
+    pra"Really? It was said that the tree has been here for thousands of years, and my father told me that it became the guardian of this forest."
+
+    a "Amazing!"
+
+    n "As they enter inside the giant tree, they are greeted by the elder of the elf village."
+
+    elder "Greetings! Princess Aoi, you have grown much."
+
+    pra"It's nice to see you again!"
+
+    elder "Hmm... Princess Aoi, are you doing okay? I heard what happened to your father and your kingdom."
+
+    elder "You know that we have a great friendship with your ancestor and your father. I’m sorry to hear it."
+
+    pra"Thank you for your concern. Please allow me to introduce you to Akemi, the hero I brought to this world to defeat Himiko."
+
+    a "Hello, it's so nice to meet you."
+
+    elder "Hmmm... I guess that you are here to ask us the location of the Blade of Ethereal Fang."
+
+    pra"Yes, we would like to use it on defeating Himiko."
+
+    elder "I will tell you the location, but it's very dangerous in the forest, and up until now many monsters have been wandering there."
+
+    elder "Do you know how to fight them?"
+
+    pra"Yes"
+
+    elder "And how about you, are you prepared to fight such a monster?"
+
+    n "They both looked at Akemi waiting for her response."
+
+    a "Yes, because I made a promise to Princess Aoi to help her."
+
+    elder "Very well then, the location of the sword is located at the center of Whispering Woods..."
+
+    elder "It is west from here, but recently there's a giant snake wandering, and we tried everything we could, but the monster can heal itself easily."
+
+    elder "Princess Aoi, please be careful and look for each other and one more thing always go the center part of the forest because the monster won't go near that location of the sword." 
+
+    a "Yes."
+
+    pra"Okay, thank you so much! Yes, we will be more careful." 
+
+    n "As they started their quest on getting the sword, Akemi asked Princess Aoi..."
+
+    a "Aoi, why did Himiko attack and want to claim your kingdom?"
+
+    pra"Himiko is also a magic caster like me but instead of helping others, she used it for her personal gain, and became obsessed with gaining more power then, later fell into the darkness and wanted to control others through fear and power."
+
+    a "So, she really is obsessed with gaining more power huh."
+
+    n "As Akemi and Princess Aoi got closer to their destination, suddenly an angry giant snake attacked them..." 
+
+    s "(sssSSsss)"
+
+    a "Ahh!"
+
     pra"Ahh!"
-    n"Princess Aoi and Akemi were able to dodge the snake attack."
-    pra"Be careful Akemi"
-    hide princess
-    show akemi 3 at left
-    a"Yeah, we need to run deep in the forest."
-    hide akemi
-    show princess
-    pra"Yeah, you're right the monster won't go near the location of the sword."
-    pra"Akemi i will cast a support magic on you and can you give me sometime i will use my magic."
-    hide princess
-    show akemi 3 at left
-    a"Okey got it."
-    n" As Akemi tries to distract the giant snake Princess Aoi is preparing her magic."
-    hide akemi_def
-    show princess
-    pra"I am ready Akemi."
-    hide princess
-    show akemi 3 at left
-    a"okey!."
-    hide akemi
-    show princess
+
+    a "Are you okay, Aoi?!"
+
+    pra"Yes, I am fine."
+
+    s "(sssSSHAAaa)"
+
+    n "As they dodged from the attack of the giant snake, Akemi suddenly stumbled by a tree."
+
+    a "Ahh!"
+
+    n "Then the snake suddenly releases a purple smoke and let it out to Akemi"
+
+    s "(sssSSsss)"
+
+    n "Akemi suddenly felt dizzy and weak with the smoke and the giant snake saw Akemi lie down on the ground"
+
+    n "The giant snake tries to attack again as Akemi looked weak"
+
+    s "(sssSSHAAaa)"
+
+    pra"Akemi, Look out!!"
+
+    n "As Princess Aoi saw Akemi can move, she used her magic and attack the snake with fire"
+
+    pra"Fireball!"
+
+    n "As the giant snake got fired, it got distracted and Princess Aoi used the chance to see and help Akemi"
+
+    s "(sssSSsss)"
+
+    pra"Are you alright, Akemi?"
+
+    a "Yeah, I am fine... I just feel a little dizzy."
+
+    pra"Let's retreat for now."
+
+    a "Yeah, you're right."
+
+    n "As they retreat far away from the monster for now, they rest for a bit."
+
+    pra"Are you okay, Akemi?"
+
+    n "As Princess Aoi asked Akemi if she is okay, she didn't get a respond."
+
+    pra"Akemi, Akemi hey are you okay?"
+
+    n "Princess Aoi shake Akemi and noticed something is strange on Akemi…"
+
+    pra"Huh!? Poison?"
+
+    pra"That is the content of the purple smoke that the snake released earlier."
+
+    pra"I must do something."
+
+    n "As soon as Princess Aoi knows that it is a poison, she began to sight an incantation for magic."
+
+    pra"Heal!"
+
+    pra"Yes, it works, are you okay now Akemi?"
+
+    n "Suddenly Akemi began to open her eyes and see Princess Aoi was about to cry."
+
+    a "Aoi, what happened?"
+
+    pra"Thank goodness you're okay... are you still injured?"
+
+    a "No, I think I am fine... What happened anyway?"
+
+    pra"You got poisoned!"
+
+    a "Oh, I see! Thank you for helping me."
+
+    pra"It’s okay, don't mention it."
+
+    n "As they rested for a bit, Akemi heard something rustling in the forest, and the giant snake appeared again."
+
+    s "(sssSSHAAaa)"
+
+    a "Aoi, look out!"
+
+    pra"Ahh!"
+
+    n "Princess Aoi and Akemi were able to dodge from the snake attack."
+
+    pra"Be careful, Akemi!"
+
+    a "Yeah, we need to run deep in the forest."
+
+    pra"Yeah, you're right! The monster won't go near the location of the sword."
+
+    pra"Akemi, I will cast a support magic on you, but I need some time."
+
+    a "Okay, got it."
+
+    s "(sssSSsss)"
+
+    n "As Akemi tries to distract the giant snake, Princess Aoi is preparing her magic on the side."
+
+    pra"I am ready, Akemi."
+
+    a "Okay!"
+
     pra"Mega Flare!!"
-    n"As the snake got attacked again by fire Akemi rush toward on Princess Aoi."
-    hide princess
-    show akemi 3 at left
-    a"We did it lets go."
-    hide akemi_def
-    show princess 3 at right
-    pra"Yeah, but i can’t run fast i used all my magic power on that attack."
-    hide princess
-    show akemi 3 at left
-    a"Okey then ill carry you lets go."
-    hide akemi 3
-    show princess
+
+    s "(sssSSHAAaa)"
+
+    n "As the snake got attacked again by fire, Akemi rushed towards Princess Aoi."
+
+    a "We did it! Let’s go."
+
+    pra"Yeah, but I can’t run that fast because I’ve used all my magic power on that attack."
+
+    a "Okay then, I'll carry you. Let’s go."
+
     pra"Thank you Akemi."
-    hide princess
-    show akemi 2 at left
-    a"Its okey."
-    n"Akemi carries Princess Aoi and ran fast at the center of the forest as soon as they see the center Akemi go toward it."
-    hide akemi_def
-    with dissolve
-    scene bg deepforestsword
-    show akemi 3 at left
-    a"AAHHH! We made it!"
-    hide akemi
-    show princess
-    pra"Yeah."
-    n"As they both got in the center of the forest Akemi look at the sword "
-    hide princess
-    show akemi 4 at left
-    a"So that's the Blade of Ethereal Fang"
-    hide akemi
-    show princess
-    pra"Yes, go on Akemi try to pull it."
-    hide princess 
-    show akemi 2 at left
-    a"Yeah..Okey lest do this."
-    n"As Akemi Approach the sword, she can feel its power wondering if this is the reason why no monster won't go near it, as Akemi hold the sword, she felt warm feeling all over her body." 
-    a "Here’s got nothing."
-    hide akemi
-    with fade
-    scene bg sword
-    n"As soon as akemi tried to pull the sword she felt it was too light."
-    with fade
-    show akemi 2 at left
-    hide akemi
-    a"Yes!, Look Aoi i did it i pulled the sword."
-    show princess 1 at left
-    n"Princess Aoi looks at Akemi and smiles. "
-    pra" Yes, you did it."
-    hide princess
-    show akemi 2 at left
-    a"let's rest here for a while, are you still tired."
-    hide akemi
-    show princess at left
+
+    a "No worries."
+
+    n "Akemi carries Princess Aoi and ran fast at the center of the forest as much as they could."
+
+    a "AAHHH! We made it!"
+
+    pra"Yeah!"
+
+    n "As they got in the center of the forest, Akemi look at the sword"
+
+    a "So, that is the Blade of Ethereal Fang"
+
+    pra"Yes, go on Akemi, try to pull it."
+
+    a "Yeah okay, let’s do this."
+
+    n "As Akemi approaches to the sword, she can already feel the power and wonders if this is the reason why the monster can’t go near it,"
+
+    n "As Akemi holds the sword, she felt warm feelings all over her body."
+
+    a "Here’s go nothing on trying."
+
+    n "As soon as Akemi tried to pull the sword, she felt it was too light."
+
+    a "Yes! Look Aoi, I did it! I pulled the sword."
+
+    n "Princess Aoi looked at Akemi and smiled."
+
+    pra"Yes, you did it!"
+
+    a "Let's rest here for a while, are you still tired?"
+
     pra"Yes, thank you for asking."
-    n"Akemi and Princess Aoi finally got rest for a bit they are now trying to go back to the elf village once again."
-    hide princess
-    with fade
-    scene bg forest1
-    show akemi at left
-    a"Finaly We got the Blade of Ethereal Fang we are close in saving your Kingdome Aoi"
-    hide akemi
-    show princess 
-    pra" Yes."
-    n"Akemi and Princess Aoi chatting, the snake appears again it their way."
-    hide princess
-    show akemi at left
-    a"Aoi be careful let'seat this giant snake for real this time."
-    hide akemi
-    show princess
-    pra"Right"
-    n"Akemi and Princess Aoi prepare to fight the giant snake and Akemi proposes a plan."
-    hide princess
-    show akemi at left
-    a"Use your magic and support and i will draw its attention try to use fire magic only "
-    hide akemi
-    show princess
-    pra"Okey"
-    n"Akemi draw the attention of the snake and princess aoi used fire magic to make the giant snake more confused, Because of this the giant snake try to use the purple Princess used her support magic to make Akemi resistance to poised for a short amount of time."
-    pra"Now is your chance Akemi."
-    hide princess
-    show akemi 2 at left
-    a"Right,HYAAAA!!."
-    n"Akemi jumps high and goes directly to attack the head of the snake. As she swings her sword to the head, Akemi lands and the giant snake's head."
-    a"Wow this sword cut it like paper...we did it Aoi."
-    hide akemi
-    show princess
-    pra"Yeah....that was amazing Akemi."
-    hide princess
-    show akemi at left
-    a"Let's go back to the elf village."
-    hide akemi
-    show princess
+
+    n "Akemi and Princess Aoi finally rested for a bit. They are now trying to go back to the elf village once again."
+
+    a "Finally, we got the Blade of Ethereal Fang. We’re close in saving your Kingdom, Aoi."
+
+    pra"Yes."
+
+    s "(sssSSsss)"
+
+    n "Akemi and Princess Aoi chatting, the snake appears again on their way."
+
+    a "Aoi, be careful. Let's defeat this giant snake for real this time."
+
+    pra"Right!"
+
+    n "Akemi proposes a plan on how to fight the giant snake…"
+
+    a "Use your magic and support me as I will draw its attention. Try to use fire magic only."
+
+    pra"Okay"
+
+    s "(sssSSsss)"
+
+    n "Akemi draws the attention of the snake and Princess Aoi used fire magic to make the giant snake more confused."
+
+    n "Because of this, the giant snake tries to use the purple smoke and Princess Aoi used her support magic for Akemi resists to be poised just a short of time"
+
+    pra"Now is your chance, Akemi."
+
+    a "Right, HYAAAA!"
+
+    s "(sssSSHAAaa)"
+
+    n "Akemi jumps high and goes directly to attack the head of the snake. As she swings her sword to the head, it lands on the giant snake's head."
+
+    a "Wow, this sword cut it like paper... we did it Aoi!"
+
+    pra"Yeah... that was amazing Akemi!"
+
+    a "Let's go back to the elf village now."
+
     pra"Yeah."
-    with dissolve
-    scene bg nightelf
-    n"Akemi and Princess Aoi got Infront of the elf village they are surprised to see that Akemi is holding the Blade of Ethereal Fang"
-    elder"We are glad you are safe Princess Aoi and Akemi. "
-    show princess
+
+    n "Akemi and Princess Aoi got in front of the elf village. The elves were surprised to see that Akemi is holding the Blade of Ethereal Fang"
+
+    elder "I am so glad that you are safe Princess Aoi and Akemi."
+
     pra"Thank you."
-    n"Akemi and Princess Aoi explain what happened, they are relief and surprised because they were able to slay the giant snake and the Elf elder explains about that giant snake."
-    elder"We have been here for long time..that snake suddenly appear out of knowhere and releasing a purple smoke."
+
+    n "Akemi and Princess Aoi explained what happened, they are relieved and surprised because they were able to slay the giant snake."
+
+    elder "I have been trying to find out for a long time how did that snake appeared out of nowhere and how it releases purple smoke."
+
     pra"Himiko must be the one behind it. She must be trying to stop someone who will search for the sword."
-    elder"It must be.... but the sword can’t be pulled by a normal person, Akemi."
-    hide princess
-    show akemi at left
-    a"Yes"
-    elder"The sword chooses you to be its user please use it only for good."
-    a"I will."
-    elder"We assume that the two of you will continue your journey, we will pray for your success and safety, good luck Akemi and Princess Aoi."
-    a"Thank you"
-    hide akemi
-    show princess
-    pra"Thank you."
-    n"Akemi and Princess Aoi say goodbye to the elf village they are now off on their next journey."
-    hide princess
-    if menu_flag == False:
-        jump branch_5
-    elif menu_flag == True:
-        jump branch_4
+
+    elder "It must be.... but the sword can’t be pulled by a normal person, Akemi."
+
+    a "Yes."
+
+    elder "The sword chooses you to be its user. Please use it only for good."
+
+    a "I will."
+
+    elder "I assumed that the two of you will continue your journey, we will all pray for your success and safety, good luck Akemi and Princess Aoi."
+
+    a "Thank you!"
+
+    pra"Thank you!"
+
+    n "Akemi and Princess Aoi say goodbye to the elf village as they take off on their next journey."
+
 with dissolve
 #Necklace of Valor
 label branch_4:
     scene black
     with dissolve
-    n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf and the name of the kingdom is Ironforge."
+    n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf kingdom which is from the Ironforge mountain."
     with dissolve
     scene bg fgdwarf
     show princess 2
-    pra"We need to travel to the Ironspine mountain and go to the Ironforge kingdom and meet their king his name is King Throin. "
-    pra"We can easily  go inside the and meet King Throin because my father and King Throin are friends."
+    pra"We need to travel to the Ironforge mountain then go to their kingdom to meet their King Throin."
+    pra"We can easily go inside and meet King Throin because he and my father are friends."
     show akemi 2 at left, flip
     show princess 2 at right
     with move
     show princess at notspeaking, unflip
-    a"I am excited to enter the kingdowm of dwarfs, its like a real fantasy. "
+    a"I am excited to enter the dwarf kingdom, it's like a real fantasy."
     show akemi at notspeaking
     show princess 2 at speaking
-    pra"Yes, and i also have a friend in the kingdom."
+    pra"Yes, and I also have a friend in the kingdom."
     show akemi at speaking
     hide princess at top
     hide akemi at top
@@ -579,11 +608,11 @@ label branch_4:
     with dissolve
     scene bg gatedwarf
     show princess 2
-    pra"Here we are the Ironforge Kingdom."
+    pra"Here we are, at the Ironforge Kingdom."
     show  princess at right, notspeaking
     with move
     show akemi 2 at left,flip
-    a"Wow look at the size of the wall and the gate is so huge."
+    a"Wow! look at the size of the wall and the gate is so huge."
     show princess at offscreenleft, speaking
     show akemi at offscreenleft
     with dissolve
@@ -591,96 +620,93 @@ label branch_4:
         xalign -0.3
     show princess at left, flip
     with move
-    n"As Akemi and princess aoi got closer one of the guards recognise princess Aoi."
+    n"As Akemi and Princess Aoi got closer. One of the guards recognized Princess Aoi."
     show princess at notspeaking
     show durin:
         xalign 2.0
         yalign 1.0
     hide akemi
     with dissolve
-    dwarfgrd"Princess Aoi is that you thank god your safe its been to long" 
+    dwarfgrd"Princess Aoi, is that you? Thanked God, you are safe. It’s been too long." 
     show durin at notspeaking
     show princess 1 at speaking
-    n"Princess Aoi smiled with relief as she explained their quest to retrieve the Necklace of Valor and save her kingdom from Himiko's darkness."
-    pra"It has been too long indeed Durin."
+    n"Princess Aoi returns to the dwarf with a smile, her relief evident as she explains their quest to retrieve the Necklace of Valor to save her kingdom from the encroaching darkness by Himiko."
+    pra"It has been too long indeed, Durin."
     show durin at speaking
     show princess at notspeaking
-    durin"What brings you here in Ironforge, Is she your companion."
+    durin"What brings you here to Ironforge, ts she your companion?"
     show durin at notspeaking
     show princess 2 at speaking
-    pra"Yes she is and she is also my friend and the hero the is summoned."
+    pra"Yes, she is also my friend, and the hero who’s summoned."
     hide princess
     show akemi 2 at left, flip
-    a"Hello nice to meet you Durin."
+    a"Hello, nice to meet you Durin."
     show akemi at notspeaking
     show durin at speaking
     durin"Nice to meet you too."
     hide akemi
     show durin at notspeaking
     show princess 2 at speaking, left, flip
-    pra"We came hoping to meet King Throin and ask for the Necklace of Valor to help me and the hero toeat Himiko that invaded their Kingdome."
+    pra"We came hoping to meet King Throin and ask for the Necklace of Valor to help me and the hero to defeat Himiko that invaded our Kingdom."
     show durin at speaking
     show princess at notspeaking
     n"Durin nods and promise to Princess Aoi"
     
-    durin"Fear not, Princess Aoi. As your friend and ally, I shall see to it that you and your companion are granted an audience with King Throin. "
+    durin"Fear not, Princess Aoi. As your friend and ally, I shall see to it that you and your companion are granted an audience with King Throin."
     show durin at notspeaking
     show princess 2 at speaking
-    pra"Thank you Durin."
+    pra"Thank you, Durin."
     scene bg outsidek
     with fade
-    n"With Durins guidance Akemi and Princess Aoi are escorted through the bustling street of ironforge."
+    n"With Durin’s guidance, Akemi and Princess Aoi are escorted through the bustling street of Ironforge."
     show akemi 2 at flip, center
-    a"Look at the busy street Aoi, there are a lot of markets and lot of weapons on display and a lot of beautiful jewelry and shining armor its really like a fantasy."
+    a"Look at the busy street Aoi, there are a lot of weapons displays, beautiful jewelries and shining armors. It’s really like a fantasy."
     show akemi at left, notspeaking
     with move
     show princess 2 at right
     with dissolve
-    pra"Yes, there's a lot of people than the last time i visit here."
+    pra"Yes, there's a lot of people than the last time I visited here."
     scene bg throne1
     with fade
-    n"As they approach the imposing gate of the royal castle, Akemi and Princess aoi was able to meet King Throin."
+    n"As they approached the imposing gate of the royal castle, Akemi and Princess Aoi were able to meet King Throin."
     show throin
-    k"Welcome, it an honor to meet you once more and to meet your esteemed companion"
+    k"Welcome, it is an honor to meet you once more and to meet your esteemed companion."
     show throin at notspeaking:
         xalign 2.0
     with move
     show princess at left, flip
-    pra"It's an honor to meet you to king Throin allow me to introduce my companion, her name is Akemi she is the hero i summon"
-    
-    pra"It's a pleasure to meet you, King Throin."
-    show throin at speaking
+    pra"It's an honor to meet you too King Throin, allow me to introduce my companion, her name is Akemi, and she is the summoned hero."
     hide princess
-    show akemi at notspeaking, left, flip
+    show akemi at speaking, left, flip
+    a"It's a pleasure to meet you, King Throin."
+    show throin at speaking
+    show akemi at notspeaking
     n"King Throin regarded Akemi with a solemn gaze, acknowledging the hero's presence with a hint of respect."
     show throin
     show akemi at notspeaking
-    k"Akemi, It's an honor to meet you."
-    show throin at notspeaking
-    show akemi at speaking
-    a"It's also my honor King Throin"
+    k"Akemi, it's an honor to meet you."
     show throin at notspeaking
     hide akemi
     show princess at left, flip
     n"Princess Aoi continued her tone urgently."
-    pra"Your Majesty, we seek you aid in offering us the Neklace of valor. "
+    pra" Your Majesty, we seek your aid in offering us the Necklace of Valor."
     show throin at speaking 
     show princess at notspeaking
-    k"I fear I must deliver grim tidings"
+    k"I fear I must deliver grim tidings."
     
-    n"The king tell them with a heavy sorrow."
+    n"The king tells them with heavy sorrow."
     
-    k"The Necklace of Valor was stolen and destroyed form us by one of Himiko men in the past few months by General Ragnor a cunnig and ruthless adversary."
+    k"The Necklace of Valor was stolen and destroyed from us by one of Himiko’s men in the past few months by General Ragnor, a cunning and ruthless adversary."
     show princess 3 at speaking
-    n"Princess Aoi heart sank at the news, but before she could despair King Throin spoke again, his tine resolute."
+    n"Princess Aoi’s heart sank at the news, but before she could despair, King Throin spoke again, his tine resolute."
     show princess 3 at notspeaking
-    k"However, There’s another way. We can forge a new necklace, one that is more powerful than its predecessor."
+    k"However, there’s another way. We can forge a new necklace, one that is more powerful than its predecessor."
     show princess 2 at speaking
-    n"A glimmer of hope sparked in Princess Aoi’s heart, but their joy was short-lived as the ground trembled, signaling impending danger."
+    n"A glimmer of hopes sparked within Princess Aoi’s heart at the King's words, but their joy was short-lived as the ground tremble beneath their feet a harbinger of impending danger."
     hide princess
     hide throin
     show durin
-    dwarfgrd" We are under attack!"
+    durin"We are under attack!"
     show akemi 5 at offscreenleft, flip
     show princess 4:
         xalign -1.3
@@ -693,7 +719,7 @@ label branch_4:
         yalign 1.0
     show princess 4 at offscreenright
     with MoveTransition(1)
-    n"One of the guards shouted, with resolved in their hearts Akemi and Princess Aoi rushed to defense of Ironforge their swords drawn and their magic ablaze."
+    n"One of the guards shouted, with resolved in their hearts Akemi and Princess Aoi rushed to defend Ironforge with their swords drawn and their magic ablaze"
     scene bg gatedwarf
     show minion as minion1:
         xalign 2.0
@@ -740,7 +766,7 @@ label branch_4:
         yalign 1.0
     with move
     
-    k"Our enemies seek the gemstone needed to forge the new necklace."
+    k"Our enemies seek the gemstone needed to forge for the new necklace."
     
     k"It lies deep within the mining caves, but the entrance is heavily guarded by General Ragnor's minions."
     scene bg dcave
@@ -761,7 +787,7 @@ label branch_4:
     show akemi at offscreenright, speaking
     show princess at flip, offscreenright
     with MoveTransition(0.8)
-    n"  With the king's blessing and the support of the dwarven warriors, Akemi and Princess Aoi ventured into the mining caves, their hearts ablaze with courage and hope."
+    n"Her voice echoed with determination. With the king's blessing and the support of the dwarven warriors, Akemi and Princess Aoi ventured into the mining caves, their hearts ablaze with courage and hope."
     show akemi at offscreenleft
     show princess:
         xalign -1.0
@@ -774,7 +800,7 @@ label branch_4:
         xzoom -1.0
     show princess at offscreenright
     with MoveTransition(1.5)
-    n"Akemi and Princess Aoi set forth into the depths of the mining caves, their hearts set ablaze with the fires of courage and hope."
+    n"Akemi and Princess Aoi set forth into the depths of the mining caves"
     hide princess
     show akemi at left
     with dissolve
@@ -789,24 +815,29 @@ label branch_4:
     show princess at flip, offscreenright
     with MoveTransition(0.8)
     n"The resolve in their voices strengthened as they ventured deeper into the darkness"
-    show ragnor
+    show minion at left
+    show minion1 at right
     with Dissolve(1)
-    n"Suddenly, shadows shifted, revealing General Ragnor's minions ready to attack."
+    n"Suddenly, shadows moved in the darkness ahead, revealing General Ragnor's minions ready to attack."
     g"Foolish mortals! You will go no further!"
-    show ragnor at notspeaking:
+    show minion:
+        xcenter 0.9
+        yalign 1.0
+    show minion1:
         xcenter 0.75
         yalign 1.0
     with move
     pause(0.2)
-    show princess 4 at offscreenleft, flip
+    show princess 4 behind akemi at offscreenleft, flip
     with None
-    show princess 4 at left
+    show princess 4:
+        xalign -0.2
     with move
     pause(0.5)
     show akemi 5 at offscreenleft, flip
     with None
     show akemi 5:
-        xalign 0.1
+        xalign 0.0
     with move
     pra"Stand your ground, Akemi! We can do this!"
     hide princess
@@ -830,44 +861,91 @@ label branch_4:
     a"We'll see about that!"
     show akemi 6 at left
     show minion:
-        xalign 2.0
+        xalign 2.0 yalign 1.0
+        linear 0.2 xalign 1.7 yalign 1.0
+        linear 0.4 xalign 2.0 yalign 1.0
+        pause(0.5)
+        repeat 2
     show akemi 6:
-        xalign 0.3
-    show minion:
-        xalign 1.7
-    a"*Clashes swords with Minion*"
+        xalign 0.0 yalign 1.0
+        linear 0.2 xalign 0.3 yalign 1.0
+        linear 0.4 xalign 0.0 yalign 1.0
+        pause(0.5)
+        repeat 2
+    a"*Clashes swords with Minion 1*"
     hide akemi
-    show princess
+    hide minion
+    show princess 4 at left, flip
     pra"Your reign of terror ends here!"
-
-    min2"Charging at Aoi* You'll regret those words!"
+    show princess 4 at notspeaking
+    show minion1:
+        xalign 2.0 yalign 1.0
+    with dissolve
+    min2"*Charging at Aoi* You'll regret those words!"
     hide princess
-    show akemi 3 at left 
+    hide minion1
+    show minion:
+        xalign 2.0 yalign 1.0
+        linear 0.2 xalign 1.7 yalign 1.0
+    show akemi 6 at left, flip:
+        xalign 0.0 yalign 1.0
+        linear 0.2 xalign 0.3 yalign 1.0
+        linear 0.4 xalign 0.0 yalign 1.0
+        pause(0.7)
+    pause(0.5)
+    hide minion
+    with dissolve
     a"*Defeating Minion 1* Aoi, stay behind me!"
     hide akemi
-    show princess
+    show princess 4 at left, flip
+    show minion1:
+        xalign 2.0 yalign 1.0
+        pause(0.5)
+        linear 0.3 xalign 0.4 yalign 1.0
+        linear 0.2 xalign 2.0 yalign 1.0
     pra"*Swiftly blocking Minion 2's attack and providing a shield* I’ve got your back, Akemi!"
-
-    n"As they defeated the minions, a menacing figure stepped out from the shadows General Ragnor himself."
-
+    show princess 4:
+        linear 0.2 xalign -0.2 yalign 1.0
+    show akemi 5 at left, flip:
+        xalign -1.0 yalign 1.0
+        linear 0.4 xalign 0.7 yalign 1.0
+        linear 0.4 xalign 0.0 yalign 1.0
+    pause(0.7)
+    hide minion1
+    with dissolve
+    pause(0.7)
+    show ragnor:
+        xcenter 0.75
+        yalign 1.0
+    with Dissolve(2.0)
+    n"As they defeated the minions, a menacing figure stepped out from the shadows... General Ragnor himself."
+    show akemi 5 at flip
+    show akemi 5 at notspeaking
+    show princess 4 at notspeaking
     g"Impressive, but now you face me!"
-
+    show akemi 5 at speaking
+    show princess 4 at notspeaking
+    show ragnor at notspeaking
     a"The real challenge begins. Ready, Princess?"
-
+    show akemi 5 behind princess at notspeaking
+    show princess 4 at speaking
     pra"I’ll support you, Akemi. Let’s end this!"
-
+    show akemi 5 at notspeaking
+    show princess 4 behind akemi at notspeaking
+    show ragnor at speaking
     g"You have courage, but it will not save you from my wrath!"
-    hide princess
-    show akemi 
-    a"We have more than courage we have each other"
-    hide akemi
-    show princess
-    pra"And we fight for a just cause! (Casts a protective spell on Akemi)"
+    show akemi 5 at speaking
+    show princess 4 at notspeaking
+    show ragnor at notspeaking
+    a"We have more than courage... We have each other!"
+    show akemi 5 behind princess at notspeaking
+    show princess 4 at speaking
+    pra"And we fight for a just cause! *Casts a protective spell on Akemi*"
 
-    g"(Deflects Aoi's attack with a powerful swing)Foolish girl"
+    g"*Deflects Aoi's attack with a powerful swing* Foolish girl!"
     hide princess
     show akemi
-    a"(Flanking Ragnor) Over here, brute! (trikes at Ragnor's side)"
+    a"(Flanking Ragnor) Over here, brute! (Strikes at Ragnor's side)"
 
     g"(Roars in anger) You will pay for that! (Swings his massive axe at Akemi)"
     hide akemi
@@ -878,7 +956,7 @@ label branch_4:
 
     g"(Breathing heavily) This... this cannot be!"
 
-    a"It's over, Ragnor. Surrender"
+    a"It's over, Ragnor. Surrender!"
 
     g"Never! (Lunges desperately)"
 
@@ -887,8 +965,8 @@ label branch_4:
     show akemi
     a"(With a final, powerful strike) For the dwarves! For our people!"
     
-    n"With a final, resounding clash, General Ragnor fell to the ground, defeated. The cavern echoed with the silence of their victory, and fo deep in the minning cave Akemi and Princess Aoi was
-    surprise the beautiful of the gem infornt of them."
+    n"With a final, resounding clash, General Ragnor fell to the ground, defeated. The cavern echoed with the silence of their victory."
+    n"With the gem safely in their possession, Akemi and Princess Aoi return to the dwarven kingdom, their hearts buoyed by the success of their mission."
     hide akemi
     with dissolve
     play music"7.mp3" fadein 0.5 fadeout 0.5 
@@ -897,12 +975,13 @@ label branch_4:
     pra"Akemi, look! Over there, deep in the mining cave. It's the Mystic Lunar, shimmering in a radiant sky blue. It's truly breathtaking... Our journey was not in vain, this gem holds the key to our kingdom's salvation."
     hide princess
     show akemi 2 at left 
-    a"Yeah, Aoi I've never seen anything so beautiful. It's like the heavens themselves have descended into this cave. With this gem, we can forge the Necklace of Valor and bring hope back to your people."
+    a"Princess Aoi, I've never seen anything so beautiful. It's like the heavens themselves have descended into this cave. With this gem, we can forge the Necklace of Valor and bring hope back to your people."
     with dissolve
     scene black
     show bg ctr 
     with fade
-    n"As Akemi and Princess Aoi return, King Throin greeted them with gratitude. He thanked both of them for their bravery and informed us that General Ragnor had been defeated. It seems our victory has weakened our enemy's forces"
+    n"As Akemi and Princess Aoi return, King Throin greeted them with gratitude. He thanked both for their bravery."
+    k"You have defeated General Ragnor and I congratulate you on your victory. It seems the victory has weakened our enemy's forces."
     with dissolve
     scene bg throne1
     a"Thank you, King Throin. We're honored to have helped. Our encounter with General Ragnor was challenging, but with Princess Aoi's leadership, we prevailed."
@@ -910,31 +989,33 @@ label branch_4:
     k"Your bravery has brought light to our kingdom in these dark times. With the Mystic Lunar in our possession, we can now forge a necklace stronger than ever before. Guards, prepare the forge and summon our most skilled smith. The Necklace of Valor shall rise again!"
     hide akemi
     show princess
-    pra"Akemi, our journey together has been filled with danger and uncertainty, but seeing the Mystic Lunar fills me with hope."
+    pra"Akemi, our journey together has been filled with danger and uncertainty, but seeing the Mystic Lunar fills me with hope. We've faced adversity and triumphed, and now our kingdom can rebuild."
     hide princess
     show akemi 
-    a"Aoi it's been an honor to fight by your side. Your courage and determination inspire me. Together, we've overcome every obstacle, and I have no doubt that we'll continue to do so."
+    a"Princess Aoi, it's been an honor to fight by your side. Your courage and determination inspire me. Together, we've overcome every obstacle, and I have no doubt that we'll continue to do so."
     hide akemi
     show princess
-    pra"Thank you, Akemi. Your strength and loyalty have been invaluable to our cause. Let us go forth and ensure that the Necklace of Valor is forged with the same determination that brought us here."
-    n"As Akemi and Priccess Aoi rest for a few day to finish the forge of Necklace of Valor Akemi notice somting is worrying Princess Aoi."
-    hide princess
-    show akemi
-    a"Aoi is something bothering you I can see the worry in your eyes."
-    hide akemi
-    show princess 3 at left
+    pra"Thank you, Akemi. Your strength and loyalty have been invaluable to our cause. Let us go forth and ensure that the Necklace of Valor is forged with the same determination that brought us here! But for now we must rest up I am tired!"
+    n"After all was said and done everyone rested up for a few days waiting for the smith to finish forging the Necklace of Valor"
+    n"While resting, Akemi notice something is worrying Princess Aoi."
+    a"Aoi are you okay? I can see the worry in your eyes."
+
     pra"Thank you Akemi, I am just worry about my father and the people of Azurevale"
     hide princess
     show akemi at left
-    a"I see...But for now, let us focus on the task at hand. We have the gem, and soon we will have the necklace. With its power, we will be better equipped to face whatever challenges lie ahead"
+    a"I see... But for now, let us focus on the task at hand. We have the gem, and soon we will have the necklace. With its power, we will be better equipped to face whatever challenges lie ahead."
     hide akemi
     show princess 2 at left
-    pra"Yes..your right,we must stay focused on our mission"
+    pra"You're right, Akemi. We must stay focused on our mission. But I cannot shake the worry for my father and my people. They need us now more than ever."
+
+    a"We'll do everything we can to protect them, Princess. But for now, let's trust in the dwarven craftsmanship and the magic of the necklace."
+
+    pra"Yes, you're right, Akemi. Thank you for your support. Let's assist wherever we can in the dwarven kingdom while we await the completion of the necklace."
     with dissolve
     scene black
     n"As they awaited the necklace's completion, Akemi and Princess Aoi spent their days in the dwarven kingdom, assisting those in need. Though outwardly brave, the weight of their responsibilities grew heavier, intensifying their sense of urgency."
 
-    n"On the day of completion, King Throin presented the finished necklace to Akemi and Princess Aoi"
+    n"On the day of completion, King Throin presented the finished necklace to Akemi and Princess Aoi."
     stop music fadeout 0.5
     with fade
     scene bg throne1
@@ -945,7 +1026,7 @@ label branch_4:
     show akemi
     a"Thank you"
 
-    n"As they set their next journey,the grand halls of the royal palace, they were greeted with cheers and applause from the dwarven citizens, who hailed them as heroes."
+    n"As they set their next journey, the grand halls of the royal palace, they were greeted with cheers and applause from the dwarven citizens, who hailed them as heroes."
 
     if menu_flag == False:
         jump branch_3
