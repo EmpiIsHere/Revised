@@ -9,20 +9,25 @@ image akemi = im.Scale("akemi_def.png", 679, 900)
 image akemi 2 = im.Scale("akemi_2.png", 679, 900)
 image akemi 3 = im.Scale("akemi_3.png", 679, 900)
 image akemi 4 = im.Scale("akemi_4.png", 679, 900)
+image akemi 5 = im.Scale("akemib.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
 image princess 2 = im.Scale("princess_2.png", 679, 900)
 image princess 3 = im.Scale("princess_3.png", 679, 900)
+image princess 4 = im.Scale("aoib.png", 679, 900)
 # Himiko
 image himiko = im.Scale("himiko_def.png", 679, 900)
 image himiko 1= im.Scale("himiko_1.png", 679, 900)
 image himiko 2 = im.Scale("himiko_2.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
+image himiko 3 = im.Scale("himiko_3.png", 679, 900)
+# Durin
+image durin = im.Scale("durin.png", 1602, 900)
 # King Throin
-# image throin = im.Scale("throin_def.png", 679, 900)
+image throin = im.Scale("king throin.png", 1602, 900)
 # Minion
-# image minion = im.Scale("minion_def.png", 679, 900)
+image minion = im.Scale("minion.png", 1602, 900)
 # Dragon
 # image dragon = im.Scale("dragon_def.png", 679, 900)
 # Elf Guard
@@ -32,7 +37,7 @@ image himiko 3 = im.Scale("himiko_3.png", 679, 900)
 # Dwarf
 # image dwarf = im.Scale("dwarf_def.png", 679, 900)
 # Generl Ragnor
-# image ragnor = im.Scale("ragnor_def.png", 679, 900)
+image ragnor = im.Scale("General_Ragnor.png", 1920, 1080)
 
 #background
 image bg forest1 = "forest1.png"
@@ -586,7 +591,9 @@ label branch_4:
     with move
     n"As Akemi and princess aoi got closer one of the guards recognise princess Aoi."
     show princess at notspeaking
-    show durin at right
+    show durin:
+        xalign 2.0
+        yalign 1.0
     hide akemi
     with dissolve
     dwarfgrd"Princess Aoi is that you thank god your safe its been to long" 
@@ -633,7 +640,8 @@ label branch_4:
     n"As they approach the imposing gate of the royal castle, Akemi and Princess aoi was able to meet King Throin."
     show throin
     k"Welcome, it an honor to meet you once more and to meet your esteemed companion"
-    show throin at right, notspeaking
+    show throin at notspeaking:
+        xalign 2.0
     with move
     show princess at left, flip
     pra"It's an honor to meet you to king Throin allow me to introduce my companion, her name is Akemi she is the hero i summon"
@@ -671,74 +679,122 @@ label branch_4:
     hide throin
     show durin
     dwarfgrd" We are under attack!"
-    show akemi at offscreenleft, flip
-    show princess:
+    show akemi 5 at offscreenleft, flip
+    show princess 4:
         xalign -1.3
         yalign 1.0
         xzoom -1
     with None
     show durin at offscreenright, flip
-    show akemi:
+    show akemi 5:
         xalign 2.0
         yalign 1.0
-    show princess at offscreenright
+    show princess 4 at offscreenright
     with MoveTransition(1)
     n"One of the guards shouted, with resolved in their hearts Akemi and Princess Aoi rushed to defense of Ironforge their swords drawn and their magic ablaze."
     scene bg gatedwarf
-    show minion as minion1 at right
+    show minion as minion1:
+        xalign 2.0
+        yalign 1.0
     show minion as minion2:
-        xalign 0.8
-    show akemi at offscreenleft, flip
-    show princess at offscreenleft, flip
+        xalign 3.5
+        yalign 1.0
+    show akemi 5 at offscreenleft, flip
+    show princess 4 at offscreenleft, flip
     show durin at offscreenleft, flip
     with None
-    show akemi:
-        xalign 0.3
+    show akemi 5:
+        xalign 0.2
         yalign 1.0
-    show princess behind akemi:
-        xalign 0.15
+    show princess 4 behind akemi:
+        xalign 0.1
         yalign 1.0
     show durin behind akemi, princess:
-        xalign 0.0
+        xalign -2.0
         yalign 1.0
     with move
     n"Outside the castle walls, they were met with a horde of monstrous creatures, their eyes filled with malice and hunger for battle."
-    show akemi:
+    show akemi 5:
         xalign 0.15
         yalign 1.0
-    show princess behind akemi:
+    show princess 4 behind akemi:
         xalign 0.0
         yalign 1.0
     with move
     hide durin
+    with dissolve
+    pause(0.5)
     hide minion1
+    with dissolve
+    pause(0.5)
     hide minion2
     with dissolve
     n"As Akemi and Princess Aoi fought bravely against the onslaught, King Throin approached them with a grim expression." 
-    show throin at right with move
+    show throin at offscreenright:
+        yalign 1.0
+    with move
+    show throin:
+        xalign 2.0
+        yalign 1.0
+    with move
     
     k"Our enemies seek the gemstone needed to forge the new necklace."
     
     k"It lies deep within the mining caves, but the entrance is heavily guarded by General Ragnor's minions."
-    hide akemi
     scene bg dcave
-    show princess
+    show princess at offscreenleft, flip
+    pause(0.2)
+    show princess at right
+    with MoveTransition(1.5)
+    show akemi at offscreenleft
+    pause(0.2)
+    show akemi at left, flip
+    with move
+    pause(0.2)
+    show princess at unflip
     n"Princess Aoi's determination burned brighter than ever as she turned to Akemi, her eyes shining with resolve."
-    
+    show akemi at notspeaking
+    show princess 2 
     pra"We must retrieve the gemstone, no matter the cost." 
-    
+    show akemi at offscreenright, speaking
+    show princess at flip, offscreenright
+    with MoveTransition(0.8)
     n"  With the king's blessing and the support of the dwarven warriors, Akemi and Princess Aoi ventured into the mining caves, their hearts ablaze with courage and hope."
-    
+    show akemi at offscreenleft
+    show princess:
+        xalign -1.0
+        yalign 1.0
+        xzoom -1.0
+    with None
+    show akemi:
+        xalign 2.0
+        yalign 1.0
+        xzoom -1.0
+    show princess at offscreenright
+    with MoveTransition(1.5)
     n"Akemi and Princess Aoi set forth into the depths of the mining caves, their hearts set ablaze with the fires of courage and hope."
     hide princess
+    show akemi at left
+    with dissolve
     show akemi 2
     a"We have faced greater dangers before, Princess. Together, we can overcome any obstacle."
-    hide akemi
-    show princess 2
+    show akemi at notspeaking
+    with None
+    show princess 2 at right
+    with dissolve
     pra"You're right, Akemi. With the strength of our friendship and the bravery of the dwarves, we will prevail."
+    show akemi at offscreenright, speaking
+    show princess at flip, offscreenright
+    with MoveTransition(0.8)
     n"The resolve in their voices strengthened as they ventured deeper into the darkness"
+    show ragnor
+    with Dissolve(1)
     n"Suddenly, shadows shifted, revealing General Ragnor's minions ready to attack."
     g"Foolish mortals! You will go no further!"
+    show ragnor at notspeaking:
+        xalign 2.0
+        yalign 1.0
+    with move
     pra"Stand your ground, Akemi! We can do this!"
     hide princess
     show akemi 3

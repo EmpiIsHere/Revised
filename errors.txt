@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 717: end of line expected.
-    n"As Akemi and Princess Aoi fought bravely against the onslaught, King Throin approached them with a grim expression." show throin at right with move
-                                                                                                                           ^
+File "game/script.rpy", line 795: expected 'simple_expression' not found.
+    xalign
+          ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Mon May 27 20:17:21 2024
+Mon May 27 21:07:36 2024
