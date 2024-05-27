@@ -792,8 +792,19 @@ label branch_4:
     n"Suddenly, shadows shifted, revealing General Ragnor's minions ready to attack."
     g"Foolish mortals! You will go no further!"
     show ragnor at notspeaking:
-        xalign 2.0
+        xcenter 0.75
         yalign 1.0
+    with move
+    pause(0.2)
+    show princess 4 at offscreenleft, flip
+    with None
+    show princess 4 at left
+    with move
+    pause(0.5)
+    show akemi 5 at offscreenleft, flip
+    with None
+    show akemi 5:
+        xalign 0.1
     with move
     pra"Stand your ground, Akemi! We can do this!"
     hide princess
