@@ -20,19 +20,19 @@ image himiko 1= im.Scale("himiko_1.png", 679, 900)
 image himiko 2 = im.Scale("himiko_2.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
 # King Throin
-image throin = im.Scale("throin_def.png", 679, 900)
+# image throin = im.Scale("throin_def.png", 679, 900)
 # Minion
-image minion = im.Scale("minion_def.png", 679, 900)
+# image minion = im.Scale("minion_def.png", 679, 900)
 # Dragon
-image dragon = im.Scale("dragon_def.png", 679, 900)
+# image dragon = im.Scale("dragon_def.png", 679, 900)
 # Elf Guard
-image elfguard = im.Scale("elfguard_def.png", 679, 900)
+# image elfguard = im.Scale("elfguard_def.png", 679, 900)
 # Elder Elf
-image elderelf = im.Scale("elderelf_def.png", 679, 900)
+# image elderelf = im.Scale("elderelf_def.png", 679, 900)
 # Dwarf
-image dwarf = im.Scale("dwarf_def.png", 679, 900)
+# image dwarf = im.Scale("dwarf_def.png", 679, 900)
 # Generl Ragnor
-image ragnor = im.Scale("ragnor_def.png", 679, 900)
+# image ragnor = im.Scale("ragnor_def.png", 679, 900)
 
 #background
 image bg forest1 = "forest1.png"
@@ -609,7 +609,7 @@ label branch_4:
     show princess 2 at speaking, left, flip
     pra"We came hoping to meet King Throin and ask for the Necklace of Valor to help me and the hero toeat Himiko that invaded their Kingdome."
     show durin at speaking
-    show princess 2 at notspeaking
+    show princess at notspeaking
     n"Durin nods and promise to Princess Aoi"
     
     durin"Fear not, Princess Aoi. As your friend and ally, I shall see to it that you and your companion are granted an audience with King Throin. "
@@ -619,46 +619,52 @@ label branch_4:
     scene bg outsidek
     with fade
     n"With Durins guidance Akemi and Princess Aoi are escorted through the bustling street of ironforge."
-    hide princess
-    show akemi 2
+    show akemi 2 at flip, center
     a"Look at the busy street Aoi, there are a lot of markets and lot of weapons on display and a lot of beautiful jewelry and shining armor its really like a fantasy."
-    hide akemi
-    show princess 2
-    pra"Yes, there's a lot of people than the last time i visit here."
+    show akemi at left, notspeaking
+    with move
+    show princess 2 at right
     with dissolve
+    pra"Yes, there's a lot of people than the last time i visit here."
     scene bg throne2
+    with fade
     n"As they approach the imposing gate of the royal castle, Akemi and Princess aoi was able to meet King Throin."
-    
+    show throin
     k"Welcome, it an honor to meet you once more and to meet your esteemed companion"
-    show princess
+    show throin at right, notspeaking
+    with move
+    show princess at left, flip
     pra"It's an honor to meet you to king Throin allow me to introduce my companion, her name is Akemi she is the hero i summon"
     
     pra"It's a pleasure to meet you, King Throin."
-    
-    n"King Throin regarded Akemi with a solemn gaze, acknowledging the hero's presence with a hint of respect."
-    
-    k"Akemi, It's an honor to meet you."
+    show throin at speaking
     hide princess
-    show akemi
+    show akemi at left, flip
+    n"King Throin regarded Akemi with a solemn gaze, acknowledging the hero's presence with a hint of respect."
+    show throin
+    show akemi at notspeaking
+    k"Akemi, It's an honor to meet you."
+    show throin at notspeaking
+    show akemi at speaking
     a"It's also my honor King Throin"
+    show throin at speaking
     hide akemi
-    show princess
+    show princess at left, flip
     n"Princess Aoi continued her tone urgently."
-    
+    show throin at notspeaking
     pra"Your Majesty, we seek you aid in offering us the Neklace of valor. "
-    
+    show throin at speaking 
+    show princess at notspeaking
     k"I fear I must deliver grim tidings"
     
     n"The king tell them with a heavy sorrow."
     
     k"The Necklace of Valor was stolen and destroyed form us by one of Himiko men in the past few months by General Ragnor a cunnig and ruthless adversary."
-    hide princess
-    show princess 3
+    show princess 3 at speaking
     n"Princess Aoi heart sank at the news, but before she could despair King Throin spoke again, his tine resolute."
-    
+    show princess 3 at notspeaking
     k"However, There’s another way. We can forge a new necklace, one that is more powerful than its predecessor."
-    hide princess
-    show princess 2
+    show princess 2 at speaking
     n"A glimmer of hope sparked in Princess Aoi’s heart, but their joy was short-lived as the ground trembled, signaling impending danger."
     hide princess
     show akemi 3

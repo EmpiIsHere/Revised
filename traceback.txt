@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 582, in script
-    with middle
-  File "game/script.rpy", line 582, in <module>
-    with middle
-NameError: name 'middle' is not defined
+  File "game/script.rpy", line 23, in script
+    image throin = im.Scale(679, 900)
+  File "game/script.rpy", line 23, in <module>
+    image throin = im.Scale(679, 900)
+TypeError: __init__() missing 1 required positional argument: 'height'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 582, in script
-    with middle
-  File "C:\Users\admin\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1356, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "C:\Users\admin\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
+  File "game/script.rpy", line 23, in script
+    image throin = im.Scale(679, 900)
+  File "C:\Users\admin\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 922, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
   File "C:\Users\admin\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 582, in <module>
-    with middle
-NameError: name 'middle' is not defined
+  File "game/script.rpy", line 23, in <module>
+    image throin = im.Scale(679, 900)
+TypeError: __init__() missing 1 required positional argument: 'height'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Mon May 27 11:44:40 2024
+Mon May 27 12:34:17 2024
