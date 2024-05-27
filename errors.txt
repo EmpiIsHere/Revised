@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 795: expected 'simple_expression' not found.
-    xalign
+File "game/script.rpy", line 824: expected 'simple_expression' not found.
+    xalign: 2.0
           ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Mon May 27 21:07:36 2024
+Mon May 27 21:28:56 2024

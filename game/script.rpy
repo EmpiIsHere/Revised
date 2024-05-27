@@ -10,6 +10,7 @@ image akemi 2 = im.Scale("akemi_2.png", 679, 900)
 image akemi 3 = im.Scale("akemi_3.png", 679, 900)
 image akemi 4 = im.Scale("akemi_4.png", 679, 900)
 image akemi 5 = im.Scale("akemib.png", 679, 900)
+image akemi 6 = im.Scale("akemibs.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -28,6 +29,7 @@ image durin = im.Scale("durin.png", 1602, 900)
 image throin = im.Scale("king throin.png", 1602, 900)
 # Minion
 image minion = im.Scale("minion.png", 1602, 900)
+image minion1 = im.Scale("Villain_1.png", 1602, 900)
 # Dragon
 # image dragon = im.Scale("dragon_def.png", 679, 900)
 # Elf Guard
@@ -37,7 +39,7 @@ image minion = im.Scale("minion.png", 1602, 900)
 # Dwarf
 # image dwarf = im.Scale("dwarf_def.png", 679, 900)
 # Generl Ragnor
-image ragnor = im.Scale("General_Ragnor.png", 1920, 1080)
+image ragnor = "General_Ragnor.png"
 
 #background
 image bg forest1 = "forest1.png"
@@ -808,15 +810,32 @@ label branch_4:
     with move
     pra"Stand your ground, Akemi! We can do this!"
     hide princess
-    show akemi 3
+    with dissolve
+    show akemi 6
+    with None
     a"For the dwarves! For our people!"
-    hide akemi
-    with fade
 #fight DIALOG
     scene bg dcave
+    show minion
+    with fade
     min1"You won't leave here alive!"
-    show akemi
-    a"We'll see about that! *Clashes swords with Minion*"
+    show akemi 5 at offscreenleft, flip
+    with None
+    show minion:
+        xalign 2.0
+    with move
+    show akemi 5 at left
+    with move
+    show akemi 6
+    a"We'll see about that!"
+    show akemi 6 at left
+    show minion:
+        xalign 2.0
+    show akemi 6:
+        xalign 0.3
+    show minion:
+        xalign 1.7
+    a"*Clashes swords with Minion*"
     hide akemi
     show princess
     pra"Your reign of terror ends here!"
