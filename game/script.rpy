@@ -547,6 +547,7 @@ with dissolve
 #Necklace of Valor
 label branch_4:
     scene black
+    with dissolve
     n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf and the name of the kingdom is Ironforge."
     with dissolve
     scene bg fgdwarf
@@ -562,47 +563,61 @@ label branch_4:
     show princess 2 at speaking
     pra"Yes, and i also have a friend in the kingdom."
     show akemi at speaking
-    show princess at rightish behind akemi
-    with move
-    show princess at flip
-    show akemi at offscreenright
-    show princess at offscreenright
-    with move
+    hide princess at top
+    hide akemi at top
+    with dissolve
     n"Akemi and Princess Aoi got closer to the entrance of the the dwarf kingdom."
     with dissolve
     scene bg gatedwarf
-    show princess
+    show princess 2
     pra"Here we are the Ironforge Kingdom."
-    hide  princess
-    show akemi 2 at left
+    show  princess at right, notspeaking
+    with move
+    show akemi 2 at left,flip
     a"Wow look at the size of the wall and the gate is so huge."
+    show princess at offscreenleft, speaking
+    show akemi at offscreenleft
+    with dissolve
+    show akemi behind princess:
+        xalign -0.3
+    show princess at left, flip
+    with move
     n"As Akemi and princess aoi got closer one of the guards recognise princess Aoi."
-    dwarfgrd"Princess Aoi is that you thank god your safe its been to long"
-
-    n"Princess Aoi smiled with relief as she explained their quest to retrieve the Necklace of Valor and save her kingdom from Himiko's darkness."
+    show princess at notspeaking
+    show durin at right
     hide akemi
-    show princess 1 
+    with dissolve
+    dwarfgrd"Princess Aoi is that you thank god your safe its been to long" 
+    show durin at notspeaking
+    show princess 1 at speaking
+    n"Princess Aoi smiled with relief as she explained their quest to retrieve the Necklace of Valor and save her kingdom from Himiko's darkness."
     pra"It has been too long indeed Durin."
-    
+    show durin at speaking
+    show princess at notspeaking
     durin"What brings you here in Ironforge, Is she your companion."
-
+    show durin at notspeaking
+    show princess 2 at speaking
     pra"Yes she is and she is also my friend and the hero the is summoned."
     hide princess
-    show akemi 2 
+    show akemi 2 at left, flip
     a"Hello nice to meet you Durin."
-    hide akemi
+    show akemi at notspeaking
+    show durin at speaking
     durin"Nice to meet you too."
     hide akemi
-    show princess
+    show durin at notspeaking
+    show princess 2 at speaking, left, flip
     pra"We came hoping to meet King Throin and ask for the Necklace of Valor to help me and the hero toeat Himiko that invaded their Kingdome."
-    
+    show durin at speaking
+    show princess 2 at notspeaking
     n"Durin nods and promise to Princess Aoi"
     
     durin"Fear not, Princess Aoi. As your friend and ally, I shall see to it that you and your companion are granted an audience with King Throin. "
-    
+    show durin at notspeaking
+    show princess 2 at speaking
     pra"Thank you Durin."
-    with dissolve
     scene bg outsidek
+    with fade
     n"With Durins guidance Akemi and Princess Aoi are escorted through the bustling street of ironforge."
     hide princess
     show akemi 2
