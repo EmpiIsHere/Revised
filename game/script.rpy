@@ -186,9 +186,11 @@ label start:
     pra"Please help me on my quest toeat an evil magician that have been terrorizing my Kingdome and my father..."
     pra"please help me"
     hide princess
-    show akemi at speaking
+    show akemi at center, speaking
     n"Akemi have been to honest and always helping someone who needs her help even if she put her sefl in danger."
-    show akemi 3 at speaking
+    show akemi at left, speaking
+    with move
+    show akemi 3
     show princess at right, notspeaking
     a".....Okey I'll help you Princess Aoi"
     show akemi at notspeaking
@@ -213,7 +215,7 @@ label branch_2:
     scene bg forest1
     with None
     n"As Akemi and Princess Aoi have decided to start their adventure journey."
-    show princess 2 at left, flip
+    show princess 2
     pra"Thank you for helping me Akemi..."
     show princess -2 at right
     with move
@@ -551,7 +553,7 @@ label branch_4:
     n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf and the name of the kingdom is Ironforge."
     with dissolve
     scene bg fgdwarf
-    show princess 2 at left, flip
+    show princess 2
     pra"We need to travel to the Ironspine mountain and go to the Ironforge kingdom and meet their king his name is King Throin. "
     pra"We can easily  go inside the and meet King Throin because my father and King Throin are friends."
     show akemi 2 at left, flip
@@ -626,7 +628,7 @@ label branch_4:
     show princess 2 at right
     with dissolve
     pra"Yes, there's a lot of people than the last time i visit here."
-    scene bg throne2
+    scene bg throne1
     with fade
     n"As they approach the imposing gate of the royal castle, Akemi and Princess aoi was able to meet King Throin."
     show throin
@@ -639,7 +641,7 @@ label branch_4:
     pra"It's a pleasure to meet you, King Throin."
     show throin at speaking
     hide princess
-    show akemi at left, flip
+    show akemi at notspeaking, left, flip
     n"King Throin regarded Akemi with a solemn gaze, acknowledging the hero's presence with a hint of respect."
     show throin
     show akemi at notspeaking
@@ -647,11 +649,10 @@ label branch_4:
     show throin at notspeaking
     show akemi at speaking
     a"It's also my honor King Throin"
-    show throin at speaking
+    show throin at notspeaking
     hide akemi
     show princess at left, flip
     n"Princess Aoi continued her tone urgently."
-    show throin at notspeaking
     pra"Your Majesty, we seek you aid in offering us the Neklace of valor. "
     show throin at speaking 
     show princess at notspeaking
@@ -667,14 +668,54 @@ label branch_4:
     show princess 2 at speaking
     n"A glimmer of hope sparked in Princess Aoi’s heart, but their joy was short-lived as the ground trembled, signaling impending danger."
     hide princess
-    show akemi 3
+    hide throin
+    show durin
     dwarfgrd" We are under attack!"
-    
-    n"One of the guards shouted, with resolved in their hearts Akemi and Princess Aoi rushed toense of Ironforge their swords drawn and their magic ablaze."
-    
+    show akemi at offscreenleft, flip
+    show princess:
+        xalign -1.3
+        yalign 1.0
+        xzoom -1
+    with None
+    show durin at offscreenright, flip
+    show akemi:
+        xalign 2.0
+        yalign 1.0
+    show princess at offscreenright
+    with MoveTransition(1)
+    n"One of the guards shouted, with resolved in their hearts Akemi and Princess Aoi rushed to defense of Ironforge their swords drawn and their magic ablaze."
+    scene bg gatedwarf
+    show minion as minion1 at right
+    show minion as minion2:
+        xalign 0.8
+    show akemi at offscreenleft, flip
+    show princess at offscreenleft, flip
+    show durin at offscreenleft, flip
+    with None
+    show akemi:
+        xalign 0.3
+        yalign 1.0
+    show princess behind akemi:
+        xalign 0.15
+        yalign 1.0
+    show durin behind akemi, princess:
+        xalign 0.0
+        yalign 1.0
+    with move
     n"Outside the castle walls, they were met with a horde of monstrous creatures, their eyes filled with malice and hunger for battle."
-    
-    n"As Akemi and Princess Aoi fought bravely against the onslaught, King Throin approached them with a grim expression."
+    show akemi:
+        xalign 0.15
+        yalign 1.0
+    show princess behind akemi:
+        xalign 0.0
+        yalign 1.0
+    with move
+    hide durin
+    hide minion1
+    hide minion2
+    with dissolve
+    n"As Akemi and Princess Aoi fought bravely against the onslaught, King Throin approached them with a grim expression." 
+    show throin at right with move
     
     k"Our enemies seek the gemstone needed to forge the new necklace."
     

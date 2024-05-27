@@ -1,26 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 23, in script
-    image throin = im.Scale(679, 900)
-  File "game/script.rpy", line 23, in <module>
-    image throin = im.Scale(679, 900)
-TypeError: __init__() missing 1 required positional argument: 'height'
+  File "game/script.rpy", line 681, in script
+    with Move(5)
+TypeError: Move() missing 2 required positional arguments: 'endpos' and 'time'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 23, in script
-    image throin = im.Scale(679, 900)
-  File "C:\Users\admin\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 922, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\admin\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 23, in <module>
-    image throin = im.Scale(679, 900)
-TypeError: __init__() missing 1 required positional argument: 'height'
+  File "game/script.rpy", line 681, in script
+    with Move(5)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1363, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\exports.py", line 1781, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 1548, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 2608, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 2518, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+TypeError: Move() missing 2 required positional arguments: 'endpos' and 'time'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Mon May 27 12:34:17 2024
+Mon May 27 20:00:28 2024

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 582: end of line expected.
-    with move, dissolve
-             ^
+File "game/script.rpy", line 717: end of line expected.
+    n"As Akemi and Princess Aoi fought bravely against the onslaught, King Throin approached them with a grim expression." show throin at right with move
+                                                                                                                           ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Mon May 27 11:48:25 2024
+Mon May 27 20:17:21 2024
