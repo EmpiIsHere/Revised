@@ -11,7 +11,8 @@ image akemi 3 = im.Scale("akemi_3.png", 679, 900)
 image akemi 4 = im.Scale("akemi_4.png", 679, 900)
 image akemi 5 = im.Scale("akemib.png", 679, 900)
 image akemi 6 = im.Scale("akemibs.png", 679, 900)
-image akemi 7 = im.Scale("akemi5.png", 679, 900)
+image akemi 7 = im.Scale("akemi_5.png", 679, 900)
+image akemi 8 = im.Scale("akemi_HURT.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -88,6 +89,13 @@ init:
 init:
     transform rightish:
         xalign +0.2
+init:
+    transform shaking:
+        linear 0.1 xoffset -2 yoffset 2 
+        linear 0.1 xoffset 3 yoffset -3 
+        linear 0.1 xoffset 2 yoffset -2
+        linear 0.1 xoffset -3 yoffset 3
+        linear 0.1 xoffset 0 yoffset 0
 
 #asset
 image bg ring = "ring_final.png"
@@ -181,18 +189,17 @@ label start:
     "Mysterious" "Thanked God, you’re alright.... My name is Aoi, I am the daughter of King Charles and from the kingdom of Azurevale" 
     show princess 2
     pra"May i ask your name Hero"
-    show akemi 3 at speaking
-    show princess at notspeaking
-    pra"May I ask your name, Hero?" 
-    show akemi 3 at speaking
+    show akemi 2 at speaking
     show princess at notspeaking
     a"Hi, my name is Akemi.... Where am I?" 
     show akemi at notspeaking
     show princess 2 at speaking
-    pra"Hero Akemi then... you are in the ruins forest; this place is used to summon a hero from another world" 
+    pra"Hero Akemi then... you are in the ruins forest"
+    pra"This place is used to summon a hero from another world" 
     show akemi 3 at speaking
     show princess at notspeaking
-    a"Huh? I am not a hero; I am just a regular student." 
+    a"Huh? I am not a hero"
+    a"I am just a regular student." 
     show akemi at notspeaking
     show princess 2 at speaking
     n"As Akemi seems confused, Princess Aoi tries to explain everything as she gradually understands the situation and Akemi asks another question." 
@@ -200,29 +207,28 @@ label start:
     show princess at notspeaking
     a"I see, so that's what happened.... then why did you summon me here?" 
     show akemi at notspeaking
-    show princess 2 at speaking
+    show princess 3 at speaking
     pra"Please help me on my quest to defeat an evil magician that has been terrorizing my kingdom and my father..." 
 
     pra"Please help me..." 
     hide princess
     show akemi at center, speaking
     n"Akemi has been too honest and always helping someone who needs her help even if she puts herself in danger." 
-
+    show akemi 2
     a"...Okay, I'll help you Princess Aoi" 
-    show akemi at left, speaking
+    show akemi at left, notspeaking
     with move
-    show akemi 3
-    show princess at right, notspeaking
+    show princess 2 at right, speaking
     pra"Really? Thank you so much, hero Akemi." 
     show akemi 3 at speaking
     show princess at notspeaking
     a"It's fine.... and please stop calling me Hero Akemi. It's kind of embarrassing." 
-    
+    show akemi 2
     a"Just call me Akemi... " 
     show akemi at notspeaking
-    show princess 3 at speaking
+    show princess 2 at speaking
     pra"Okay.... Then you can call me Aoi, it’s so nice to meet you!" 
-    show akemi 3 at speaking
+    show akemi 2 at speaking
     show princess at notspeaking
     a"Yeah, nice to meet you too." 
     hide akemi
@@ -313,12 +319,12 @@ label branch_3:
     hide princess
     with dissolve
     n "As they entered the elf village, Akemi was amazed at the scenery of the elf village, especially with the giant tree in the center."
-    show akemi 3 at left, flip
+    show akemi 2 at left, flip
     a "Wow! Look at that tree, it looks bigger than the biggest building in my hometown."
     show akemi at notspeaking
     show princess 2 at right
     pra"Really? It was said that the tree has been here for thousands of years, and my father told me that it became the guardian of this forest."
-    show akemi 3 at speaking
+    show akemi 2 at speaking
     show princess at notspeaking
     a "Amazing!"
     hide akemi
@@ -343,7 +349,7 @@ label branch_3:
     show elder at notspeaking
     pra"Thank you for your concern. Please allow me to introduce you to Akemi, the hero I brought to this world to defeat Himiko."
     hide princess
-    show akemi 3 at left, flip
+    show akemi 2 at left, flip
     a "Hello, it's so nice to meet you."
     show akemi at notspeaking
     show elder at speaking
@@ -370,7 +376,7 @@ label branch_3:
     with None
     show akemi at left, flip
     n "They both looked at Akemi waiting for her response."
-    show akemi 3 at speaking
+    show akemi 2 at speaking
     show princess at notspeaking
     show elder at notspeaking
     a "Yes, because I made a promise to Princess Aoi to help her."
@@ -383,7 +389,7 @@ label branch_3:
     elder "It is west from here, but recently there's a giant snake wandering, and we tried everything we could, but the monster can heal itself easily."
 
     elder "Princess Aoi, please be careful and look for each other and one more thing always go the center part of the forest because the monster won't go near that location of the sword." 
-    show akemi 3 at speaking
+    show akemi 2 at speaking
     show elder at notspeaking
     a "Yes."
     hide akemi
@@ -405,59 +411,94 @@ label branch_3:
     with dissolve
     play music"cbattle.mp3" loop
     show akemi at offscreenleft, flip
-    show princess behind akemi at offscreenleft
+    show princess behind akemi at offscreenleft, flip
     with None
     show akemi at left
-    show princess at flip:
+    show princess:
         xalign -0.2 yalign 1.0
     with move
     show snake at offscreenright
     with None
     show snake:
-        xcenter 0.75 yalign 1.0
+        xcenter 0.75 ycenter 0.52
     with move
     n "As Akemi and Princess Aoi got closer to their destination, suddenly an angry giant snake attacked them..." 
     show akemi at notspeaking
     show princess at notspeaking
     s "(sssSSsss)"
     show snake at notspeaking
-    show akemi 3 at sppeaking
+    show akemi 7 at speaking
     a "Ahh!"
-
+    show akemi 7 at notspeaking
+    show princess 2 at speaking
     pra"Ahh!"
-
+    show akemi 3 at speaking
+    show princess at notspeaking
     a "Are you okay, Aoi?!"
-
+    show snake at offscreenright
+    show princess at right
+    with move
+    show princess 2 at unflip
+    show princess 2 at speaking
+    show akemi at notspeaking
     pra"Yes, I am fine."
-
-    s "(sssSSHAAaa)"
-
+    hide princess
+    with dissolve
+    show princess behind akemi:
+        xalign -0.2 yalign 1.0
+        xzoom -1.0
+        alpha 0.63
+    with dissolve
+    show snake at speaking
+    show snake:
+        xcenter 0.75 ycenter 0.52
+    with move
+    s "(sssSHAAaa)"
+    show akemi at speaking
+    show princess at speaking
+    show akemi:
+        linear 0.3 xalign -0.2 yalign 1.0
+        "akemi 7"
+        linear 0.2 xalign 0.0 yalign 1.0
+    show princess:
+        linear 0.2 xalign -0.75 yalign 1.0
     n "As they dodged from the attack of the giant snake, Akemi suddenly stumbled by a tree."
 
     a "Ahh!"
 
     n "Then the snake suddenly releases a purple smoke and let it out to Akemi"
-
+    show akemi 8 at notspeaking
     s "(sssSSsss)"
-
+    show akemi 8 at speaking
+    show snake at speaking
     n "Akemi suddenly felt dizzy and weak with the smoke and the giant snake saw Akemi lie down on the ground"
 
     n "The giant snake tries to attack again as Akemi looked weak"
-
+    show akemi 8 at notspeaking
     s "(sssSSHAAaa)"
-
+    show princess 2:
+        xalign -0.2 yalign 1.0
     pra"Akemi, Look out!!"
-
+    show akemi 8 at offscreenleft
+    with move
+    show princess at left
+    with move
     n "As Princess Aoi saw Akemi can't move, she used her magic and attack the snake with fire"
-    play audio "mstrike.mp3" loop
+    play audio "mstrike.mp3"
     pra"Fireball!"
-    play aoudio "fireact.mp3" loop
+    play audio "fireact.mp3"
+    show snake at shaking
     n "As the giant snake got fired, it got distracted and Princess Aoi used the chance to see and help Akemi"
-    
+    show princess at notspeaking
     s "(sssSSsss)"
-
+    show princess at speaking
+    show snake at offscreenright
+    show princess at right
+    with move
+    show princess 2 at unflip
     pra"Are you alright, Akemi?"
-
+    show akemi 8  at left, speaking
+    with move
     a "Yeah, I am fine... I just feel a little dizzy."
 
     pra"Let's retreat for now."
