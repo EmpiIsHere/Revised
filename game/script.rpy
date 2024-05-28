@@ -11,6 +11,7 @@ image akemi 3 = im.Scale("akemi_3.png", 679, 900)
 image akemi 4 = im.Scale("akemi_4.png", 679, 900)
 image akemi 5 = im.Scale("akemib.png", 679, 900)
 image akemi 6 = im.Scale("akemibs.png", 679, 900)
+image akemi 7 = im.Scale("akemi5.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -416,9 +417,11 @@ label branch_3:
         xcenter 0.75 yalign 1.0
     with move
     n "As Akemi and Princess Aoi got closer to their destination, suddenly an angry giant snake attacked them..." 
-    
+    show akemi at notspeaking
+    show princess at notspeaking
     s "(sssSSsss)"
-
+    show snake at notspeaking
+    show akemi 3 at sppeaking
     a "Ahh!"
 
     pra"Ahh!"
