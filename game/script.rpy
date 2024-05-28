@@ -19,6 +19,8 @@ image princess 1= im.Scale("princess_1.png", 679, 900)
 image princess 2 = im.Scale("princess_2.png", 679, 900)
 image princess 3 = im.Scale("princess_3.png", 679, 900)
 image princess 4 = im.Scale("aoib.png", 679, 900)
+image princess 5 = im.Scale("aoibs.png", 679, 900)
+image princess 6 = im.Scale("princess_3s.png", 679, 900)
 # Himiko
 image himiko = im.Scale("himiko_def.png", 679, 900)
 image himiko 1= im.Scale("himiko_1.png", 679, 900)
