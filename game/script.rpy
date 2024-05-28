@@ -1906,9 +1906,13 @@ label option_1:
         pause(0.3)
         linear 0.15 xalign 1.0
     h"That’s a brilliant idea princess! *Binds the princess*"
-
+    show himiko 1
     h"You may have the legendary equipment (looks at Akemi) but the princess doesn’t have anything!"
+    show akemi 4 at speaking
+    show himiko 2
     n"Akemi surprised of what happened angerly tried to attack Himiko but was swiftly blocked by Himiko’s demons."
+    show himiko 1
+    show akemi 4 at notspeaking
     h"What will you do now that you lost your partner? Are you really going to fight me and my army all on your own?"
     show akemi 3 at left, flip
     a"What should I do? Why is she here? Can I even defeat her with her army?"
