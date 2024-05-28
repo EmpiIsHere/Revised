@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1923, in script
-    show himiko 5
-Exception: Image 'himiko' does not accept attributes '5'.
+  File "game/script.rpy", line 2140, in script
+    show himiko 15 at notspeaking
+Exception: Image 'himiko' does not accept attributes '15'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1923, in script
-    show himiko 5
+  File "game/script.rpy", line 2140, in script
+    show himiko 15 at notspeaking
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1076, in show_imspec
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'himiko' does not accept attributes '5'.
+Exception: Image 'himiko' does not accept attributes '15'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Tue May 28 23:13:43 2024
+Wed May 29 00:42:24 2024

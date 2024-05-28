@@ -19,6 +19,8 @@ image akemi 11 = im.Scale("akemi_defws.png", 679, 900)
 image akemi 12 = im.Scale("akemi_2ws.png", 679, 900)
 image akemi 13 = im.Scale("akemi_4ws.png", 679, 900)
 image akemi 14 = im.Scale("akemi_5ws.png", 679, 900)
+image akemi 15 = im.Scale("akemibh.png", 679, 900)
+image akemi 16 = im.Scale("akemibsh.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -57,6 +59,8 @@ image minion1 = im.Scale("Villain_1.png", 1602, 900)
 # image dwarf = im.Scale("dwarf_def.png", 679, 900)
 # Generl Ragnor
 image ragnor = "General_Ragnor.png"
+# King Charles
+image charles = "King_Charles.png"
 #Necklace
 image necklace ="Necklace.png"
 
@@ -2076,43 +2080,71 @@ label option_2:
 label himiko_fight:
     scene bg throne2
     with fade
-    show akemi 3 at left, flip
+    show akemi 14 at left, flip
     a"What just happened? Where are we?"
-    show himiko 2 at right
+    show akemi 13 at notspeaking
+    show himiko 4 at right
     h"We are in the Throne Room of the castle where you will rest as the King watches you suffer."
-
-    a"(Looks towards the throne and saw the king) What have you done to the king?"
-
-    h"Nothing really, He was very reluctant to give me his Kingdom, so I made sure he wouldn’t change his mind."
-
-    a"By chaining him to the throne? This is torture!"
-
-    h"That’s what he wanted its not like I killed him or something he is still alive"
-
-    n"As the king holds on to his life, so does the castle where the pillars and walls that became the foundation of the castle where now damaged and barely able to support the ceiling."
-
+    show akemi 5 at speaking
+    show himiko 4 at notspeaking
+    a"(Looks towards the throne and saw the king)"
+    show charles:
+        xcenter 0.75
+        yalign 1.0
+    show akemi 5 at speaking
+    hide himiko
+    c"..."
+    hide akemi
+    show charles:
+        xcenter 0.5 yalign 1.0
+    with move
+    n"As the king stays silent, so does the castle where all of the guards and royalty are now gone and what was left was their echoes."
+    hide charles
+    show akemi 5 at flip, center
+    with fade
     n"This will be Akemi’s final battle!"
-
+    show akemi 5 at center
+    show himiko 2 at offscreenright
+    with None
+    show akemi 5 at left
+    show himiko 2 at right
+    with move
+    show akemi 5 at flip
+    show akemi 5 at notspeaking
+    show himiko 4
     h"Shall we commence this duel once and for all?"
-
+    show akemi 6 at speaking
+    show himiko 2 at notspeaking
     a "Im ready!"
-
+    show akemi 5
+    show himiko 2 at speaking
+    pause(0.5)
+    scene black
+    with fade
     n"As Akemi was preparing and taking a stance. Himiko immediately launched an attack towards Akemi hitting her on her left side while a cloud of dust covered."
-
+    show himiko 1
     h"Is it already over? And here I thought I would be able to torture her some…"
-
+    scene bg throne2
+    show akemi 15 at flip, left
+    with Dissolve(1.0)
     n"As the dust settled, Himiko saw Akemi still standing."
-
+    show himiko 4 at right
     h"So, you were able to be survive..."
-
+    show himiko 3
     n"Himiko paused as she noticed that Akemi only received a scratch."
-
+    show himiko 5
     h"That attack only scratched you? Just how powerful are these items!"
-
+    show akemi 16
+    show himiko 3 at notspeaking
     a"That didn’t really hurt too much! So, this must be the power of the ring and with this I have a chance to defeat you!"
-
+    show akemi 15 at notspeaking
+    show akemi 15 at flip
+    show himiko 5 at speaking
     h"How powerful can these legendary items be? To think that attack will only leave a scratch!"
-
+    show akemi 15:
+        alpha 1
+        linear 0.2 xalign 0.6
+    show himiko 3 behind akemi at speaking
     n"Akemi with her newfound confidence charged at Himiko preparing an attack."
 
     h"That attack is nothing (waves hand to try deflecting the attack) A magician defense must not be… (spell slowly breaks and forced Himeko to retreat) These items’ power holds is impressive if I don’t get serious, I may lose this battle."
