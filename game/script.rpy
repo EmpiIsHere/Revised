@@ -1533,11 +1533,11 @@ label branch_4:
 label branch_5:
     scene black
     n"Akemi and Princess Aoi continue and prepare their journey and Princess Aoi turned to Akemi with a determined look in her eyes."
-    with fade
     scene bg deepforest
     show princess
-    pra"Akemi, there is one final item we need to retrieve toeat Himiko once and for all."
-    n"she explained, her voice filled with resolve"
+    with fade
+    pra"Akemi, there is one final item we need to retrieve to eat Himiko once and for all."
+    n"She explained, her voice filled with resolve"
     pra"The Crimson Radiance Ring, said to protect its wearer from even the most powerful of attacks. However, it is in the realm of one of the Heavenly Dragons, guarded for millennia, awaiting the true and worthy hero to retrieve it."
     hide princess
     show akemi 2
