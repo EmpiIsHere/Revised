@@ -1,48 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/script.rpy:743
-  File "game/script.rpy", line 740, in script
-    show princess 4 behind akemi:
-  File "game/script.rpy", line 743, in <module>
-    linear 1 xalign 0.- yalign 1.0
-NameError: name 'yalign' is not defined
+While running game code:
+  File "game/script.rpy", line 1447, in script
+    show akemi at offscreenleftleft, flip
+  File "game/script.rpy", line 1447, in <module>
+    show akemi at offscreenleftleft, flip
+NameError: name 'offscreenleftleft' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 740, in script
-    show princess 4 behind akemi:
+  File "game/script.rpy", line 1447, in script
+    show akemi at offscreenleftleft, flip
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1076, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\exports.py", line 765, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\scenelists.py", line 474, in add
-    thing.visit_all(lambda d : None)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\displayable.py", line 421, in visit_all
-    for d in self.visit():
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\atl.py", line 764, in visit
-    block = self.compile()
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\atl.py", line 671, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\atl.py", line 873, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\atl.py", line 873, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\atl.py", line 1214, in compile
-    value = ctx.eval(expr)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\atl.py", line 392, in eval
-    return renpy.python.py_eval(expr, locals=self.context)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 743, in <module>
-    linear 1 xalign 0.- yalign 1.0
-NameError: name 'yalign' is not defined
+  File "game/script.rpy", line 1447, in <module>
+    show akemi at offscreenleftleft, flip
+NameError: name 'offscreenleftleft' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Tue May 28 19:28:53 2024
+Tue May 28 21:35:17 2024

@@ -15,6 +15,8 @@ image akemi 7 = im.Scale("akemi_5.png", 679, 900)
 image akemi 8 = im.Scale("akemi_HURT.png", 679, 900)
 image akemi 9 = im.Scale("akemi_HURTS.png", 679, 900)
 image akemi 10 = im.Scale("akemi_3N.png", 679, 900)
+image akemi 11 = im.Scale("akemi_defws.png", 679, 900)
+image akemi 12 = im.Scale("akemi_2ws.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -755,99 +757,226 @@ label branch_3:
     show akemi 2 at speaking
     show princess at notspeaking
     a "Yeah okay, let’s do this."
-    
+    hide princess
+    with dissolve
+    show akemi:
+        linear 0.5 xalign 0.8
     n "As Akemi approaches to the sword, she can already feel the power and wonders if this is the reason why the monster can’t go near it,"
-
+    show akemi 7
     n "As Akemi holds the sword, she felt warm feelings all over her body."
-
+    show akemi 3
     a "Here’s go nothing on trying."
-
+    show akemi:
+        pause(0.2)
+        "akemi 4"
+        linear 0.3 xalign 1.0
+    pause(0.6)
+    scene bg sword
+    show akemi 4 at right
+    with dissolve
     n "As soon as Akemi tried to pull the sword, she felt it was too light."
-
+    show akemi 7
     a "Yes! Look Aoi, I did it! I pulled the sword."
-
+    show akemi
+    show princess at offscreenleft, flip
+    with None
+    show princess 1 at left
+    with move
     n "Princess Aoi looked at Akemi and smiled."
-
+    show princess 2
+    show akemi at notspeaking
     pra"Yes, you did it!"
-
+    show princess at notspeaking
+    show akemi 2 at speaking
     a "Let's rest here for a while, are you still tired?"
-
+    show princess 2 at speaking
+    show akemi at notspeaking
     pra"Yes, thank you for asking."
-
+    scene black
+    with Dissolve(1.0)
     n "Akemi and Princess Aoi finally rested for a bit. They are now trying to go back to the elf village once again."
-
+    scene bg deepforest
+    with dissolve
+    show akemi 12:
+        xzoom -1
+        xalign -0.5 yalign 1.0
+        linear 1.0 xalign 0.0 yalign 1.0
     a "Finally, we got the Blade of Ethereal Fang. We’re close in saving your Kingdom, Aoi."
-
+    show akemi 11:
+        xalign 0.0 yalign 1.0
+        linear 1.0 xalign 1.0 yalign 1.0
+        xzoom 1
+    show princess 2:
+        xzoom -1
+        xalign -0.5 yalign 1.0
+        linear 1.0 xalign 0.0 yalign 1.0
+    
     pra"Yes."
 
     stop music
     #SNAKE
+    show akemi 11:
+        xalign 1.0 yalign 1.0
+        linear 0.7 xalign 0.4 yalign 1.0
+        alpha 0.63
+    show princess 2:
+        alpha 0.63
+    show snake:
+        xcenter 2.0 ycenter 0.52
+        linear 1.0 xcenter 1.0 ycenter 0.52
     play music "cbattle.mp3" loop
-
     s "(sssSSsss)"
-
+    show akemi 11:
+        alpha 1.0
+        xalign 0.4 yalign 1.0
+        linear 0.5 xalign 0.0 yalign 1.0
+        xzoom -1
+        "akemi 5"
+    show princess 2 behind akemi:
+        linear 0.5 xalign -0.2 yalign 1.0
+        alpha 1.0
+        "princess 4"
+    show snake:
+        xcenter 1.0 ycenter 0.52
+        linear 0.5 xcenter 0.75 ycenter 0.52
     n "Akemi and Princess Aoi chatting, the snake appears again on their way."
-
+    show akemi 6
+    show princess 4 at notspeaking, offscreenleft
+    show snake at notspeaking
+    with move
     a "Aoi, be careful. Let's defeat this giant snake for real this time."
-
+    show princess 5 at speaking, left
+    hide akemi
     pra"Right!"
-
+    show akemi 6 at offscreenleft, flip
+    with None
+    show akemi 5 at left
+    show snake at speaking, offscreenright
+    show princess 4 at right
+    with move
+    show princess 4 at unflip
     n "Akemi proposes a plan on how to fight the giant snake…"
-
+    show akemi 6
+    show princess 4 at notspeaking
     a "Use your magic and support me as I will draw its attention. Try to use fire magic only."
-
+    show akemi 5 at notspeaking
+    show princess 5 at speaking
     pra"Okay"
-
+    show akemi 5:
+        alpha 1
+    show princess 4 behind akemi:
+        linear 0.8 xalign -0.7 yalign 1.0
+        xzoom -1
+    show snake:
+        alpha 1
+        xcenter 2.0 ycenter 0.52
+        linear 1.0 xcenter 0.75 ycenter 0.52
     s "(sssSSsss)"
-
+    show akemi 5:
+        linear 0.5 xoffset -200
+        linear 0.5 xoffset 100
+        linear 0.5 xoffset -250
+        linear 0.5 xoffset 0 yoffset 0
+        repeat
     n "Akemi draws the attention of the snake and Princess Aoi used fire magic to make the giant snake more confused."
-
     n "Because of this, the giant snake tries to use the purple smoke and Princess Aoi used her support magic for Akemi resists to be poised just a short of time"
-    play audio "fattack.mp3" loop
+    play sound "fattack.mp3"
+    hide akemi
+    show princess 5 at left
     pra"Now is your chance, Akemi."
-
+    hide princess
+    show akemi 6 at flip:
+        xalign 0.0 yalign 1.0
+        linear 0.2 xalign 0.25 yalign 0.5
+        linear 0.2 xalign 0.5 yalign 1.0
+        linear 0.2 xalign 0.0 yalign 1.0
     a "Right, HYAAAA!"
-
+    show akemi 5:
+        alpha 0.63
+        xzoom -1
     s "(sssSSHAAaa)"
-
-    n "Akemi jumps high and goes directly to attack the head of the snake. As she swings her sword to the head, it lands on the giant snake's head."
-
-    a "Wow, this sword cut it like paper... we did it Aoi!"
-    stop audio
-    pra"Yeah... that was amazing Akemi!"
-
-    a "Let's go back to the elf village now."
-
-    pra"Yeah."
+    show akemi 5 at speaking
+    hide snake
+    with Dissolve(1.0)
+    stop sound
     stop music
     play music "forest2.mp3" loop
-
+    n "Akemi jumps high and goes directly to attack the head of the snake. As she swings her sword to the head, it lands on the giant snake's head."
+    show akemi 12 at speaking
+    a "Wow, this sword cut it like paper... we did it Aoi!"
+    show akemi 11 at notspeaking
+    show princess 2 at right
+    pra"Yeah... that was amazing Akemi!"
+    show akemi 12 at speaking
+    show princess at notspeaking
+    a "Let's go back to the elf village now."
+    show akemi 11 at notspeaking
+    show princess 2 at speaking
+    pra"Yeah."
+    scene bg dayelf
+    with dissolve
+    show akemi 11:
+        xzoom -1
+        xalign -0.5 yalign 1.0
+        linear 1.0 xalign 0.2 yalign 1.0
+    show princess behind akemi:
+        xzoom -1
+        xalign -0.7 yalign 1.0
+        linear 1.0 xalign 0.0 yalign 1.0
     n "Akemi and Princess Aoi got in front of the elf village. The elves were surprised to see that Akemi is holding the Blade of Ethereal Fang"
-
+    show elder:
+        xalign 2.0 yalign 1.0
+    with dissolve
     elder "I am so glad that you are safe Princess Aoi and Akemi."
-
+    hide akemi
+    with dissolve
+    show princess 2
+    show elder at notspeaking
     pra"Thank you."
 
-    n "Akemi and Princess Aoi explained what happened, they are relieved and surprised because they were able to slay the giant snake."
-
+    n "Princess Aoi explained what happened, they are relieved and surprised because they were able to slay the giant snake."
+    show princess at notspeaking
+    show elder at speaking
     elder "I have been trying to find out for a long time how did that snake appeared out of nowhere and how it releases purple smoke."
-
+    show princess 6 at speaking
+    show elder at notspeaking
     pra"Himiko must be the one behind it. She must be trying to stop someone who will search for the sword."
-
+    show princess at notspeaking
+    show elder at speaking
     elder "It must be.... but the sword can’t be pulled by a normal person, Akemi."
-
+    hide princess
+    show akemi 3 at left, flip
+    show elder at notspeaking
     a "Yes."
-
+    show akemi at notspeaking
+    show elder at speaking
     elder "The sword chooses you to be its user. Please use it only for good."
-
+    show akemi 2 at speaking
+    show elder at notspeaking
     a "I will."
-
+    show akemi at notspeaking
+    show elder at speaking
     elder "I assumed that the two of you will continue your journey, we will all pray for your success and safety, good luck Akemi and Princess Aoi."
-
+    show akemi 2 at speaking
+    show elder at notspeaking
     a "Thank you!"
-
+    hide akemi
+    show princess 2 at left, flip
     pra"Thank you!"
-
+    show elder at speaking
+    show akemi behind princess:
+        xzoom -1
+        xalign -0.2 yalign 1.0
+    with dissolve
+    pause(0.5)
+    show princess behind akemi:
+        xzoom 1
+        xalign 0.0 yalign 1.0
+        linear 1.0 xalign -0.8 yalign 1.0
+    show akemi:
+        xzoom 1
+        xalign -0.2 yalign 1.0
+        linear 1.0 xalign -1.0 yalign 1.0
     n "Akemi and Princess Aoi say goodbye to the elf village as they take off on their next journey."
     if menu_flag == False:
         jump branch_5
@@ -859,13 +988,13 @@ with dissolve
 #Necklace of Valor
 label branch_4:
     stop music
-    play music "Arrraivesound.mp3" loop 
+    # play music "Arrraivesound.mp3" loop 
     scene black
     with dissolve
     n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf kingdom which is from the Ironforge mountain."
-    with dissolve
     scene bg fgdwarf
     show princess 2
+    with dissolve
     pra"We need to travel to the Ironforge mountain then go to their kingdom to meet their King Throin."
     pra"We can easily go inside and meet King Throin because he and my father are friends."
     show akemi 2 at left, flip
@@ -877,13 +1006,12 @@ label branch_4:
     show princess 2 at speaking
     pra"Yes, and I also have a friend in the kingdom."
     show akemi at speaking
-    hide princess at top
-    hide akemi at top
     with dissolve
     n"Akemi and Princess Aoi got closer to the entrance of the the dwarf kingdom."
     with dissolve
     scene bg gatedwarf
     show princess 2
+    with fade
     pra"Here we are, at the Ironforge Kingdom."
     show  princess at right, notspeaking
     with move
@@ -1130,9 +1258,8 @@ label branch_4:
     with None
     a"For the dwarves! For our people!"
 #fight DIALOG
-    play music "bgground.mp3" fadein 0.5 fadeout 0.5 loop 
+    # play music "bgground.mp3" fadein 0.5 fadeout 0.5 loop 
     scene bg dcave
-    play audio "swordfight.mp3" loop
     show minion
     with fade
     min1"You won't leave here alive!"
@@ -1145,6 +1272,7 @@ label branch_4:
     with move
     show akemi 6
     a"We'll see about that!"
+    play audio "swordfight.mp3"
     show akemi 6 at left
     show minion:
         xalign 2.0 yalign 1.0
@@ -1170,6 +1298,7 @@ label branch_4:
     min2"*Charging at Aoi* You'll regret those words!"
     hide princess
     hide minion1
+    play audio "<from 0.0 to 1>swordfight.mp3"
     show minion:
         xalign 2.0 yalign 1.0
         linear 0.2 xalign 1.7 yalign 1.0
@@ -1189,6 +1318,8 @@ label branch_4:
         pause(0.5)
         linear 0.3 xalign 0.4 yalign 1.0
         linear 0.2 xalign 2.0 yalign 1.0
+    pause(0.6)
+    play audio "<from 0.0 to 1>swordfight.mp3"
     pra"*Swiftly blocking Minion 2's attack and providing a shield* I’ve got your back, Akemi!"
     show princess 4:
         linear 0.2 xalign -0.2 yalign 1.0
@@ -1196,6 +1327,7 @@ label branch_4:
         xalign -1.0 yalign 1.0
         linear 0.4 xalign 0.7 yalign 1.0
         linear 0.4 xalign 0.0 yalign 1.0
+    play audio "<from 0.0 to 1>swordfight.mp3"
     pause(0.7)
     hide minion1
     with dissolve
@@ -1228,87 +1360,143 @@ label branch_4:
     show akemi 5 behind princess at notspeaking
     show princess 4 at speaking
     pra"And we fight for a just cause! (Casts a attack spell on General Ragnor)"
-    play audio "swordfight.mp3" loop
+    show ragnor at speaking
+    play audio "<from 0.0 to 1>swordfight.mp3"
     g"(Deflects Aoi's attack with a powerful swing) Foolish girl!"
     hide princess
-    show akemi
+    show akemi 6 at speaking
+    show ragnor at notspeaking
     a"(Flanking Ragnor) Over here, brute! (Strikes at Ragnor's side)"
-
+    show akemi 5 at notspeaking
+    show ragnor at speaking
     g"(Roars in anger) You will pay for that! (Swings his massive axe at Akemi)"
-    hide akemi
-    show princess
-    pra"Akemi, look out! (Uses her magic shield to block the axe)"
-
+    show akemi 5 at speaking
+    show princess 6:
+        xzoom -1
+        xalign -0.7 yalign 1.0
+        linear 0.1 xalign -0.2 yalign 1.0
+    show ragnor:
+        linear 0.2 xcenter 0.5 yalign 1.0
+        linear 0.2 xcenter 0.75 yalign 1.0
+    pause(0.2)
+    play audio "<from 0.0 to 1>swordfight.mp3"
+    pra"Akemi, look out! (Uses her magic shield to block the sword)"
+    show princess 5
     n"The battle intensifies, with Akemi and Aoi coordinating their attacks, wearing Ragnor down"
-
+    show akemi 5 at notspeaking
+    show princess 4 behind akemi at notspeaking
     g"(Breathing heavily) This... this cannot be!"
-
+    show akemi 6 at speaking
+    show ragnor at notspeaking
     a"It's over, Ragnor. Surrender!"
-
+    show akemi 5 at speaking
+    show ragnor:
+        alpha 1
+        linear 0.2 xcenter 0.5 yalign 1.0
+        linear 0.2 xcenter 0.75 yalign 1.0
+    pause(0.2)
+    play audio "<from 0.0 to 1>swordfight.mp3"
     g"Never! (Lunges desperately)"
-
+    show akemi 5 behind princess at notspeaking
+    show princess 5 at speaking
     pra"(Providing a final spell boost to Akemi) Now, Akemi!"
     hide princess
-    show akemi
+    show akemi 5:
+        alpha 1
+        xalign 0.0 yalign 1.0
+        pause(0.5)
+        "akemi 6"
+        linear 0.2 xalign 0.5 yalign 1.0
+        linear 0.4 xalign 0.0 yalign 1.0
+        "akemi 5"
+    pause(0.5)
+    play audio "<from 0.0 to 1>swordfight.mp3"
     a"(With a final, powerful strike) This is for the dwarves!"
-    stop audio
+    stop music
+    hide ragnor
+    with Dissolve(1)
+    scene black
+    with fade
     n"With a final, resounding clash, General Ragnor fell to the ground, defeated. The cavern echoed with the silence of their victory."
     n"With the gem safely in their possession, Akemi and Princess Aoi return to the dwarven kingdom, their hearts buoyed by the success of their mission."
     hide akemi
     with dissolve
-    stop music
     play music "goodnews.mp3" fadein 0.5 fadeout 1.0 loop
     scene bg cc
-    show princess 2 at left
-    pra"Akemi, look! Over there, deep in the mining cave. It's the Mystic Lunar, shimmering in a radiant sky blue. It's truly breathtaking... Our journey was not in vain, this gem holds the key to our kingdom's salvation."
-    hide princess
-    show akemi 2 at left 
-    a"Princess Aoi, I've never seen anything so beautiful. It's like the heavens themselves have descended into this cave. With this gem, we can forge the Necklace of Valor and bring hope back to your people."
     with dissolve
+    show princess 2 at left, flip
+    pra"Akemi, look! Over there, deep in the mining cave. It's the Mystic Lunar, shimmering in a radiant sky blue. It's truly breathtaking..."
+    pra"Our journey was not in vain, this gem holds the key to our kingdom's salvation."
+    show akemi 2 at offscreenleft, flip
+    with None
+    show princess at right
+    show akemi 2 at left, flip
+    with move
+    show princess at unflip
+    show princess at  notspeaking
+    a"Princess Aoi, I've never seen anything so beautiful. It's like the heavens themselves have descended into this cave."
     scene black
     show bg ctr 
     with fade
-    n"As Akemi and Princess Aoi return, King Throin greeted them with gratitude. He thanked both for their bravery."
-    k"You have defeated General Ragnor and I congratulate you on your victory. It seems the victory has weakened our enemy's forces."
-    with dissolve
+    a"With this gem, we can forge the Necklace of Valor and bring hope back to your people."
     scene bg throne1
+    with fade
+    n"As Akemi and Princess Aoi return, King Throin greeted them with gratitude. He thanked both for their bravery."
+    show throin
+    k"You have defeated General Ragnor and I congratulate you on your victory. It seems the victory has weakened our enemy's forces."
+    show akemi at offscreenleft, flip
+    with None
+    show throin:
+        xalign 2.0
+    show akemi at left, flip
+    with move
+    show akemi 2
+    show throin at notspeaking
     a"Thank you, King Throin. We're honored to have helped. Our encounter with General Ragnor was challenging, but with Princess Aoi's leadership, we prevailed."
-
+    show akemi at notspeaking
+    show throin at speaking
     k"Your bravery has brought light to our kingdom in these dark times. With the Mystic Lunar in our possession, we can now forge a necklace stronger than ever before. Guards, prepare the forge and summon our most skilled smith. The Necklace of Valor shall rise again!"
-    hide akemi
-    show princess
+    hide throin
+    show princess 2 at right
     pra"Akemi, our journey together has been filled with danger and uncertainty, but seeing the Mystic Lunar fills me with hope. We've faced adversity and triumphed, and now our kingdom can rebuild."
-    hide princess
-    show akemi 
+    show akemi 2 at speaking
+    show princess at notspeaking
     a"Princess Aoi, it's been an honor to fight by your side. Your courage and determination inspire me. Together, we've overcome every obstacle, and I have no doubt that we'll continue to do so."
-    hide akemi
-    show princess
-    pra"Thank you, Akemi. Your strength and loyalty have been invaluable to our cause. Let us go forth and ensure that the Necklace of Valor is forged with the same determination that brought us here! But for now we must rest up I am tired!"
+    show akemi at notspeaking
+    show princess 2 at speaking
+    pra"Thank you, Akemi. Your strength and loyalty have been invaluable to our cause. Let us go forth and ensure that the Necklace of Valor is forged with the same determination that brought us here!"
+    pra"But for now we must rest up I am tired!"
+    scene black
+    with fade
     n"After all was said and done everyone rested up for a few days waiting for the smith to finish forging the Necklace of Valor"
     n"While resting, Akemi notice something is worrying Princess Aoi."
 
     play music "falls.mp3" fadein 0.5 fadeout 1.0 loop
-
+    show akemi 3 at left, flip
     a"Aoi are you okay? I can see the worry in your eyes."
+    show akemi 10 at notspeaking
+    show princess 7 at right
     pra"Thank you Akemi, I am just worry about my father and the people of Azurevale"
-    hide princess
-    show akemi at left
+    show akemi 3 at speaking
+    show princess 3 at notspeaking
     a"I see... Don't worry we will save your father and your people, but for now, let us focus on the task at hand. We have the gem, and soon we will have the necklace. With its power, we will be better equipped to face whatever challenges lie ahead."
-    hide akemi
-    show princess 2 at left
+    show akemi 10 at notspeaking
+    show princess 7 at speaking
     pra"You're right, Akemi. We must stay focused on our mission. But I cannot shake the worry for my father and my people. They need us now more than ever."
-
+    show akemi 2 at speaking
+    show princess 3 at notspeaking
     a"We'll do everything we can to protect them, Princess. But for now, let's trust in the dwarven craftsmanship and the magic of the necklace."
-
+    show akemi at notspeaking
+    show princess 2 at speaking
     pra"Yes, you're right, Akemi. Thank you for your support. Let's assist wherever we can in the dwarven kingdom while we await the completion of the necklace."
-    with dissolve
     scene black
+    with fade
     n"As they awaited the necklace's completion, Akemi and Princess Aoi spent their days in the dwarven kingdom, assisting those in need. Though outwardly brave, the weight of their responsibilities grew heavier, intensifying their sense of urgency."
     stop music fadeout 0.5
     play music "goodnews.mp3" fadein 0.5 fadeout 1.0 loop
     n"On the day of completion, King Throin presented the finished necklace to Akemi and Princess Aoi."
-    with fade
     scene bg throne1
+    with fade
     k"This necklace is a testament to your bravery and determination. May it serve you well in your quest to bring peace to your kingdom."
 
     pra"Thank you King Throin"
