@@ -1993,8 +1993,9 @@ label option_1:
     
 
 label option_2: 
-    hide princess
-    show akemi 2 at left, flip
+    scene bg forest1
+    show akemi 3 at left, flip
+    with fade
     a"I am afraid that something bad may happen to you princess, so I must fight her alone."
 
     pra"What are you saying? That’s suicide!"
