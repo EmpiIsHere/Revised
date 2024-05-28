@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1512: end of line expected.
-    a"Thank you" at left, flip
-                 ^
+File "game/script.rpy", line 2048: expected statement.
+    w
+     ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue May 28 21:48:58 2024
+Tue May 28 23:30:36 2024

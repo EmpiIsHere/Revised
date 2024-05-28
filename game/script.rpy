@@ -17,6 +17,8 @@ image akemi 9 = im.Scale("akemi_HURTS.png", 679, 900)
 image akemi 10 = im.Scale("akemi_3N.png", 679, 900)
 image akemi 11 = im.Scale("akemi_defws.png", 679, 900)
 image akemi 12 = im.Scale("akemi_2ws.png", 679, 900)
+image akemi 13 = im.Scale("akemi_4ws.png", 679, 900)
+image akemi 14 = im.Scale("akemi_5ws.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -32,6 +34,8 @@ image himiko 1= im.Scale("himiko_1.png", 679, 900)
 image himiko 2 = im.Scale("himiko_2.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
+image himiko 4 = im.Scale("himiko_4.png", 679, 900)
+image himiko 5 = im.Scale("himiko_3s.png", 679, 900)
 # Elder
 image elder = im.Scale("Elder_Elf.png", 1602, 900)
 # Elder
@@ -58,6 +62,8 @@ image necklace ="Necklace.png"
 
 #background
 image bg forest1 = "forest1.png"
+image bg forest1full = "forest1full.png"
+image bg frontgateazure = "frontgateazure.png"
 image bg deepforest = "deepforest.png"
 image bg deepforestsword = "deepforestsword.png"
 image bg cave1 = "caved.png"
@@ -1830,6 +1836,7 @@ label outcome:
     n"and Draythorn's blessing, Akemi and Princess Aoi continued their quest with renewed determination"
 #branch 6
 label branch_6:
+    stop music
     scene bg forest1
     show princess 2
     with fade
@@ -1886,12 +1893,16 @@ label option_1:
     pra"I will support you with all I got Akemi and together we will defeat Himiko!"
     scene black
     with fade
-    n"The duo continued its way towards the kingdom but as they get closer and closer to their destination the sound of demons screaming and the undead growling can be heard getting louder and louder"
-    n"Then they saw it, outside of the kingdom a massive horde of demons and undead scattered outside ravaging everything from houses to the land scape itself"
+    n"The duo continued its way towards the kingdom but as they get closer and closer to their destination the sound of minions screaming can be heard getting louder and louder"
+    scene bg frontgateazure
+    with fade
+    n"Then they saw it, outside of the kingdom a massive horde of minions scattered outside ravaging everything from houses to the land scape itself"
     n"The once beautiful kingdom was turn into a desolate place by the army"
     n"As both of them are shocked at what they saw Akemi filled with self-doubt asked Princess Aoi"
+    scene bg forest1
     show akemi 7 at left, flip
-    a"With all these demons and undead are we able to fight this head on?"
+    with fade
+    a"With all these minions are we able to fight this head on?"
     show akemi 4 at notspeaking
     show princess 7 at right
     pra"Although the legendary equipments are powerful, they only protect you and an ambush from Himiko herself can easily be the death of both of us."
@@ -1905,39 +1916,74 @@ label option_1:
         xalign 1.5 yalign 1.0
         pause(0.3)
         linear 0.15 xalign 1.0
+        pause(0.15)
+        "himiko 4"
     h"That’s a brilliant idea princess! *Binds the princess*"
-    show himiko 1
-    h"You may have the legendary equipment (looks at Akemi) but the princess doesn’t have anything!"
+    show bg forest1full behind akemi, himiko
     show akemi 4 at speaking
     show himiko 2
-    n"Akemi surprised of what happened angerly tried to attack Himiko but was swiftly blocked by Himiko’s demons."
-    show himiko 1
-    show akemi 4 at notspeaking
+    with fade
+    show himiko 4
+    h"You may have the legendary equipment (looks at Akemi) but the princess doesn’t have anything!"
+    show himiko 2
+    show akemi 4:
+        alpha 1
+        xalign 0.0 yalign 1.0
+        "akemi 5"
+        pause(0.5)
+        "akemi 5"
+        linear 0.2 xalign 0.5 yalign 1.0
+        linear 0.4 xalign 0.0 yalign 1.0
+        "akemi 13"
+    pause(0.5)
+    play audio "<from 0.0 to 1>swordfight.mp3"
+    n"Akemi surprised of what happened angerly tried to attack Himiko but was swiftly blocked by Himiko’s minions."
+    show akemi 13 at notspeaking
+    show himiko 4
     h"What will you do now that you lost your partner? Are you really going to fight me and my army all on your own?"
-    show akemi 3 at left, flip
+    show akemi 14 at speaking
+    show himiko 2 at notspeaking
     a"What should I do? Why is she here? Can I even defeat her with her army?"
-    show princess at right
+    show akemi 13 at notspeaking
+    show himiko 2 behind princess:
+        alpha 0.63
+        linear 0.3 xalign 0.8
+        "himiko 3"
+    show princess 3:
+        xalign 1.5 yalign 1.0
+        linear 0.3 xalign 1.0
+        "princess 7"
     pra"Stop doubting yourself!"
     pra"We have come this far just to give up! We got everything we needed. You can do it, Akemi!"
     pra"You have all you need to defeat her!"
     hide princess
-    show akemi 2 at left, flip
+    with dissolve
+    show akemi 6 at speaking
+    show himiko 3:
+        alpha 0.63
+        linear 0.3 xalign 1.0
+        "himiko 3"
     a"You are right princess!"
 
     a"Himiko! If you are really that powerful, then you can defeat me all by yourself! Stop hiding behind your minions like a coward and fight me in a duel! Just you and me!"
-    show himiko 2 at right
+    show akemi 5 at notspeaking
+    show himiko 5 at speaking
     h"And what makes you think I would accept that? You are the one who is surrounded here, and I can easily command my army to attack you all at once."
 
     h"What gave you the authority to challenge me in a duel?"
-
+    show akemi 6 at speaking
+    show himiko 3 at notspeaking
     a"If you truly are as powerful as you say then there’s nothing to fear about the duel. At the very least if I fail to defeat you, I can have an honorable departure."
-
+    show akemi 5 at notspeaking
+    show himiko 4 at speaking
     h"You amuse me. Your name is Akemi, correct?"
-
+    show akemi 6 at speaking
+    show himiko 2 at notspeaking
     a"Yes, I am Akemi the Outworlder that will defeat you once and for all!"
-
+    show akemi 5 at notspeaking
+    show himiko 4 at speaking
     h"You amuse me Akemi, I will accept your duel so that you will have a much more humiliating defeat! I want to see you beg as you wish you fought my army instead of me!"
-
+    show himiko 1
     h"Take the princess to the dungeon with the rest of the people and do not interfere with our fight!"
 
     n"Himiko started chanting as she prepares to transport both herself and Akemi to the throne room."
@@ -1963,9 +2009,9 @@ label option_2:
     hide princess
     n"As Princess Aoi thought of everything Akemi has said. Akemi heads towards the Azurevale."
 
-    n"As Akemi gets closer and closer to her destination the sound of demons screaming and the undead growling can be heard getting louder and louder"
+    n"As Akemi gets closer and closer to her destination the sound of minions screaming can be heard getting louder and louder"
 
-    n"Then she saw it, outside of the kingdom a massive horde of demons and undead scattered outside ravaging everything from houses to the landscape itself"
+    n"Then she saw it, outside of the kingdom a massive horde of minions scattered outside ravaging everything from houses to the landscape itself"
 
     n"The once beautiful kingdom was turn into a desolate place"
 
@@ -1998,6 +2044,8 @@ label option_2:
     jump himiko_fight
 
 label himiko_fight:
+    scene bg throne2
+    with fade
     show akemi 3 at left, flip
     a"What just happened? Where are we?"
     show himiko 2 at right
@@ -2083,11 +2131,11 @@ label himiko_fight:
 
     n"Himiko collapsed as Akemi points her sword towards her."
 
-    a"You lose Himiko, surrender and get rid of all demons and undead in the kingdom!"
+    a"You lose Himiko, surrender and get rid of all minions in the kingdom!"
 
     h"So, this is the power of the legendary items? With this power even if my army ambushed you, you will be able to wipe them out."
 
-    h"I was supposed to let my demons ambush you, but it is too late now. I will honor our duel and let my army retreat. For I was defeated with honor."
+    h"I was supposed to let my minions ambush you, but it is too late now. I will honor our duel and let my army retreat. For I was defeated with honor."
 
     n"As she used her last bit of energy to order her army to retreat, Himiko has met her end."
 
