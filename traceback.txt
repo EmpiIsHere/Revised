@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 814, in script
-    with none
-  File "game/script.rpy", line 814, in <module>
-    with none
-NameError: name 'none' is not defined
+  File "game/script.rpy", line 332, in script
+    show elder not speaking
+Exception: Image 'elder' does not accept attributes 'not speaking'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 814, in script
-    with none
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1356, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 814, in <module>
-    with none
-NameError: name 'none' is not defined
+  File "game/script.rpy", line 332, in script
+    show elder not speaking
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1076, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\exports.py", line 739, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\displayable.py", line 246, in _duplicate
+    args.extraneous()
+  File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'elder' does not accept attributes 'not speaking'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Mon May 27 21:24:02 2024
+Tue May 28 13:47:48 2024

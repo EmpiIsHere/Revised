@@ -23,6 +23,8 @@ image himiko 1= im.Scale("himiko_1.png", 679, 900)
 image himiko 2 = im.Scale("himiko_2.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
+# Elder
+image elder = im.Scale("Elder_Elf.png", 1602, 900)
 # Durin
 image durin = im.Scale("durin.png", 1602, 900)
 # King Throin
@@ -321,59 +323,93 @@ label branch_3:
     with dissolve
     n "As they enter inside the giant tree, they are greeted by the elder of the elf village."
     scene bg meetingelf
+    show elder
     elder "Greetings! Princess Aoi, you have grown much."
     show princess 2 at left, flip
+    show elder:
+        xalign 2.0 yalign 1.0
+    with move
+    show elder at notspeaking
     pra"It's nice to see you again!"
     show princess at notspeaking
+    show elder at speaking
     elder "Hmm... Princess Aoi, are you doing okay? I heard what happened to your father and your kingdom."
 
     elder "You know that we have a great friendship with your ancestor and your father. I’m sorry to hear it."
     show princess 2 at speaking
+    show elder at notspeaking
     pra"Thank you for your concern. Please allow me to introduce you to Akemi, the hero I brought to this world to defeat Himiko."
-    show princess at right
-    with move
-    show princess at notspeaking, unflip
+    hide princess
     show akemi 3 at left, flip
     a "Hello, it's so nice to meet you."
     show akemi at notspeaking
+    show elder at speaking
     elder "Hmmm... I guess that you are here to ask us the location of the Blade of Ethereal Fang."
-    show princess 2 at speaking
+    hide akemi
+    show princess 2 at left, flip
     pra"Yes, we would like to use it on defeating Himiko."
     show princess at notspeaking
+    show elder at speaking
     elder "I will tell you the location, but it's very dangerous in the forest, and up until now many monsters have been wandering there."
-
     elder "Do you know how to fight them?"
     show princess 2 at speaking
+    show elder at notspeaking
     pra"Yes"
     show princess at notspeaking
+    show elder at speaking
     elder "And how about you, are you prepared to fight such a monster?"
-
+    show elder at speaking
+    show princess:
+        xalign 1.15 yalign 1.0
+    with MoveTransition(0.5)
+    show princess at speaking
+    show princess at unflip
+    with None
+    show akemi at left, flip
     n "They both looked at Akemi waiting for her response."
     show akemi 3 at speaking
+    show princess at notspeaking
+    show elder at notspeaking
     a "Yes, because I made a promise to Princess Aoi to help her."
-
+    hide princess
+    with dissolve
+    show akemi at notspeaking
+    show elder at speaking
     elder "Very well then, the location of the sword is located at the center of Whispering Woods..."
 
     elder "It is west from here, but recently there's a giant snake wandering, and we tried everything we could, but the monster can heal itself easily."
 
     elder "Princess Aoi, please be careful and look for each other and one more thing always go the center part of the forest because the monster won't go near that location of the sword." 
-
+    show akemi 3 at speaking
+    show elder at notspeaking
     a "Yes."
-
+    hide akemi
+    show princess 2 at left, flip
     pra"Okay, thank you so much! Yes, we will be more careful." 
-
+    scene bg meetingelf
     n "As they started their quest on getting the sword, Akemi asked Princess Aoi..."
-
+    show akemi 3 at left, flip
     a "Aoi, why did Himiko attack and want to claim your kingdom?"
-
+    show akemi at notspeaking
+    show princess 2 at right
     pra"Himiko is also a magic caster like me but instead of helping others, she used it for her personal gain, and became obsessed with gaining more power then, later fell into the darkness and wanted to control others through fear and power."
-
+    show akemi 3 at speaking
+    show princess at notspeaking
     a "So, she really is obsessed with gaining more power huh."
     stop audio
     stop music
+    scene bg deepforest
+    with dissolve
     play music"cbattle.mp3" loop
+    show akemi at offscreenleft, flip
+    show princess behind akemi at offscreenleft
+    with None
+    show akemi at left
+    show princess at flip:
+        xalign -0.2 yalign 1.0
+    with move
     n "As Akemi and Princess Aoi got closer to their destination, suddenly an angry giant snake attacked them..." 
-
+    
     s "(sssSSsss)"
 
     a "Ahh!"
