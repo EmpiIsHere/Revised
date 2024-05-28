@@ -25,6 +25,8 @@ image himiko 3 = im.Scale("himiko_3.png", 679, 900)
 image himiko 3 = im.Scale("himiko_3.png", 679, 900)
 # Elder
 image elder = im.Scale("Elder_Elf.png", 1602, 900)
+# Elder
+image snake = "snake.png"
 # Durin
 image durin = im.Scale("durin.png", 1602, 900)
 # King Throin
@@ -407,6 +409,11 @@ label branch_3:
     show akemi at left
     show princess at flip:
         xalign -0.2 yalign 1.0
+    with move
+    show snake at offscreenright
+    with None
+    show snake:
+        xcenter 0.75 yalign 1.0
     with move
     n "As Akemi and Princess Aoi got closer to their destination, suddenly an angry giant snake attacked them..." 
     
