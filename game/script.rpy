@@ -21,6 +21,10 @@ image akemi 13 = im.Scale("akemi_4ws.png", 679, 900)
 image akemi 14 = im.Scale("akemi_5ws.png", 679, 900)
 image akemi 15 = im.Scale("akemibh.png", 679, 900)
 image akemi 16 = im.Scale("akemibsh.png", 679, 900)
+image akemi 17 = im.Scale("akemi_HURTB.png", 679, 900)
+image akemi 18 = im.Scale("akemi_HURTBS.png", 679, 900)
+image akemi 19 = im.Scale("Akemi_HB.png", 679, 900)
+image akemi 20 = im.Scale("Akemi_HBS.png", 679, 900)
 # Princess aoi
 image princess = im.Scale("princess_def.png", 679, 900)
 image princess 1= im.Scale("princess_1.png", 679, 900)
@@ -897,7 +901,8 @@ label branch_3:
     n "Because of this, the giant snake tries to use the purple smoke and Princess Aoi used her support magic for Akemi resists to be poised just a short of time"
     play sound "fattack.mp3"
     hide akemi
-    show princess 5 at left
+    show princess 5 at left:
+        linear 0.0 xoffset 0 yoffset 0
     pra"Now is your chance, Akemi."
     hide princess
     show akemi 6 at flip:
@@ -2169,64 +2174,154 @@ label himiko_fight:
     h"These items’ power holds is impressive if I don’t get serious, I may lose this battle."
     show himiko 1
     h"How are you able to get all 3 Legendary Items especially the necklace since it was broken?"
-
+    show akemi 15 at left, flip
     n"Akemi didn’t respond as she is too focused on the fight as one wrong step may lead to her demise"
-
+    show himiko 3:
+        pause(1)
+        linear 0.5 xalign 2.0
+    show akemi 15
     h"So, you are going to be quiet about everything then so be it! (launches a volley of attacks with different elements)"
-
+    show himiko 3:
+        xalign 2.0
+        pause(2)
+        linear 3.5 xalign 1.0
+    show akemi 15:
+        linear 0.5 xoffset -200
+        linear 0.5 xoffset 100
+        linear 0.5 xoffset -250
+        linear 0.5 xoffset 0 yoffset 0
+        repeat
     n"Akemi although amazed at how powerful Himiko is, however she was unable to say anything as she is to focus on dodging while inching closer and closer towards Himeko waiting for the right opportunity to strike!"
-
+    show akemi 16:
+        xoffset 0 yoffset 0
+        xalign 0.0
+        pause(1)
+        linear 0.2 xalign 0.25 yalign 0.5
+        linear 0.2 xalign 0.5 yalign 1.0
+    show himiko 3:
+        linear 0.1 xalign 1.0
     a"I finally got close enough to you (lunges at her preparing for an attack)"
-
+    show akemi 16:
+        xalign 0.5 yalign 1.0
+        pause(1)
+        linear 0.2 xalign 0.0 yalign 1.0
+        pause(0.2)
+        "akemi 17"
+    show himiko 4:
+        linear 0.1 xalign 1.0
     h"A magician doesn’t only specialize in long range *As she says that a power spell that was prepared for the opportune moment was launched at Akemi hitting her directly*"
-
+    show himiko 2
     n"The hit was so powerful it launched Akemi towards the wall!"
-
+    show akemi 19
     n"Akemi visible hurt from the blast and impact was bleeding but still able to stand and fight."
-
+    show himiko 5
     h"Still not giving up? Then you will suffer some more!"
-
+    show himiko 3:
+        linear 0.5 xalign 2.0
+    show akemi 19:
+        linear 0.5 xoffset -200
+        linear 0.5 xoffset 100
+        linear 0.5 xoffset -250
+        linear 0.5 xoffset 0 yoffset 0
+        repeat
     n"A barrage of spells continued to target Akemi as she tries to dodge and inch forward."
-
+    show akemi 20:
+        xoffset 0 yoffset 0
+        linear 0.5 xoffset -200
+        linear 0.5 xoffset 100
+        linear 0.5 xoffset -250
+        linear 0.5 xoffset 0 yoffset 0
+        repeat
     a"What should I do? Getting closer to her is no problem but I am not fast enough to dodge the attack up close!"
-
+    show akemi 19:
+        xoffset 0 yoffset 0
+        linear 0.5 xoffset -200
+        linear 0.5 xoffset 100
+        linear 0.5 xoffset -250
+        linear 0.5 xoffset 0 yoffset 0
+        repeat
     n"Akemi thinks of a way and wished she had a shield to block the spell to create an opening"
-
     n"An idea popped up in her head and gathered all her courage because she knew if she fails, she will meet death."
-
+    hide akemi
+    with dissolve  
+    pause (0.5) 
+    show himiko 4:
+        linear 0.2 xalign 1.0
     h"You may be strong because of the items but in terms of experience you are no match for me! A simple girl with no sword training is nothing compared to me!"
-
+    show himiko 2
     n"Himiko knows Akemi’s defense so strong, she prepared a spell with all her power and focusing it on one point, strong enough to piece anything. As she did that, she continued her volley of attack not letting Akemi gain any room to rest."
-
+    show himiko 4
     h"With this spell, no matter how strong her defense is this spell will pierce through it!"
-
+    show himiko 2
+    show akemi 19:
+        xzoom -1
+        xoffset 0 yoffset 0
+        xalign -1.0 yalign 1.0
+        linear 0.5 xalign 0.0
     n"As Akemi is a meter away from Himiko, Himiko unleashed the magic circle where a huge spike burst through with a lot of speed"
-
+    show akemi 19:
+        xalign 0.0 yalign 1.0
+        pause(0.5)
+        linear 0.1 xalign 0.2
     n"This was the opportunity Akemi was waiting for as she clashed with the spell head on with the spell. Both attacks clashed to see which one is more powerful!"
-
+    show himiko 4
+    show akemi 19:
+        alpha 0.63
+        xalign 0.2 yalign 1.0
     h"Give it up Akemi! If you apologize and grovel now, I will let you live and be a part of my army or maybe even bring you back home."
-
+    show himiko 2:
+        alpha 0.63
+    show akemi 20:
+        alpha 1
     a"I don’t need your pity for I will be the victor here!"
-
+    show himiko 2:
+        alpha 1
+        pause(1)
+        "himiko 3"
     n"With all their might, the clashed continued until the spell broke surprising Himeko as the slash was able to connect to Himiko"
-
+    show akemi 19
+    show himiko:
+        linear 1 matrixcolor SaturationMatrix(1)
+        linear 1 matrixcolor SaturationMatrix(0)
+        repeat
     n"Himiko collapsed as Akemi points her sword towards her."
-
+    show akemi 20:
+        linear 0.2 xalign 0.0
     a"You lose Himiko, surrender and get rid of all minions in the kingdom!"
-
+    show akemi 19
+    show himiko 1:
+        linear 1 matrixcolor SaturationMatrix(1)
+        linear 1 matrixcolor SaturationMatrix(0)
+        repeat
     h"So, this is the power of the legendary items? With this power even if my army ambushed you, you will be able to wipe them out."
-
+    show himiko 4:
+        linear 1 matrixcolor SaturationMatrix(1)
+        linear 1 matrixcolor SaturationMatrix(0)
+        repeat
     h"I was supposed to let my minions ambush you, but it is too late now. I will honor our duel and let my army retreat. For I was defeated with honor."
-
+    show himiko 1:
+        linear 0.5 matrixcolor SaturationMatrix(0)
+        "himiko"
+        pause(0.5)
+        linear 2 alpha 0
+        repeat
     n"As she used her last bit of energy to order her army to retreat, Himiko has met her end."
 
     n"The battle was done, and Akemi was the Victor!"
-
-    n"Akemi released the king and, with his help, freed all prisoners."
-
+    show charles:
+        xcenter 0.75
+        yalign 1.0
+    with Dissolve(1)
+    n"Akemi released the king and, with his help, freed all the prisoners."
+    hide charles
+    with dissolve
+    show princess 3:
+        xalign 2.0 yalign 1.0
+        linear 0.5 xalign 1.0 yalign 1.0
+        "princess"
     n"Aoi then reunites with Akemi."
-
+    show princess 2
     pra"You did it, you won! You saved us all from Himiko! Our kingdom is once again free!"
-
-with dissolve
+    scene black
+    with fade
 return

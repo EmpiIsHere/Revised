@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2127: scene statement expects a non-empty block.
-    scene bg throne2:
-                     ^
+File "game/script.rpy", line 2326: expected statement.
+    fade
+        ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Wed May 29 00:32:03 2024
+Wed May 29 02:07:40 2024
