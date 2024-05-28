@@ -624,14 +624,15 @@ label branch_3:
     show snake at offscreenright
     with move
     show akemi 6 at unflip
-    a "Yeah, we need to run deep in the forest."
+    pra"Aoi we need to run deep in the forest. "
+    a "Yeah, you're right! The monster won't go near the location of the sword, we just need to make a diversion."
     show akemi 5 at notspeaking
     show princess 5 at speaking
-    pra"Yeah, you're right! The monster won't go near the location of the sword."
+    pra"I will cast support magic on you, to boost your agility and i will try to use my magic to make a diversion but it will take some time"
     play audio "mheal.mp3" fadein 0.5 fadein 0.5 loop
     pra"Akemi, I will cast a support magic on you, but I need some time."
 
-    a "Okay, got it."
+    a "Okay, got it, I’ll distract it to buy you sometime"
 
     s "(sssSSsss)"
 
@@ -649,7 +650,7 @@ label branch_3:
 
     a "We did it! Let’s go."
 
-    pra"Yeah, but I can’t run that fast because I’ve used all my magic power on that attack."
+    pra"Yeah, but I can’t run that fast because I don’t have much energy left,  I’ve used all my magic power on that attack."
 
     a "Okay then, I'll carry you. Let’s go."
 
