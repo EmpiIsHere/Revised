@@ -1893,10 +1893,12 @@ label option_1:
     pra"I will support you with all I got Akemi and together we will defeat Himiko!"
     scene black
     with fade
-    n"The duo continued its way towards the kingdom but as they get closer and closer to their destination the sound of minions screaming can be heard getting louder and louder"
     scene bg frontgateazure
     with fade
+    n"The duo continued its way towards the kingdom but as they get closer and closer to their destination the sound of minions screaming can be heard getting louder and louder"
     n"Then they saw it, outside of the kingdom a massive horde of minions scattered outside ravaging everything from houses to the land scape itself"
+    scene black
+    with fade
     n"The once beautiful kingdom was turn into a desolate place by the army"
     n"As both of them are shocked at what they saw Akemi filled with self-doubt asked Princess Aoi"
     scene bg forest1
@@ -1997,9 +1999,11 @@ label option_2:
     show akemi 3 at left, flip
     with fade
     a"I am afraid that something bad may happen to you princess, so I must fight her alone."
-
+    show princess 5 at right
+    show akemi 10 at notspeaking
     pra"What are you saying? That’s suicide!"
-
+    show akemi 3 at speaking
+    show princess 4 at notspeaking
     a"I know it may be suicide but what will happen when we fail to defeat Himiko, and you didn’t survive?"
 
     a"What would happen if we won but at the cost of your life? Who will lead your people? Who will look for help from other kingdoms when things don’t go our way?"
@@ -2007,40 +2011,65 @@ label option_2:
     a"I will continue to take this path alone. Please go back or stay at a safe place."
 
     a"I will be back when everything is done and if I don’t come back ask the other kingdom for help."
-    hide princess
+    show akemi 5:
+        xzoom 1
+        linear 1.0 xalign -1.0
+    show princess 3 at speaking
+    pause(2.0)
+    scene black
+    with fade
     n"As Princess Aoi thought of everything Akemi has said. Akemi heads towards the Azurevale."
 
     n"As Akemi gets closer and closer to her destination the sound of minions screaming can be heard getting louder and louder"
-
+    scene bg frontgateazure
+    with fade
     n"Then she saw it, outside of the kingdom a massive horde of minions scattered outside ravaging everything from houses to the landscape itself"
-
+    scene black
+    with fade
     n"The once beautiful kingdom was turn into a desolate place"
-
+    scene bg forest1
+    show akemi 5 at left, flip
+    with fade
     n"With determination in her heart, she continued her path and was met someone unfamiliar"
-    show himiko 2 at right
+    show himiko 2:
+        xalign 1.5 yalign 1.0
+        pause(0.15)
+        linear 0.3 xalign 1.0
+        pause(0.15)
+        "himiko 4"
+    pause(0.6)
+    show akemi 5 at notspeaking
     h"Are you the hero they keep on talking about? Where is the princess? Did she run away like the coward she is? Hahahahaha"
-
+    show himiko 2 at notspeaking
+    show akemi 6 at speaking
     a"So, you must be Himiko, the reason why the kingdom is in ruins."
-
+    show himiko 4 at speaking
+    show akemi 5 at notspeaking
     h"The one and only!"
-
+    show akemi 6 at speaking
+    show himiko 2 at notspeaking
     a"If you are really that powerful then you can defeat me all by yourself! I challenge you in a duel! Just you and me!"
-
+    show akemi 5 at notspeaking
+    show bg forest1full behind akemi, himiko
+    with dissolve
+    show himiko 5 at speaking
     h"And what makes you think I would accept that? You are the one who is outnumbered here, and I can easily command my army to attack you all at once."
 
     h"What gave you the authority to challenge me in a duel?"
-
+    show akemi 6 at speaking
+    show himiko 3 at notspeaking
     a"If you truly are as powerful as you say then there’s nothing to fear about the duel. At the very least if I fail to defeat you, I can have an honorable departure."
-
+    show akemi 5 at notspeaking
+    show himiko 4 at speaking
     h"You amuse me, what is your name?"
-
+    show akemi 6 at speaking
+    show himiko 2 at notspeaking
     a"I am Akemi the Outworlder that will defeat you once and for all!"
-
+    show akemi 5 at notspeaking
+    show himiko 4 at speaking
     h"You amuse me Akemi, I will accept your duel so that you will have a much more humiliating defeat! I want to see you beg as you wish you fought my army instead of me!"
-
+    show himiko 1
     n"Himeko started chanting as she prepared to transport both herself and Akemi to the throne room."
-
-    h"Will this be a suitable place for the duel? And for our audience we have the King himself!"
 
     jump himiko_fight
 
