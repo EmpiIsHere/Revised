@@ -680,9 +680,11 @@ label branch_3:
     a "Okay!"
     hide akemi 5
     show princess 5 at left, flip
-    play audio "mstike.mp3" 
+    stop sound
+    play sound "mstrike.mp3" 
     pra"Mega Flare!!"
-    play audio "fattack.mp3"
+    stop sound
+    play sound "fattack.mp3"
     show snake at shaking
     show princess 4 at notspeaking
     s "(sssSSHAAaa)"
@@ -697,6 +699,7 @@ label branch_3:
     show princess 4 at notspeaking
     a "We did it! Let’s go."
     show snake at offscreenright
+    stop sound fadeout 1.0
     show princess 4 at right
     show akemi 6 at left
     with move
@@ -2143,12 +2146,28 @@ label himiko_fight:
     h"How powerful can these legendary items be? To think that attack will only leave a scratch!"
     show akemi 15:
         alpha 1
-        linear 0.2 xalign 0.6
-    show himiko 3 behind akemi at speaking
+        linear 5 xalign 2.0
+    hide himiko
     n"Akemi with her newfound confidence charged at Himiko preparing an attack."
-
-    h"That attack is nothing (waves hand to try deflecting the attack) A magician defense must not be… (spell slowly breaks and forced Himeko to retreat) These items’ power holds is impressive if I don’t get serious, I may lose this battle."
-
+    hide akemi
+    show himiko 4 at right
+    show akemi 15:
+        xzoom -1
+        xalign -1.0 yalign 1.0
+        alpha 1
+        linear 0.6 xalign 0.4 yalign 1.0
+    h"That attack is nothing (waves hand to try deflecting the attack)"
+    show himiko 4:
+        pause (1)
+        "himiko 3"
+        pause (0.8)
+        linear 0.5 xalign 1.75
+    h"A magician defense must not be…(spell slowly breaks and forced Himeko to retreat)"
+    hide akemi
+    with dissolve
+    show himiko 5 at right
+    h"These items’ power holds is impressive if I don’t get serious, I may lose this battle."
+    show himiko 1
     h"How are you able to get all 3 Legendary Items especially the necklace since it was broken?"
 
     n"Akemi didn’t respond as she is too focused on the fight as one wrong step may lead to her demise"
