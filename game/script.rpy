@@ -53,6 +53,8 @@ image minion1 = im.Scale("Villain_1.png", 1602, 900)
 # image dwarf = im.Scale("dwarf_def.png", 679, 900)
 # Generl Ragnor
 image ragnor = "General_Ragnor.png"
+#Necklace
+image necklace ="Necklace.png"
 
 #background
 image bg forest1 = "forest1.png"
@@ -1496,14 +1498,31 @@ label branch_4:
     play music "goodnews.mp3" fadein 0.5 fadeout 1.0 loop
     n"On the day of completion, King Throin presented the finished necklace to Akemi and Princess Aoi."
     scene bg throne1
+    show throin
     with fade
     k"This necklace is a testament to your bravery and determination. May it serve you well in your quest to bring peace to your kingdom."
+    show black:
+        alpha 0.5
+    show necklace
+    with dissolve
+    pause(2)
+    hide necklace
+    hide black
+    with dissolve
+    show princess at offscreenleft, flip
+    with None
+    show throin:
+        xalign 2.0
 
+    show princess at left, flip
+    with move
+    show princess 2
     pra"Thank you King Throin"
     hide princess
-    show akemi
+    show akemi 2 at left, flip 
     a"Thank you"
-
+    scene black
+    with fade
     n"As they set their next journey, the grand halls of the royal palace, they were greeted with cheers and applause from the dwarven citizens, who hailed them as heroes."
 
     if menu_flag == False:
