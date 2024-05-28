@@ -1828,26 +1828,29 @@ label outcome:
     n"With their mission accomplished, Draythorn offers Princes Aoi and Akemi a ride. As they soared towards the edge of the forest"
     n"they bid farewell to Draythorn, expressing their gratitude for his aid and the swift ride, With the Crimson Radiance Ring in their possession"
     n"and Draythorn's blessing, Akemi and Princess Aoi continued their quest with renewed determination"
-
+#branch 6
 label branch_6:
     scene bg forest1
-    show princess
-    pra"Now that we have gathered everything, we finally have all the necessary items needed to defeat Himiko!"
-    hide princess
-    show akemi 2 at left
-    a"Lead the way princess towards the Kingdom of Azurevale."
-    hide akemi
     show princess 2
+    with fade
+    pra"Now that we have gathered everything, we finally have all the necessary items needed to defeat Himiko!"
+    show princess at right
+    with move
+    show princess at notspeaking
+    show akemi 2 at left, flip
+    a"Lead the way princess towards the Kingdom of Azurevale."
+    show akemi at notspeaking
+    show princess 2 at speaking
     pra"Draythorn dropped us off at the outskirts of the Kingdom, it will only take us half a day on foot to reach Azurevale, if we follow this path, we should be fine."
-    show akemi 2 at left
+    show princess at notspeaking
+    show akemi 2 at speaking
     a"Then, let’s get going then…"
-    hide akemi
+    scene black
+    with fade
     n"Akemi and Aoi set off to the kingdom of Azurevale."
-
     n"As they follow the path towards the kingdom their surroundings are filled with destruction and despair as they see villages nearby abandoned, natural resources destroyed, and dead bodies scattered in the area."
-
     n"Fear soon filled the air as the duo witnessed the results of their evil thinking how bad it is at the center of it all."
-    show princess 3 at left
+    show princess 7 at left,flip
     pra"This is one of the villages that are outside of the Azurevale. I know Himiko is evil, but it is worse than I thought."
 
     pra"All villagers that met their untimely demise, the houses are in ruins, even the farms and surrounding forest are reduced to ashes."
@@ -1861,6 +1864,7 @@ label branch_6:
     pra"I am afraid we are too late to take action?"
 
     pra"What do you think we should do?"
+    hide princess
     menu:
         "Akemi comforted Aoi ":
             jump option_1
@@ -1871,30 +1875,38 @@ label branch_6:
 
     
 label option_1:
-    hide princess
-    show akemi 2 at left, flip
+    scene bg forest1
+    show akemi 3 at left, flip
+    with fade
     a"Aoi you are the Princess of Azurevale, the one who helped me through this journey to get the necessary equipment to defeat Himiko, and the one who will free your people from Himeko."
     a"We may not be able to save everyone but there are still people who are waiting to be save and if we don’t stop her then she will continue destroying everything"
-    hide akemi
-    show princess 3 at right
+    show akemi 10 at notspeaking
+    show princess 7 at right
     pra"You are right, defeat is never an option. We must continue."
     pra"I will support you with all I got Akemi and together we will defeat Himiko!"
-    hide princess
+    scene black
+    with fade
     n"The duo continued its way towards the kingdom but as they get closer and closer to their destination the sound of demons screaming and the undead growling can be heard getting louder and louder"
-    hide akemi
-    hide princess
     n"Then they saw it, outside of the kingdom a massive horde of demons and undead scattered outside ravaging everything from houses to the land scape itself"
     n"The once beautiful kingdom was turn into a desolate place by the army"
     n"As both of them are shocked at what they saw Akemi filled with self-doubt asked Princess Aoi"
-    show akemi 3 at left , flip
+    show akemi 7 at left, flip
     a"With all these demons and undead are we able to fight this head on?"
-    hide akemi_def
-    show princess at right
+    show akemi 4 at notspeaking
+    show princess 7 at right
     pra"Although the legendary equipments are powerful, they only protect you and an ambush from Himiko herself can easily be the death of both of us."
     pra"Our best bet is to avoid conflict against the whole army and sneak our way in!"
-    show himiko 2
+    show princess 3:
+        linear 0.3 xalign 0.5
+        "princess 6"
+        pause(1)
+        linear 0.3 xalign 1.5
+    show himiko 2:
+        xalign 1.5 yalign 1.0
+        pause(0.3)
+        linear 0.15 xalign 1.0
     h"That’s a brilliant idea princess! *Binds the princess*"
-    hide princess
+
     h"You may have the legendary equipment (looks at Akemi) but the princess doesn’t have anything!"
     n"Akemi surprised of what happened angerly tried to attack Himiko but was swiftly blocked by Himiko’s demons."
     h"What will you do now that you lost your partner? Are you really going to fight me and my army all on your own?"
