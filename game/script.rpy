@@ -305,44 +305,51 @@ label branch_3:
     n "As the time passed, Akemi and Princess Aoi have the approval of the village chief."
 
     grdelf "You may now enter and be careful."
-    
-
+    hide princess
+    with dissolve
     n "As they entered the elf village, Akemi was amazed at the scenery of the elf village, especially with the giant tree in the center."
-
+    show akemi 3 at left, flip
     a "Wow! Look at that tree, it looks bigger than the biggest building in my hometown."
-
+    show akemi at notspeaking
+    show princess 2 at right
     pra"Really? It was said that the tree has been here for thousands of years, and my father told me that it became the guardian of this forest."
-
+    show akemi 3 at speaking
+    show princess at notspeaking
     a "Amazing!"
-
+    hide akemi
+    hide princess
+    with dissolve
     n "As they enter inside the giant tree, they are greeted by the elder of the elf village."
-
+    scene bg meetingelf
     elder "Greetings! Princess Aoi, you have grown much."
-
+    show princess 2 at left, flip
     pra"It's nice to see you again!"
-
+    show princess at notspeaking
     elder "Hmm... Princess Aoi, are you doing okay? I heard what happened to your father and your kingdom."
 
     elder "You know that we have a great friendship with your ancestor and your father. I’m sorry to hear it."
-
+    show princess 2 at speaking
     pra"Thank you for your concern. Please allow me to introduce you to Akemi, the hero I brought to this world to defeat Himiko."
-
+    show princess at right
+    with move
+    show princess at notspeaking, unflip
+    show akemi 3 at left, flip
     a "Hello, it's so nice to meet you."
-
+    show akemi at notspeaking
     elder "Hmmm... I guess that you are here to ask us the location of the Blade of Ethereal Fang."
-
+    show princess 2 at speaking
     pra"Yes, we would like to use it on defeating Himiko."
-
+    show princess at notspeaking
     elder "I will tell you the location, but it's very dangerous in the forest, and up until now many monsters have been wandering there."
 
     elder "Do you know how to fight them?"
-
+    show princess 2 at speaking
     pra"Yes"
-
+    show princess at notspeaking
     elder "And how about you, are you prepared to fight such a monster?"
 
     n "They both looked at Akemi waiting for her response."
-
+    show akemi 3 at speaking
     a "Yes, because I made a promise to Princess Aoi to help her."
 
     elder "Very well then, the location of the sword is located at the center of Whispering Woods..."
