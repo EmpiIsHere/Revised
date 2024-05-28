@@ -619,60 +619,143 @@ label branch_3:
     show akemi 5 at notspeaking
     pra"Be careful, Akemi!"
     show akemi 5 at center
-    show akemi 5 at speaking
-    show princess 4 at notspeaking, left
+    show princess 5 at left
     show snake at offscreenright
     with move
-    show akemi 6 at unflip
+    show akemi 5 at unflip
     pra"Aoi we need to run deep in the forest. "
+    show akemi 6 at right, speaking
+    with move
+    show princess 4 at notspeaking
     a "Yeah, you're right! The monster won't go near the location of the sword, we just need to make a diversion."
     show akemi 5 at notspeaking
     show princess 5 at speaking
     pra"I will cast support magic on you, to boost your agility and i will try to use my magic to make a diversion but it will take some time"
-    play audio "mheal.mp3" fadein 0.5 fadein 0.5 loop
+    play sound "mheal.mp3" fadein 0.5 fadein 0.5 loop
     pra"Akemi, I will cast a support magic on you, but I need some time."
-
+    show akemi 6 at speaking
+    show princess 4 at notspeaking
     a "Okay, got it, I’ll distract it to buy you sometime"
-
+    show akemi 5 at left
+    show princess 4 at notspeaking:
+        xalign -0.2
+    show snake:
+        xcenter 0.75 ycenter 0.52
+    with move
+    show akemi 5 at flip
+    show akemi 5 at notspeaking,
     s "(sssSSsss)"
-
+    show akemi 5 at speaking,
+    with None
+    show princess at offscreenleft
+    with move
+    show akemi 5:
+        linear 0.5 xoffset -200
+        linear 0.5 xoffset 100
+        linear 0.5 xoffset -250
+        linear 0.5 xoffset 0 yoffset 0
+        repeat
     n "As Akemi tries to distract the giant snake, Princess Aoi is preparing her magic on the side."
-
+    hide akemi 5
+    with dissolve
+    show princess 5 at left, speaking
+    with dissolve
     pra"I am ready, Akemi."
-
+    show akemi 6 at left, flip
+    hide princess 5
     a "Okay!"
+    hide akemi 5
+    show princess 5 at left, flip
     play audio "mstike.mp3" 
     pra"Mega Flare!!"
     play audio "fattack.mp3"
+    show snake at shaking
+    show princess 4 at notspeaking
     s "(sssSSHAAaa)"
-
+    show akemi 5 at offscreenleft, flip
+    with None
+    show akemi 5:
+        xalign -0.2 yalign 1.0
+    with move
+    show princess 4 at speaking
     n "As the snake got attacked again by fire, Akemi rushed towards Princess Aoi."
-
+    show akemi 6
+    show princess 4 at notspeaking
     a "We did it! Let’s go."
-
+    show snake at offscreenright
+    show princess 4 at right
+    show akemi 6 at left
+    with move
+    show princess 5 at speaking
+    show princess 5 at unflip
+    show akemi 5 at notspeaking
     pra"Yeah, but I can’t run that fast because I don’t have much energy left,  I’ve used all my magic power on that attack."
-
+    show princess 4 at notspeaking
+    show akemi 6 at speaking
     a "Okay then, I'll carry you. Let’s go."
-
+    show princess 5 at speaking
+    show akemi 5 at notspeaking
     pra"Thank you Akemi."
-
+    show princess 4 at notspeaking
+    show akemi 6 at speaking
     a "No worries."
-
+    hide princess
+    show princess 4 at right
+    show akemi 5:
+        linear 0.5 xalign 0.7 yalign 1.0
+        xzoom 1,0
+        pause (0.5)
+    show princess 4:
+        pause (0.5)
+        linear 0.1 xoffset -2 yoffset 2 
+        linear 0.1 xoffset 3 yoffset -3 
+        linear 0.1 xoffset 2 yoffset -2
+        linear 0.1 xoffset -3 yoffset 3
+        linear 0.1 xoffset 0 yoffset 0
+    pause (1)
+    show akemi 5:
+        linear 1 xalign -1.0 yalign 1.0
+    show princess 4:
+        linear 1 xalign -0.7 yalign 1.0
     n "Akemi carries Princess Aoi and ran fast at the center of the forest as much as they could."
+    scene bg deepforestsword
+    with dissolve
     stop music
     play music "branch1.mp3" loop
+    pause (1)
+    show akemi 2:
+        xzoom -1.0
+        xalign -1.0 yalign 1.0
+        linear 1 xalign 0.0 yalign 1.0
+    show princess behind akemi:
+        xzoom -1.0
+        xalign -1.2 yalign 1.0
+        linear 1 xalign -0.2 yalign 1.0
     a "AAHHH! We made it!"
-
+    show akemi:
+        xzoom -1.0
+        xalign 0.0 yalign 1.0
+        linear 1 xalign 1.0 yalign 1.0
+        xzoom 1.0
+        alpha 0.63
+    show princess 2 behind akemi:
+        xzoom -1.0
+        xalign -0.2 yalign 1.0
+        linear 1 xalign 0.0 yalign 1.0
     pra"Yeah!"
-
+    show akemi at speaking
+    show princess at speaking
     n "As they got in the center of the forest, Akemi look at the sword"
-
+    show akemi 3 at speaking
+    show princess at notspeaking
     a "So, that is the Blade of Ethereal Fang"
-
+    show akemi at notspeaking
+    show princess 2 at speaking
     pra"Yes, go on Akemi, try to pull it."
-
+    show akemi 2 at speaking
+    show princess at notspeaking
     a "Yeah okay, let’s do this."
-
+    
     n "As Akemi approaches to the sword, she can already feel the power and wonders if this is the reason why the monster can’t go near it,"
 
     n "As Akemi holds the sword, she felt warm feelings all over her body."

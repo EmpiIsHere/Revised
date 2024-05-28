@@ -1,17 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/script.rpy:589
-  File "game/script.rpy", line 588, in script
-    show snake:
-  File "game/script.rpy", line 589, in <module>
-    xcenter 1.- ycenter 0.52
-NameError: name 'ycenter' is not defined
+Compiling ATL code at game/script.rpy:743
+  File "game/script.rpy", line 740, in script
+    show princess 4 behind akemi:
+  File "game/script.rpy", line 743, in <module>
+    linear 1 xalign 0.- yalign 1.0
+NameError: name 'yalign' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 588, in script
-    show snake:
+  File "game/script.rpy", line 740, in script
+    show princess 4 behind akemi:
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1076, in show_imspec
@@ -38,11 +38,11 @@ Full traceback:
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\nathan\Downloads\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 589, in <module>
-    xcenter 1.- ycenter 0.52
-NameError: name 'ycenter' is not defined
+  File "game/script.rpy", line 743, in <module>
+    linear 1 xalign 0.- yalign 1.0
+NameError: name 'yalign' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Re:Life  1.0
-Tue May 28 16:56:02 2024
+Tue May 28 19:28:53 2024

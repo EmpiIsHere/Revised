@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 555: expected end of line
-    stop audioheal heal fadeout 0.5
-                   ^
+File "game/script.rpy", line 659: end of line expected.
+    hide akemi 5:
+                ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue May 28 16:38:00 2024
+Tue May 28 18:58:23 2024
