@@ -1549,146 +1549,304 @@ label branch_4:
         jump branch_5
 
 label branch_5:
+     play music "branch5.mp3"
     scene black
-    n"Akemi and Princess Aoi continue and prepare their journey and Princess Aoi turned to Akemi with a determined look in her eyes."
-    scene bg deepforest
-    show princess
+    n"Akemi and Princess Aoi continue and prepare their journey."
+    n"Princess Aoi turned to Akemi with a determined look in her eyes"
     with fade
-    pra"Akemi, there is one final item we need to retrieve to eat Himiko once and for all."
-    n"She explained, her voice filled with resolve"
-    pra"The Crimson Radiance Ring, said to protect its wearer from even the most powerful of attacks. However, it is in the realm of one of the Heavenly Dragons, guarded for millennia, awaiting the true and worthy hero to retrieve it."
+    scene bg deepforest
+    show princess 5 at center, speaking 
+    show akemi 4 at left, flip, notspeaking
+    pra"Akemi, there is one final item that we need to retrieve on defeating Himiko once and for all. "
+    n"She explained, her voice filled with resolve."
+    pra"It is the Crimson Radiance Ring, said to protect its wearer from even the most powerful of attacks."
+    pra"However, it is in the realm of one of the Heavenly Dragons, guarded for millennia, awaiting the true and worthy hero to retrieve it"
     hide princess
-    show akemi 2
+    show akemi 2 at left, flip, speaking
+    show princess 5 at center, notspeaking
     n"Akemi nodded, understanding the gravity of their task." 
-    a "Then we must journey to the realm of the Heavenly Dragon and prove ourselves worthy of the Crimson Radiance Ring."
+    show akemi 2 at left, speaking
+    show princess 2 at center, notspeaking 
+    a "Then we must start our journey to the realm of the Heavenly Dragon and prove ourselves worthy of the Crimson Radiance Ring."
     n"She replied, her voice steady with determination"
     a"Together, we will face whatever challenges lie ahead and emerge victorious."
-    hide akemi
-   
+    show akemi at left, flip,speaking
+    show princess at center, flip ,speaking
     n"With their hearts set on their next quest, Akemi and Princess Aoi, their minds filled with thoughts of the trials and tribulations that awaited them."
     with dissolve
     scene black 
     #black screen
-    n"As one of the minions of General Ragnor escaped from the kingdom of the dwarves,"
-    n"he wasted no time in delivering his message to Himiko. Rage consumed her as she learned of Princess Aoi and Akemi's involvement."
+    n"As one of the minions of General Ragnor escaped from the kingdom of the dwarves."
+    n"He wasted no time in delivering his message to Himiko. Rage consumed her as she learned of Princess Aoi and Akemi's involvement.."
     with fade
     scene bg throne2
-    show himiko 
-    min1"Your Majesty General Ragnor was defeated by a Princess Aoi and a girl named Akemi."
-    hide Himiko
-    show himiko 3 at left
-    h"What...theyeated Ragnor what Ragnor is supposed to be strong, and he was defeated."
-    min1"What should we do you Majesty."
+    show himiko  at left, flip, notspeaking
+    show minion :
+        xalign 2.0 yalign 1.0
+    min1"Your Majesty, General Ragnor was defeated by Princess Aoi and a girl named Akemi."
+    show minion at left, notspeaking:
+        xalign 2.0 yalign 1.0
+    show himiko 1 at left, flip, speaking
+    h"What?....They defeated Ragnor? He is so strong, and yet he was defeated."
+    show himiko 3 at left, flip, notspeaking 
+    show minion at left, speaking:
+        xalign 2.0 yalign 1.0
+    min1"What should we do, your Majesty?"
+    show himiko 3 at left, flip,speaking
+    show minion at left, notspeaking:
+        xalign 2.0 yalign 1.0
     h"Bring me King Charles (king of Azurevale) from his cell now!"
-    min2"Yes, your Majesty."
-    n"The Minion brings King Charles to Himiko and asks him the location of the Crimson Radiance Ring."
-    hide himiko 3
-    show himiko 1
-    h"Hmmm...I want you to tell me something and don't think of lying to me! "
-    c"Hmmm... "
-    h"Tell me the location of the Crimson  of Radiance Ring."
-    c"Hmmm...I won't tell you even if you threat to kill me"
-    h"hmm....If you don't tell me the location of the Crimson radiance ring i will kill ever person in this castle HAHAHHAHAH!"
-    h"And that's not all I will also kill your beloved daughter"
-    c"You monster don't you dare to hurt her...or-"
-    hide himiko 1
-    show himiko 2
-    h"AHAHAHAH!...Or what haha what can you possible do in your current state...I make you a deal, I will order my Servant to only capture Princess Aoi and return her to you safe and sound if you tell me the location of the ring."
+    show minion at left, speaking:
+        xalign 2.0 yalign 1.0
+    show himiko 3 at left, notspeaking
+    min1"Yes, your Majesty."
+    show kc at center
+    n"The Minion brings King Charles to Himiko and asks him the location of the Crimson Radiance Ring. "
+    #slide King and minion from rigth to left
+    show kc at center, notspeaking
+    show himiko 1 at left, flip, speaking
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    h" Hmmm... I want you to tell me something and don't you think of lying to me!"
+    show kc at center, speaking
+    show himiko 1 at left, notspeaking
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    c"Ahhh...Hmmm... "
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    show kc at center, notspeaking
+    show himiko 1 at left, flip, speaking 
+    h"Tell me the location of where the Crimson Radiance Ring is."
+    show kc at center, speaking 
+    show himiko 1 at left, flip, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    c"Hmmm... I won't tell you even if you threaten to kill me."
+    show himiko 3 at left, flip, speaking
+    show kc at center, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    h"Hmm... If you won’t tell me the location of the ring, I will kill your people in this castle HAHAHHAHAH!"
+    h"And that's not all, I will also kill your beloved daughter."
+    
+    show kc at center, speaking 
+    show himiko 1 at left, flip, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    c"You monster! Don't you dare to hurt her... or-"
+    
+    show himiko 4 at left, flip, speaking
+    show kc at center, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    h"HAHAHAHAH! Or what?......What can you possibly do in your current state?"
+    h"I will make you a deal, I will order my servant to only capture Princess Aoi and return her to you safe and sound, if you tell me the location of the ring."
+    
+    show kc at center, speaking 
+    show himiko 1 at left, flip, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
     c"Hmmm....I want you to give me your word that you won't hurt my daughter and my people."
-    h"Hehe, Fine i give you my word"
+
+    show himiko 4 at left, flip, speaking
+    show kc at center, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    h"Hehe, fine, I give you my word."
+
+    show kc at center, speaking 
+    show himiko 1 at left, flip, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0    
     c"The location of the Crimson Radiance Ring is in the Heavenly Dragon Mountain."
-    hide himiko 2
-    show himiko 1
-    h"Was that hard to say, take him back to his cell. "
-    n"With King Charles returning to back to his cell his heart heavy with guilt and despair, he hoped to protect his people and Princess Aoi from her wrath."
-    n"But as soon as the information was in her grasp, Himiko's true intentions were revealed. With a wicked grin, she ordered her minion to return the king to his cell, his fate sealed for daring toy her."
-    h"Heavenly Dragons Mountain huh....Let's see if this time they will survive HAHAHAAHAH!."
-    n"Himiko concocted a sinister plan to ensure Akemi and Princess Aoi's demise. Harnessing her dark powers, she formed a purple orb infused with her malevolent energy."
-    h"Come my servant i want to give you a special quest right now you are my general I need you to deliver this in the heavenly dragons Mountain now, "
-    min1" I am honored your majesty."
-    n"The orb contains some of Himiko power and it will realease  a purple smoke that will make any living creature to go berserk and becomes Himikos pawn,meanwhile Akemi and Princess Aoi continue their journey. "
+    
+    show himiko 4 at left, flip, speaking
+    show kc at center, notspeaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    h"Was that hard to say? Take him back to his cell!"
+    n"As King Charles returns to his cell, his heart heavy with guilt and despair, he hopes to protect his people and Princess Aoi from her wrath."
+    hide minion
+    hide kc
+    show himiko 4 at center, speaking 
+    n"But as soon as the information was in her grasp, Himiko's true intentions were revealed."
+    n"With a wicked grin, she ordered her minion to return the king to his cell and his fate sealed for daring to defy her."
+    h"Heavenly Dragons Mountain huh.... Let's see if this time they will survive HAHAHAAHAH!"
+    n"Himiko concocted a sinister plan to ensure Akemi and Princess Aoi's demise. Harnessing her dark powers, she formed a purple orb infused with her malevolent energy. "
+    
+    show himiko 4 at left, flip, speaking 
+    show minion at right, notspeaking:
+        xalign 2.0 yalign 1.0
+    h"Come my servant, I want to give you a special quest right now. You are my general, I need you to deliver this in the Heavenly Dragons Mountain now."
+    show himiko 4 at left, flip, notspeaking 
+    show minion at right, speaking:
+        xalign 2.0 yalign 1.0
+    min1" It’s an honor, Your Majesty. "
+    n"The orb contains some of Himiko’s power and it will release a purple smoke that will make any living creature go berserk and becomes Himiko’s pawn."
     hide himiko
     with dissolve
     scene black
+    show himiko 4 at center, speaking  
     h"HAHAHAHAHAHAHHA!"
-    with fade
+    with dissolve
     #Next Scene for akemi and aio  ot heavenly dragon mountain
     scene bg mountain
-    show akemi 
-    a"So thats the heavenly Mountain Dragon."
-    hide akemi
-    show princess
-    pra"Yes..theirs also a dragon living there"
-    hide princess
-    show akemi
-    a"Really thats amazing, wait if there is a dragon living there then we will get attacked by it"
-    hide akemi
-    show princess
-    pra"No its okey the dragon thats been living there is actually a kind dragon he never go attack human as long as it doesnt bother him."
-    hide princess
-    show akemi
-    a"Really then were safe..as long as we dont bother him okey seems easy."
-    hide akemi
-    show princess
+    #show akemi 4 at center, speaking 
+    show akemi 4 at center, flip, speaking   
+    show princess at left, flip, notspeaking
+    a" So, that’s the Heavenly Dragons Mountain."
+    
+    show princess 2 at left, flip, speaking
+    show akemi at center, flip, notspeaking
+    pra"Yes, there’s a dragon living there."
+    
+    show akemi 7  at center, flip, speaking
+    show princess 2 at left, flip, notspeaking
+    a"Really, that’s amazing! Wait, if there is a dragon living there then we will get attacked by it."
+
+    show princess at left, flip, speaking
+    show akemi 2 at center, flip,notspeaking
+    pra"No, it’s okay. The dragon living there is a kind of dragon that never attacks humans especially if it doesn’t bother him."
+
+    show akemi 2 at center, flip, speaking
+    show princess 2 at left, flip, notspeaking
+    a"Really, we are safe then. That’s easy."
+    show akemi 4 at center, notspeaking
+    show princess at left, flip, speaking
     pra"Yes"
-    dragon"(Roar)RAWWWWWWW!!!!"
-    n"As Akemi and Princess Aoi continue their walk a violent wind suddenly whipped around them."
-    hide princess
-    show akemi
+    
+    #hurt
+    show akemi 7 at center, unflip ,speaking
+    show princess 7 at left, flip, notspeaking
+
+    n"As Akemi and Princess Aoi continue their walk, a violent wind suddenly whipped around them."
+    show akemi 3 at right, unflip ,speaking
+    show princess at left, flip, notspeaking
     a"Aoi, AAHHHH!"
-    hide akemi
-    show princess
+    show akemi 3 at right, unflip ,notspeaking
+    show princess 7 at left, flip, speaking
     pra"Akemi, AAHHHH!"
-    hide princess
-    show akemi
-    a"It's the Dragon...Be careful Aoi.!!"
-    n"As the dragon poised itself for another strike, Akemi leaped high into the air, carrying Princess Aoi to safety."
+    n"They senses heightened, they looked up to see a massive dragon" 
+    n"descending from the sky, its eyes ablaze with malice and ready to attack."
+    show akemi 3 at right, unflip ,notspeaking
+    show princess at left, flip, notspeaking
+    show drag at center, speaking
+    dragon"(Roar)RAWWWWWWW!!!!"
+    #slide Effect fight
+    show drag at center, notspeaking
+    show akemi 7 at right, unflip ,speaking
+    show princess at left, flip, notspeaking
+    a"Aoi, look out!!"
+    show akemi 3 at right, unflip ,notspeaking
+    show princess 7 at left, flip, speaking
+    pra"AHH!!"
+    show akemi 6 at right, unflip ,speaking
+    show princess 7 at left, flip, notspeaking
+    show drag at center, speaking
+    a"Why you!!"
+    n"As the dragon ready itself for another strike, Akemi leaped high into the air, carrying Princess Aoi to safety."
+    show akemi 6 at center, notspeaking
+    show princess 7 at left, flip, notspeaking
+    show drag at right, speaking
+    dragon"(RrrrrrrRrrrr)"
+
+    #allignment Needed
+    show akemi 3 at center, unflip ,speaking
+    show princess at left, flip, notspeaking
+    show drag at right, notspeaking
     a"Are you okey Aoi. "
-    hide akemi
-    show princess
-    pra"Yes, i am fine, Thank you."
-    hide princess
-    show akemi
-    a"Stay here i deal with the dragon."
-    n"Akemi drew her sword, ready to face the formidable foe. With a swift and precise strike, she lunged at the dragon, but to her astonishment, her blade had no effect. "
-    a"What...It didn’t work, what's going on?"
-    n"Princess Aoi uses her magic to strike the dragons wing and to Akemi is surprised that magic is working. She also try to use it."
-    a"So magic works huh..then let's see you try to take this."
-    n"The sword lights fire and Akemi try to slash the dragon but as soon as Akemi is about to attack Princess Aoi stops her."
-    hide akemi
-    show princess
+    show akemi 3 at center, unflip ,notspeaking
+    show princess at left, flip, speaking
+    pra"Yes, I am fine. Thank you."
+
+    #Need Transition
+    show akemi 6 at center, flip, speaking
+    show princess 7 at left, flip, notspeaking
+    show drag at right, notspeaking
+    a"Stay here, I will deal with the dragon."
+    n"Akemi drew her sword, ready to face the formidable foe. With a swift and precise strike, she lunged at the dragon, but to her astonishment, her blade had no effect."
+    
+    show akemi 7 at center,speaking
+    show princess 7 at left, flip, notspeaking
+    show drag at right, notspeaking
+    a" What?....It didn’t work, what's going on? "
+    show akemi 3 at center,notspeaking
+    show princess 5 at left, flip, speaking
+    show drag at right, notspeaking
+    n"Princess Aoi uses her magic to strike the dragon's wing and Akemi is surprised that the magic is working. She then also tried to use it."
+    pra"Fireball"
+    show akemi 3 at center,speaking
+    show princess at left, flip, notspeaking
+    show drag at right, notspeaking
+    a"So magic works huh. Then, let's see if you try to take this."
+
+    show akemi 3 at center,notspeaking
+    show princess at left, flip, notspeaking
+    show drag at right, speaking
+    dragon"(RrrrrrrRrrrr)"
+    n"The sword lights fire and Akemi tries to slash the dragon but as soon as Akemi is about to attack, Princess Aoi stops her."
+    
+    show akemi 3 at center,notspeaking
+    show princess 6 at left, flip, speaking
+    show drag at right, notspeaking
     pra"Wait Akemi!!"
-    hide princess
-    show akemi 
-    a"Huh,why whats wrong."
-    n"As soon as Akemi got stopped by princess Aoi the dragon raise up and started to fire a multipe fireball."
-    a"Whooo!, Thats was close."
-    hide akemi
-    show princess
-    pra"Akemi lets hide for now, trust me. "
-    hide princess
-    show akemi 
-    a"Really, Okey if you say so."
-    with fade
+
+    show akemi 3 at center,speaking
+    show princess at left, flip, notspeaking
+    show drag at right, notspeaking
+    a"Huh? Why, what’s wrong?"
+    n"As soon as Akemi got stopped by princess Aoi, the dragon raised up and started to fire a multiple fireball"
+    show akemi 3 at center,notspeaking
+    show princess at left, flip, notspeaking
+    show drag at right, speaking
+    dragon"(grrrooooowl)"
+
+    show akemi 7 at center,speaking
+    show princess at left, flip, notspeaking
+    show drag at right, notspeaking
+    a"Whooo! That was close."
+
+    show akemi 3 at center,notspeaking
+    show princess 5 at left, flip, speaking
+    show drag at right, notspeaking
+    pra"Akemi, let’s hide for now. Trust me."
+
+    show akemi 3 at center, speaking
+    show princess at left, flip, notspeaking
+    show drag at right, notspeaking
+    a"Really, okay if you say so."
+    with dissolve
     scene bg deepforest
-    n"Akemi and princess Ai ran deep to the forest were the stumble a lake and Princess Aoi explained to Akemi what she noticed."
-    show akemi 3
-    a"What happen why did you stop me. "
-    hide akemi
-    show princess
-    pra"That dragon seems in pain and under an influence of something like there is something controlling it against its will."
+    n"Akemi and Princess Aoi ran deep into the forest then they stumbled into a lake and Princess Aoi explained to Akemi what she had noticed."
+    
+    show akemi 3 at center, unflip ,speaking
+    show princess 7 at left, flip, notspeaking
+    a"What, why did you stop me?"
+    show akemi 3 at center,notspeaking
+    show princess 7 at left, flip, speaking
+    pra"That dragon seems in pain and under the influence of something like there’s controlling it against its will."
     hide princess
-    show akemi 
-    a"Then what should we do."
     hide akemi
-    show princess
-    pra"I know that i am asking too much, but can we save it. "
-    hide princess
-    show akemi
-    a"Okey if that's what you want so how we will help it."
-    hide akemi
-    show princess
-    pra"Hmmmmm...how about we investigate his lair maybe we can find somethig there or."
+    show drag at center, speaking
+    dragon"(prrrr prrrr) (sighing)"
+    hide drag
+    show akemi 3 at center,speaking
+    show princess at left, flip, notspeaking
+    a"Then, what should we do?"
+
+    show akemi 3 at center,notspeaking
+    show princess 7 at left, flip, speaking
+    pra" I know that I am asking too much, but we can help it."
+
+
+    show akemi 2 at center, speaking
+    show princess at left, flip, notspeaking
+    a"Okay, if that's what you want. So, how will we help it?"
+   
+    show akemi 3 at center,notspeaking
+    show princess 2 at left, flip, speaking
+    pra"Hmm... how about we investigate his lair? Maybe we can find something there or."
     pra"We can try to make it unconscious and see what is going on to him Whats your choice?"
 menu:
         "Investiagte the cause":
@@ -1698,154 +1856,283 @@ menu:
         "Fight the dragon":
             $ menu_flag = False
             jump fight_dragon
-
+            with dissolve
 label invest_dragon:
-    hide princess
-    show akemi 
-    a"We should investigate it then" 
-    hide akemi
-    show princess
-    pra"Okey then "
+    show akemi 3 at center,speaking
+    show princess at left, flip, notspeaking
+    a"We should investigate it then." 
+    show akemi 3 at center,notspeaking
+    show princess at left, flip, speaking
+    pra"Okay. "
     with dissolve
-    n"As they try to hide from the trees to go look for the dragon lair Princess Aoi saw something."
+    show akemi 3 at center,notspeaking
+    show princess at left, flip, notspeaking
+    n"As they tried to hide from the trees to go look for the dragon’s lair, Princess Aoi saw something."
     scene bg cave1 
-    pra"Hmm,whats that, Akemi come over here"
-    hide princess
-    show akemi
-    a"What did you saw."
-    hide akemi
-    show princess
-    pra"There's seemed to be a cave over theirs seem to be a purple fog inside it."
-    hide princess
-    show akemi 
-    a"We Should go and see it."
-    hide akemi
-    show princess
-    pra"Okey, but first i will cast a spell to prevent us from that purple smoke."
+    show akemi 3 at right, unflip,notspeaking
+    show princess at left, flip, speaking
+    pra"Hmm what’s that? Akemi come over here."
+   
+    show akemi 3 at center, speaking
+    show princess at left, flip, notspeaking
+    a"What did you see?"
+    
+    show akemi 3 at center,notspeaking
+    show princess at left, flip, speaking
+    pra"There's seemed to be a cave over there and seem there’s a purple fog inside it."
+
+    show akemi 3 at center, speaking
+    show princess at left, flip, notspeaking
+    a"We should go and see it."
+
+    show akemi 3 at center,notspeaking
+    show princess at left, flip, speaking
+    pra" Okay but first, I will cast a spell to protect us from that purple smoke."
     with dissolve
     scene bg cavepurple
-    n"Akemi and Princess Aoi enter the cave the saw a purple orb that is releasing purple smoke. "
-    hide princess
-    show akemi
+    show akemi 3 at right, speaking
+    show princess at left, flip, speaking
+    n"Akemi and Princess Aoi enter the cave the saw a purple orb that is releasing purple smoke."
+
+    show akemi 3 at right, speaking
+    show princess at left, flip, notspeaking
     a"What is that should we go and see it."
-    hide akemi
-    show princess
-    pra"Okey, but lest be carefull"
-    n"Akemi and Aoi got closer to the purple orb Princess Aoi looks it and realize that this is Himiko’s doing."
-    pra"I see now Himiko must have used this purple orb to control the dragon. "
-    hide princess
-    show akemi 3 
+
+    show akemi 3 at right,notspeaking
+    show princess at left, flip, speaking
+    pra"Okay, but let’s be careful."
+    n"They got closer to the purple orb as Princess Aoi looked at it and realized that was Himiko’s doing. "
+    
+    show akemi 3 at right,notspeaking
+    show princess 5 at left, flip, speaking
+    pra"I see, Himiko must have used this purple orb to control the dragon. "
+
+    show akemi 3 at right, speaking
+    show princess at left, flip, notspeaking
     a"Should we destroy it then?"
-    hide akemi
-    show princess
-    pra"Wait if we just destroy it the smoke will get more powerful  "
-    hide princess
-    show akemi
-    a"So What should we do"
-    hide akemi
-    show princess
-    pra"We need to purify it by chaneling light magic maybe it will stop the smoke but my magic it not enough to purify it but I think you can do it  Akemi you Blade of Ethereal Fang to cast the light magic and necklace of valor to boost your magic."
-    hide princess
-    show akemi at left
+    show akemi 3 at right, notspeaking
+    show princess 5 at left, flip, speaking
+    pra"Wait, if we just destroy it, the smoke will get more powerful."
+
+    show akemi 3 at right,speaking
+    show princess at left, flip, notspeaking
+    a"So What should we do?"
+    
+    show akemi 3 at right,notspeaking
+    show princess 3 at left, flip, speaking
+    pra"We need to purify it by channeling light magic into it. Maybe it will stop the smoke, but my magic is not enough to purify it."
+    pra"But I think you can do it Akemi, your Blade of Ethereal Fang to cast the light magic and the Necklace of Valor to boost your magic."
+    
+    show akemi 3 at right, unflip, speaking
+    show princess at left, flip, notspeaking
     a"Okey, i will try"
-    n"Akemi try to focus with the help of the elder of the elf Akemi is able to cast magic into the sword and as the sword lights all the smoke slowly vanishes, and the purple orb suddenly turns gray. "
-    a"HMMMMMM!MMMMMM!!! "
+    
+    n"Akemi tries to focus with the help of the elder elf. Akemi was able to cast magic into the sword and as the sword lit, the smoke slowly vanishes, and the purple orb suddenly turns gray."
+    
+    show akemi 5 at right, unflip, speaking
+    show princess at left, flip, notspeaking
+    a"HMMMM!!!!MMMMMM!!!"
     hide akemi
     scene bg cavepurple
     with fade
-
- 
     scene bg gcave
-
+    show akemi 5 at right, unflip, speaking
+    show princess 2 at left, flip, speaking
     n"Princess Aoi notice that the purple smoke gradually fading and the orb is turning into a gray orb"
-    show princess
-    pra"Yes thats it Akemi you did it now we should see what the condition of the dragon is outside"
-    n"Akemi saw the dragon fall sleep nearby when the purple smoke is gone."
+
+    show akemi 3 at right, unflip, notspeaking
+    show princess 2 at left, flip, speaking
+    pra"Yes, that’s it Akemi. You did it! We should see what’s the condition of the dragon."
+    n"Akemi saw the dragon fall asleep nearby when the purple smoke was gone. "
     with fade
     jump outcome
 
-
-
 label fight_dragon:
-    hide princess
     scene bg deepforest
-    show akemi 
-    a"We should fight it if we dont try to stop in now the dragon might attack an innocent"
-    hide akemi
-    show princess
+    show akemi 6 at left, flip, speaking
+    show princess at center, notspeaking
+    a"We should fight it. If we don’t try to stop, now the dragon might attack an innocent one."
+    show akemi 6 at left, speaking
+    show princess 5 at center, speaking
     pra"Okey, I understand."
-    pra"First we need plan, magic is the only thing to hurt him and we have to knock him down so i will be able to observe what is wrong with him, "
+    show akemi 6 at left, speaking
+    show princess 5 at center, speaking
+    pra"First, we need a plan, magic is the only thing to hurt him, and we must knock him down so I will be able to observe what is wrong with him."
+    show akemi 2 at left, speaking
+    show princess at center, notspeaking
+    a"I have an idea, Aoi."
+    show akemi at left, notspeaking
+    show princess 2 at center, speaking
+    pra"Okay, what’s your idea?"
     hide princess
-    show akemi
-    a"I Have an idea Aoi."
-    hide akemi
-    show princess
-    pra"Okey lets hear it."
-    hide princess
-    show akemi 
-    a"First I will draw its attention and you try to attack him with magic and once he is down i will try to use a bind magic so he mont be able to move"
-    hide akemi
-    show princess
+    show akemi 2 at left, speaking
+    show princess at center, notspeaking
+    a"First, I will draw its attention and you try to attack him with magic and once he is down, I will try to use a bind magic, so he won’t be able to move."
+    show akemi 2 at left, notspeaking
+    show princess 2 at center, speaking  
     pra"Okey I,got it."
     n" As Akemi try to shout loudly to lure the dragon."
     hide princess
-    show akemi 
+    show akemi 6 at left, speaking 
+    show princess at center, speaking
     a"HYYAAAAAAAAAAA!!"
+    n"As Akemi tries to shout to lure the dragon."
     n" A violent wind dash through Akemi as see observe where will it attack Akemi."
-    a"Hmmm,Over there, aoi get ready."
-    hide akemi
-    show princess
+    show drag at right, speaking
+    show akemi at left, notspeaking 
+    show princess at center, notspeaking
+    dragon"(grrrooooowl)"
+
+    show drag at right, speaking
+    show akemi at left, notspeaking 
+    show princess at center, notspeaking
+    dragon"(RrrrrrrRrrrr)"
+
+    show drag at right, notspeaking
+    show akemi 6 at left, speaking 
+    show princess at center, notspeaking
+    a"Hmmm,It's over there, aoi get ready."
+    show drag at right, notspeaking
+    show akemi 6 at left, notspeaking 
+    show princess 5 at center, speaking
     pra"On it."
-    n"Narator As akemi draw the attention of the dragon princess Aoi used this chance to fire at the dragon."
+
+    n"As Akemi drew the attention of the dragon, Princess Aoi used this chance to fire at the dragon. "
+    show drag at right, notspeaking
+    show akemi 6 at left, notspeaking 
+    show princess 5 at center, speaking
     pra"FireBall"
     n"As the dragon got hit Akemi used a binding magic to seal the movement of the dragon while Princess Aoi notice the purple aura raleasing n the body of the dragon"
-    pra"Akemi I got it we need to use light magic to remove the purple aura but my magic is not enough."
-    hide princess
-    show akemi 
+    
+    show drag at right, notspeaking
+    show akemi 6 at left, notspeaking 
+    show princess 5 at center, speaking
+    pra"Akemi, I got it. We need to use light magic to remove the purple aura, but my magic is not enough."
+    
+    show drag at right, notspeaking
+    show akemi 6 at left, speaking 
+    show princess 5 at center, notspeaking
     a"I will do it i will used the Blade of Ethereal Fang to cast the light magic and necklace of valor to boost your magic"
-    n"As Akemi concentrate in casting light magic the sword light and the necklace glow and the purple aura is slowly fading and making the dragon fall sleep"
+    n"As Akemi concentrates in casting light magic, the sword lit and the necklace glows then the purple aura is slowly fading and making the dragon fall sleep. "
     jump outcome
 
 #Same ending for branch 6
 label outcome:
     scene bg deepforest
-    n"Exhausted from the Akemi and Princess Aoi shared a triumphant smile, knowing they had succeeded in freeing the dragon from Himiko's control, As minutes passed, the dragon stirred awake, its eyes filled with remorse for its actions. "
-    show akemi 
+    show akemi  at left, speaking
+    show princess  at center, speaking
+    n"Exhausted Akemi and Princess Aoi shared a triumphant smile, knowing they had succeeded in freeing the dragon from Himiko's control. Minutes passed, the dragon stirred awake, its eyes filled with remorse for its actions. "
+    
+    show akemi 2 at left, notspeaking
+    show princess 2 at center, notspeaking
+    show drag at right, speaking
+    dragon"(prrrr prrrr) (sighing)"
+    show akemi 2 at left, speaking
+    show princess 2 at center, notspeaking
+    show drag at right, notspeaking
     a"Hi are you okey?"
-    hide akemi
-    show princess
+    show akemi 2 at left, notspeaking
+    show princess 2 at center, speaking
+    show drag at right, notspeaking
     pra"How are you feeling?"
-    hide princess
-    dragon"Yes and thank you for saving me."
-    pra"My name is Aoi and this is my companion Akemi."
-    show akemi
-    a"Hi whats your name."
-    dragon"Akemi and Aoi it's a pleasure to meet you...My name is Draythorn" 
-    n"As they rest for bit, Draythorn asks what are they doing here in heavenly mountain?"
-    hide akemi
-    show princess
-    pra" We are looking for the Crimson of Radiance Ring."
-    dra"So you are also looking for it too?" 
-    hide princess
-    show akemi 
-    a"What do you mean by that "
-    dra"When i was under the influence of that purple smoke a keep hearing a female voice to destroy someone and bring her the ring."
-    hide akemi
-    show princess
-    pra"Its Himiko again."
-    hide princess
-    show akemi
-    a"Yeah and she is probably trying to get the ring for herself."
-    dra" So that's her name huh, it's true that i have the ring but it won't work if I don't give my magic to power to it, I will give you the ring as a reward for helping me and promise me this Akemi and Princess Aoi toeat Himiko."
-    a" I Promise"
-    hide akemi
-    show princess
-    pra" I Promise"
 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    show drag at right, speaking
+    dragon"Huh, ahh. I am sorry about what happened earlier."
+
+    show akemi 2 at left, speaking
+    show princess 2 at center, notspeaking
+    show drag at right, notspeaking
+    a"It’s okay, don’t mention it."
+    show akemi at left, notspeaking
+    show princess at center, speaking
+    show drag at right, 
+    pra"Yeah, no worries"
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dragon"Thank you for saving me."
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess 2 at center, speaking
+    pra"My name is Princess Aoi, and this is my companion Akemi."\
+
+    show drag at right, notspeaking 
+    show akemi 2 at left, speaking
+    show princess at center,speaking
+    a"Hi, what’s your name?"
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dragon"My name is Draythorn. It’s nice to meet both of you." 
+
+    n"As they are resting for a bit. Draythorn pops a question."
+    
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dra"Anyway, what are you doing here in Heavenly Dragons Mountain?"
+   
+    show drag at right, notspeaking 
+    show akemi at left, notspeaking
+    show princess 2 at center, speaking
+    pra"We are looking for the Crimson Radiance Ring."
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dra"So, you are also looking for it huh?" 
+    
+    show drag at right, notspeaking 
+    show akemi 3 at left, speaking
+    show princess at center, notspeaking
+    a"What do you mean by that?"
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dra"When I was under the influence of that purple smoke. I keep on hearing a female voice about destroying someone and brings her the ring."
+
+    show drag at right, notspeaking 
+    show akemi at left, notspeaking
+    show princess 5 at center, speaking
+    pra"It’s Himiko again."
+
+    show drag at right, notspeaking 
+    show akemi 3 at left, speaking
+    show princess at center, notspeaking
+    a"Yeah, Himiko probably trying to get the ring for herself."
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dra" So that's her name huh? It's true that I have the ring, but it won't work if I don't give my magic to power to it."
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center, notspeaking
+    dra"I will give you the ring as a reward for helping me and promise me that you will defeat Himiko."
+
+    show drag at right, notspeaking 
+    show akemi 2 at left, speaking
+    show princess 2 at center, notspeaking
+    a" I Promise"
+
+    show drag at right, speaking 
+    show akemi at left, notspeaking
+    show princess at center,speaking
+    pra" I Promise"
+    
+    scene black
     n"Draythorn gave Crimson Radiance Ring. Akemi donned the ring, feeling its power course through her veins, and to their surprise, Draythorn blessed the ring, imbuing it with even greater strength. "
     n"With their mission accomplished, Draythorn offers Princes Aoi and Akemi a ride. As they soared towards the edge of the forest"
     n"they bid farewell to Draythorn, expressing their gratitude for his aid and the swift ride, With the Crimson Radiance Ring in their possession"
     n"and Draythorn's blessing, Akemi and Princess Aoi continued their quest with renewed determination"
+with dissolve
 #branch 6
 label branch_6:
     stop music
