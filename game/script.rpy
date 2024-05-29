@@ -186,9 +186,7 @@ label start:
     n"As Akemi read the riddle, she tries to answer it." 
     show akemi 3 at left, flip
     a"Hmmmmm......Moon?" 
-    #Stop Music library.mp3
     stop music
-    #Play Music branch1.mp3
     play music "branch1.mp3" loop 
     scene white 
     with Fade(.5,.5,.5)
@@ -1008,7 +1006,7 @@ with dissolve
 #Necklace of Valor
 label branch_4:
     stop music
-    # play music "Arrraivesound.mp3" loop 
+    play music "Arrraivesound.mp3" loop 
     scene black
     with dissolve
     n"As Akemi and Princess Aoi set their journey to get the Necklace of Valor from the dwarf kingdom which is from the Ironforge mountain."
@@ -1549,7 +1547,7 @@ label branch_4:
         jump branch_5
 
 label branch_5:
-    play music "branch5.mp3"
+    play music "branch5.mp3" loop
     scene black
     n"Akemi and Princess Aoi continue and prepare their journey."
     n"Princess Aoi turned to Akemi with a determined look in her eyes"
@@ -1575,12 +1573,14 @@ label branch_5:
     show princess at center, flip ,speaking
     with fade
     n"With their hearts set on their next quest, Akemi and Princess Aoi, their minds filled with thoughts of the trials and tribulations that awaited them."
+    stop music
     with dissolve
     scene black 
     #black screen
     n"As one of the minions of General Ragnor escaped from the kingdom of the dwarves."
     n"He wasted no time in delivering his message to Himiko. Rage consumed her as she learned of Princess Aoi and Akemi's involvement.."
     with dissolve
+    play music "himikoentry.mp3" loop
     scene bg throne2
     show himiko  at left, flip, notspeaking
     show minion :
@@ -1699,8 +1699,10 @@ label branch_5:
     scene black
     show himiko 4 at center, speaking  
     h"HAHAHAHAHAHAHHA!"
+    stop music
     with dissolve
     #Next Scene for akemi and aio  ot heavenly dragon mountain
+    play music "branch5.mp3" loop
     scene bg mountain
     #show akemi 4 at center, speaking 
     show akemi 4 at center, flip, speaking   
@@ -1725,11 +1727,11 @@ label branch_5:
     show akemi 4 at center, notspeaking
     show princess at left, flip, speaking
     pra"Yes"
-    
+    stop music
     #hurt
+    play music "bgmusic2.mp3" loop
     show akemi 7 at center, unflip ,speaking
     show princess 7 at left, flip, notspeaking
-
     n"As Akemi and Princess Aoi continue their walk, a violent wind suddenly whipped around them."
     show akemi 3 at right, unflip ,speaking
     with MoveTransition(0.3)
@@ -1833,10 +1835,11 @@ label branch_5:
     show princess at center, flip, notspeaking
     show drag at right, notspeaking
     a"Really, okay if you say so."
+    stop music
     with dissolve
+    play music "branch1.mp3" loop
     scene bg deepforest
     n"Akemi and Princess Aoi ran deep into the forest then they stumbled into a lake and Princess Aoi explained to Akemi what she had noticed."
-    
     show akemi 3 at left, flip ,speaking
     show princess 7 at center, unflip, notspeaking
     a"What, why did you stop me?"
@@ -1875,6 +1878,8 @@ menu:
             jump fight_dragon
             with dissolve
 label invest_dragon:
+    stop music
+    play music "branch5.mp3" loop
     show akemi 3 at left, speaking
     show princess at right, unflip, notspeaking
     a"We should investigate it then." 
@@ -1908,6 +1913,8 @@ label invest_dragon:
     scene bg cavepurple
     show akemi 3 at right, speaking
     show princess at left, flip, speaking
+    stop music
+    play musuic "bgmusic2.mp3" loop
     n"Akemi and Princess Aoi enter the cave the saw a purple orb that is releasing purple smoke." 
     show akemi 3 at right, speaking
     show princess at left, flip, notspeaking
@@ -1960,10 +1967,12 @@ label invest_dragon:
     show princess 2 at left, flip, speaking
     pra"Yes, that’s it Akemi. You did it! We should see what’s the condition of the dragon."
     n"Akemi saw the dragon fall asleep nearby when the purple smoke was gone. "
+    stop music
     with fade
     jump outcome
 
 label fight_dragon:
+    play music "dragon2.mp3" loop
     scene bg deepforest
     show akemi 6 at left, flip, speaking
     show princess at center, notspeaking
@@ -2034,12 +2043,14 @@ label fight_dragon:
     a"HYYYYAAAAAAAA!"
     scene white
     n"As Akemi concentrates in casting light magic, the sword lit and the necklace glows then the purple aura is slowly fading and making the dragon fall sleep. "
+    stop music
     jump outcome
     with dissolve
 
 #Same ending for branch 6
 label outcome:
     scene bg deepforest
+    play music "goodnews.mp3" loop
     show akemi  at left, flip,speaking
     show princess  at center, flip, speaking
     n"Exhausted Akemi and Princess Aoi shared a triumphant smile, knowing they had succeeded in freeing the dragon from Himiko's control. Minutes passed, the dragon stirred awake, its eyes filled with remorse for its actions. "
@@ -2153,6 +2164,7 @@ label outcome:
     n"With their mission accomplished, Draythorn offers Princes Aoi and Akemi a ride. As they soared towards the edge of the forest"
     n"they bid farewell to Draythorn, expressing their gratitude for his aid and the swift ride, With the Crimson Radiance Ring in their possession"
     n"and Draythorn's blessing, Akemi and Princess Aoi continued their quest with renewed determination"
+    stop music
 with dissolve
 #branch 6
 label branch_6:
@@ -2234,12 +2246,14 @@ label option_1:
         "princess 6"
         pause(1)
         linear 0.3 xalign 1.5
+    stop music
+    play music "himikoentry.mp3" loop
     show himiko 2:
         xalign 1.5 yalign 1.0
         pause(0.3)
         linear 0.15 xalign 1.0
         pause(0.15)
-        "himiko 4"
+        "himiko 4"    
     h"That’s a brilliant idea princess! *Binds the princess*"
     show bg forest1full behind akemi, himiko
     show akemi 4 at speaking
@@ -2286,7 +2300,7 @@ label option_1:
         linear 0.3 xalign 1.0
         "himiko 3"
     a"You are right princess!"
-
+    
     a"Himiko! If you are really that powerful, then you can defeat me all by yourself! Stop hiding behind your minions like a coward and fight me in a duel! Just you and me!"
     show akemi 5 at notspeaking
     show himiko 5 at speaking
