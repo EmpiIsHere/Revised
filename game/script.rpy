@@ -67,6 +67,8 @@ image ragnor = "General_Ragnor.png"
 image charles = "King_Charles.png"
 #Necklace
 image necklace ="Necklace.png"
+image Rring =im.Scale("ring.png",1602, 900)
+
 
 #background
 image bg forest1 = "forest1.png"
@@ -121,7 +123,7 @@ init:
         linear 0.1 xoffset 0 yoffset 0
 
 #asset
-image bg ring = "ring_final.png"
+
 image bg sword = "sword.png"
 
 define a = Character("Akemi",color="546569") 
@@ -1972,7 +1974,7 @@ label invest_dragon:
     jump outcome
 
 label fight_dragon:
-    play music "dragon2.mp3" loop
+    play music "dragom2.mp3" loop
     scene bg deepforest
     show akemi 6 at left, flip, speaking
     show princess at center, notspeaking
@@ -2148,7 +2150,14 @@ label outcome:
     show akemi at left, notspeaking
     show princess at center, notspeaking
     dra"I will give you the ring as a reward for helping me and promise me that you will defeat Himiko."
-
+    show black:
+        alpha 0.5    
+    show Rring
+    with dissolve
+    pause(2)
+    hide Rring
+    hide black
+    with dissolve
     show drag at right, notspeaking 
     show akemi 2 at left, speaking
     show princess 2 at center, notspeaking
@@ -2169,6 +2178,7 @@ with dissolve
 #branch 6
 label branch_6:
     stop music
+    play music "forest2.mp3" loop
     scene bg forest1
     show princess 2
     with fade
@@ -2187,6 +2197,8 @@ label branch_6:
     scene black
     with fade
     n"Akemi and Aoi set off to the kingdom of Azurevale."
+    stop music
+    play music "himikobg.mp3" loop
     n"As they follow the path towards the kingdom their surroundings are filled with destruction and despair as they see villages nearby abandoned, natural resources destroyed, and dead bodies scattered in the area."
     n"Fear soon filled the air as the duo witnessed the results of their evil thinking how bad it is at the center of it all."
     show princess 7 at left,flip
@@ -2214,6 +2226,8 @@ label branch_6:
 
     
 label option_1:
+    stop music
+    play music "dragom2.mp3" fadein 0.5 fadeout 0.5 loop
     scene bg forest1
     show akemi 3 at left, flip
     with fade
@@ -2247,7 +2261,7 @@ label option_1:
         pause(1)
         linear 0.3 xalign 1.5
     stop music
-    play music "himikoentry.mp3" loop
+    play music "himikoentry.mp3" fadein 0.5 fadeout 0.5 loop
     show himiko 2:
         xalign 1.5 yalign 1.0
         pause(0.3)
@@ -2329,6 +2343,8 @@ label option_1:
     
 
 label option_2: 
+    stop music
+    play music "dragom2.mp3" fadein 0.5 fadeout 0.5 loop
     scene bg forest1
     show akemi 3 at left, flip
     with fade
@@ -2409,6 +2425,7 @@ label option_2:
 
 label himiko_fight:
     scene bg throne2
+    play music "CriticalPhaseSFX.mp3" loop
     with fade
     show akemi 14 at left, flip
     a"What just happened? Where are we?"
@@ -2628,7 +2645,7 @@ label himiko_fight:
         linear 2 alpha 0
         repeat
     n"As she used her last bit of energy to order her army to retreat, Himiko has met her end."
-
+    play music "Endingbgm.mp3" fadein 0.5 fadeout 0.5 loop
     n"The battle was done, and Akemi was the Victor!"
     show charles:
         xcenter 0.75
@@ -2645,5 +2662,7 @@ label himiko_fight:
     show princess 2
     pra"You did it, you won! You saved us all from Himiko! Our kingdom is once again free!"
     scene black
+    n"The Kingdome of Azurevale has been freed from Himiko, and everyone praise our hero Akemi and Princess Aoi in helping them."
     with fade
+    stop music
 return
